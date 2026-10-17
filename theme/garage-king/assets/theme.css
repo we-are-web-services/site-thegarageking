@@ -109,3 +109,28 @@
 .gk-blog .wp-block-post-date { color: #6b6b66; }
 
 .gk-footer .wp-block-column p { overflow-wrap: anywhere; }
+
+/* Price estimator */
+.gk-est { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.gk-est h3 { font-size: 1.05rem; margin: 1.25rem 0 0.6rem; }
+.gk-est__form h3:first-child { margin-top: 0; }
+.gk-est__input { width: 100%; padding: 0.75rem 0.9rem; font: inherit; border: 2px solid #1b1b1b; background: #fff; border-radius: 0; }
+.gk-est__row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid #d9d9d4; }
+.gk-est__label { display: flex; flex-direction: column; gap: 0.15rem; }
+.gk-est__label label, .gk-est__label strong { font-weight: 700; }
+.gk-est__label small { color: #55554f; }
+.gk-est__qtywrap { display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+.gk-est__qty { width: 6rem; text-align: right; }
+.gk-est__unit { font-size: 0.85rem; color: #55554f; }
+.gk-est__row--quote { opacity: 0.85; }
+.gk-est__panel { position: sticky; top: 6rem; background: #0b0b0b; color: #fff; padding: 1.75rem; border-top: 4px solid var(--gk-amber); }
+.gk-est__panel h3 { color: #fff; margin-top: 0; }
+.gk-est__lines { list-style: none; padding: 0; margin: 0 0 1rem; }
+.gk-est__lines li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid #2d2d2d; font-size: 0.9rem; }
+.gk-est__total { font-family: var(--wp--preset--font-family--poppins); font-style: italic; font-weight: 800; font-size: 2.6rem; line-height: 1; color: var(--gk-amber); margin: 0.5rem 0; }
+.gk-est__area, .gk-est__note, .gk-est__empty { font-size: 0.9rem; color: #b9b9b5; margin: 0.4rem 0; }
+.gk-est__sample { font-size: 0.8rem; color: #ffcf66; margin: 0.8rem 0 0; }
+.gk-est__cta { display: block; margin-top: 1.25rem; text-align: center; text-decoration: none; }
+.gk-anchor { scroll-margin-top: 7rem; }
+@media (max-width: 860px) { .gk-est { grid-template-columns: 1fr; } .gk-est__panel { position: static; } }
+.gk-est__lines strong { white-space: nowrap; }

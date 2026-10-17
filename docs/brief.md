@@ -89,7 +89,7 @@ Built on **Divi** (theme) with WooCommerce and add-ons for deposits and a QuickB
 
 1. **Mockup vs. positioning.** The mockup says "No franchise markups", "Direct pricing" and "Honest Texas pricing", while the client's notes say they are the boutique luxury option, not the most affordable. Pick one voice.
 2. **The mockup's numbers are placeholders**, not facts: "3,800+ garages", "4.9 / 412 reviews", the three named reviews, and every price in the calculator. The client still has to supply real counts, reviews and prices (questionnaire item 9 says the garage count is still an estimate to gather).
-3. **Calculator rules.** What it multiplies, what it assumes (service area, quantities), and whether it shows exact prices or ranges. Not decided.
+3. **Calculator rules.** Built with sample prices (`assets/pricing.json`): quantities per product, a service-area label, and the multi-rack offer. Still to decide: real prices, whether it shows exact figures or ranges, and whether the BOGO offers belong in it.
 4. **Primary offer.** The client has not decided whether to change it (current: phone quote plus a multi-rack discount).
 5. **Photos and video** have not arrived, so the prototype uses placeholders.
 6. **GoHighLevel and Jobber** integration details are not specified.

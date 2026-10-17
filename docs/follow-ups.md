@@ -9,6 +9,7 @@ Kept in one place; update it when an item is done. Last updated 2026-10-17. Noth
 4. Decide what to do with the old site's content that the sitemap does not mention (section D).
 
 ## B. Needs the client (through Rhonda)
+- Estimator: the real prices (now sample values in `assets/pricing.json`), which products and units to offer, what the multi-rack offer covers, whether the BOGO offers belong in the estimator, floor coating price per square foot, and whether to show an exact figure or a range.
 - Real prices, package contents and what the estimator multiplies; garages completed; Google review count; real reviews (or live feed).
 - Photos and video (shared Drive folder, not received); team photos; customer permission for photos and names.
 - Phone, email, hours, address for the footer; warranty and installation details; product specs (motorized racks, slatwall colours and finishes, cabinets, floor coating system, fans), which the client deferred to the designer.
@@ -18,7 +19,7 @@ Kept in one place; update it when an item is done. Last updated 2026-10-17. Noth
 - Legal review of the privacy policy and SMS terms.
 
 ## C. To build
-- Pricing and Offers page with the estimator and three packages; Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
+- Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
 - Quote page and forms: photo upload, "reason for contact" including existing customer, one thank-you URL per form (no "take photos" tip on the thank-you page, ask on the form).
 - Five more product pages from the overhead page; Lifts; a bookmarked Garage Door Installation and Repairs page; Service Areas and the city page template.
 - Ad landing page `/ga` and keyword variants; `/nextdoor` and `/sael` if still active; Privacy, Terms and SMS; 404.
