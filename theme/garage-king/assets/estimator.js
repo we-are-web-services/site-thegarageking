@@ -74,8 +74,23 @@
 			return Math.min( v, max );
 		}
 
+		// Remember the estimate so the quote form can send it along with the request.
+		function save( items, discounts, total ) {
+			try {
+				if ( ! items.length ) {
+					sessionStorage.removeItem( 'gkEstimate' );
+					return;
+				}
+				sessionStorage.setItem( 'gkEstimate', JSON.stringify( { area: areaSelect.value, items: items, discounts: discounts, total: total, sample: !! cfg.sample } ) );
+			} catch ( e ) {
+				/* storage can be blocked; the estimate then simply does not travel */
+			}
+		}
+
 		function update() {
 			var lines = [];
+			var items = [];
+			var discountsOut = [];
 			var subtotal = 0;
 			cfg.products.forEach( function ( p ) {
 				var q = clamp( document.getElementById( 'gk-est-' + p.id ).value, p.max );
@@ -85,6 +100,7 @@
 					subtotal += cost;
 					var unit = q === 1 ? p.unit.replace( /s$/, '' ) : p.unit;
 					lines.push( [ q + ' ' + unit + ' × ' + money.format( p.price ), cost ] );
+					items.push( { id: p.id, label: p.label, qty: q, unit: p.unit, price: p.price, cost: cost } );
 				}
 			} );
 
@@ -99,12 +115,14 @@
 						var off = n * d.amountPerUnit;
 						total -= off;
 						lines.push( [ d.label, -off ] );
+						discountsOut.push( { label: d.label, amount: off } );
 					} else if ( n === d.threshold ) {
 						notes.push( d.label + ' (add one more rack to apply it).' );
 					}
 				}
 			} );
 
+			save( items, discountsOut, Math.max( total, 0 ) );
 			out.textContent = '';
 			if ( ! lines.length ) {
 				out.appendChild( el( 'p', { class: 'gk-est__empty', text: 'Add a solution to see an estimate.' } ) );

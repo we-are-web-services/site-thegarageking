@@ -24,18 +24,9 @@
 <div class="wp-block-column"><!-- wp:heading -->
 <h2 class="wp-block-heading">Your details</h2>
 <!-- /wp:heading -->
-<!-- wp:group {"className": "gk-estimator gk-estimator--light", "layout": {"type": "constrained"}, "backgroundColor": "grey", "style": {"spacing": {"padding": {"top": "var:preset|spacing|40", "bottom": "var:preset|spacing|40"}}}} -->
-<div class="wp-block-group gk-estimator gk-estimator--light has-grey-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:paragraph -->
-<p>Form goes here: first and last name, email, phone, city, garage size and what you want to store, plus an optional photo upload. A scheduler for step 2 follows. The form and scheduler are not built yet (GoHighLevel and Jobber details are pending).</p>
-<!-- /wp:paragraph -->
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="tel:+18446945464">Call 844-MY-GKING</a></div>
-<!-- /wp:button -->
-</div>
-<!-- /wp:buttons -->
-</div>
-<!-- /wp:group -->
+<!-- wp:shortcode -->
+[gk_quote_form]
+<!-- /wp:shortcode -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
@@ -54,6 +45,9 @@
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Prefer to talk now? Call 844-MY-GKING.</p>
+<!-- /wp:paragraph -->
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->

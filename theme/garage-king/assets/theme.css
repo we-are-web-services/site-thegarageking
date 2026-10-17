@@ -134,3 +134,13 @@
 .gk-anchor { scroll-margin-top: 7rem; }
 @media (max-width: 860px) { .gk-est { grid-template-columns: 1fr; } .gk-est__panel { position: static; } }
 .gk-est__lines strong { white-space: nowrap; }
+
+/* Keep the header on one row on laptop widths */
+@media (min-width: 782px) and (max-width: 1400px) {
+	.gk-header__bar { flex-wrap: nowrap; gap: 1rem; padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+	.gk-wordmark, .gk-wordmark a { font-size: 1.1rem; }
+	.gk-nav { gap: 0.9rem; }
+	.gk-nav .wp-block-navigation__container { gap: 0.9rem; }
+	.gk-btn-small .wp-block-button__link { padding: 0.7rem 0.85rem; font-size: 0.68rem; }
+	.gk-header__cta { gap: 0.75rem; }
+}

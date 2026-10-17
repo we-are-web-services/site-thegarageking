@@ -392,11 +392,10 @@ write("page-service-areas", "Service areas page", body)
 
 body = page_hero("Book a Free Design Consultation", "Step 1 of 2", "Tell us about your garage. After you submit, you pick a time for your free phone consultation.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg").replace("min-height:46vh", "min-height:34vh").replace('"minHeight":46', '"minHeight":34')
 body += grp(cols([
-    hd(2, "Your details")
-    + grp(pa("Form goes here: first and last name, email, phone, city, garage size and what you want to store, plus an optional photo upload. A scheduler for step 2 follows. The form and scheduler are not built yet (GoHighLevel and Jobber details are pending).")
-          + btns(btn("Call 844-MY-GKING", f"tel:{TOLL_TEL}")), bg="grey", cls="gk-estimator gk-estimator--light", pad="40", full=False),
+    hd(2, "Your details") + "<!-- wp:shortcode -->\n[gk_quote_form]\n<!-- /wp:shortcode -->\n",
     hd(2, "What happens next")
     + ul(["We call at the time you choose, by phone or video.", "We plan the right mix for your ceiling height and space.", "You get a written price and an installation date."], cls="gk-checks")
+    + pa("Prefer to talk now? Call " + TOLL + ".", cls="")
     + badges(),
 ]), width="1180px")
 write("page-schedule-quote", "Schedule quote page", body)
