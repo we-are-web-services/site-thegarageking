@@ -4,13 +4,13 @@
  * Slug: garage-king/king-difference
  * Categories: garage-king
  */
-$img = gk_placeholder( '2021/04/20101129-IMG_4456-scaled.jpg' );
+$img = gk_placeholder( '2021/04/20210212_101134-scaled.jpg' );
 ?>
 <!-- wp:group {"align":"full","className":"gk-section","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"2rem","left":"4rem"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="<?php echo $img; ?>" alt="The Garage King installation crew standing under an overhead storage rack (placeholder photo from the current site)"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo $img; ?>" alt="The Garage King work truck and trailer (photo from the current site)"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 <!-- wp:column {"verticalAlignment":"center"} -->
