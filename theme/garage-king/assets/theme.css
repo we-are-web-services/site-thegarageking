@@ -1,0 +1,92 @@
+/* The Garage King: styles that theme.json cannot express. Palette and fonts live in theme.json. */
+
+:root { --gk-amber: #ffb117; --gk-black: #0b0b0b; --gk-steel: #262626; }
+
+/* Header */
+.gk-header { position: sticky; top: 0; z-index: 50; }
+.admin-bar .gk-header { top: 32px; }
+.gk-header__bar { border-bottom: 3px solid var(--gk-amber); gap: 1rem 2rem; }
+.gk-wordmark, .gk-wordmark a { font-size: 1.35rem; letter-spacing: 0.02em; text-decoration: none; white-space: nowrap; }
+.gk-wordmark a:hover { color: var(--gk-amber); }
+.gk-nav a { color: #fff; text-decoration: none; }
+.gk-nav a:hover { color: var(--gk-amber); }
+.gk-nav .wp-block-navigation__submenu-container { background: var(--gk-black); border: 1px solid var(--gk-steel); padding: 0.4rem 0; }
+.gk-header__cta { gap: 1rem; }
+.gk-phone { margin: 0; }
+.gk-phone a { color: #fff; text-decoration: none; white-space: nowrap; }
+.gk-phone a:hover { color: var(--gk-amber); }
+.gk-btn-small .wp-block-button__link { padding: 0.8rem 1.2rem; font-size: 0.75rem; }
+
+/* Shared type */
+.gk-eyebrow { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.gk-section h2 { margin-bottom: 1rem; }
+
+/* Hero */
+.gk-hero .wp-block-cover__inner-container { width: 100%; max-width: none; margin: 0; padding-inline: max(1.5rem, calc((100% - 1180px) / 2)); }
+.gk-hero .wp-block-cover__inner-container > * { margin-left: 0 !important; margin-right: auto !important; }
+.gk-hero h1 { max-width: 12ch; margin-block: 0.5rem 1.25rem; }
+.gk-hero p { max-width: 38rem; }
+.gk-hero--page h1 { font-size: var(--wp--preset--font-size--x-large); max-width: 20ch; }
+.gk-rating { margin: 0; font-size: 0.9rem; }
+.gk-rating strong { color: var(--gk-amber); }
+
+/* Trust bar */
+.gk-trust p { margin: 0; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Problems strip */
+.gk-problems p { font-size: 1rem; }
+
+/* Cards */
+.gk-cards { margin-top: 1.25rem; }
+.gk-card { background: var(--gk-steel); border-top: 3px solid var(--gk-amber); padding: 1.75rem; }
+.gk-card h3 { margin: 0.25rem 0 0.75rem; font-size: 1.15rem; }
+.gk-card h3 a { color: #fff; text-decoration: none; }
+.gk-card h3 a:hover { color: var(--gk-amber); }
+.gk-card__num { font-family: var(--wp--preset--font-family--poppins); font-style: italic; font-weight: 800; font-size: 1.5rem; margin: 0; }
+.gk-estimator { margin-top: 2rem; border-left: 4px solid var(--gk-amber); }
+
+/* Photos */
+.gk-photo img { width: 100%; height: auto; display: block; }
+.gk-gallery .gk-photo img { aspect-ratio: 4 / 3; object-fit: cover; }
+.gk-gallery figcaption { text-align: center; }
+
+/* Lists and steps */
+.gk-checks { list-style: none; padding-left: 0; }
+.gk-checks li { padding-left: 1.75rem; position: relative; margin-bottom: 0.6rem; }
+.gk-checks li::before { content: "✓"; position: absolute; left: 0; color: #b87d00; font-weight: 800; }
+.gk-step__num { font-family: var(--wp--preset--font-family--poppins); font-style: italic; font-weight: 800; font-size: 3rem; line-height: 1; color: var(--gk-amber); margin: 0; }
+
+/* Reviews */
+.gk-review { background: #fff; padding: 1.5rem; border-top: 3px solid var(--gk-amber); }
+
+/* City / size chips */
+.gk-chip { margin: 0; padding: 0.45rem 1rem; border: 1px solid #4a4a4a; font-size: 0.875rem; font-weight: 600; }
+.gk-chips--light .gk-chip { border-color: #c9c9c4; }
+
+/* FAQ */
+.wp-block-details summary { cursor: pointer; font-weight: 700; }
+
+/* Page rhythm: no stray gaps between header, sections and footer */
+.wp-site-blocks > *, .wp-site-blocks main > * { margin-block-start: 0; margin-block-end: 0; }
+.gk-footer a, .gk-cta a, .gk-trust a { color: inherit; }
+.gk-steps h3 { font-size: 1.15rem; margin: 0.5rem 0; }
+
+/* Footer */
+.gk-footer a { text-decoration: none; }
+.gk-footer a:hover { color: var(--gk-amber); }
+.gk-footer__list { list-style: none; padding-left: 0; }
+.gk-footer__list li { margin-bottom: 0.35rem; }
+.gk-footer p a { color: inherit; }
+
+/* Mobile sticky bar */
+.gk-mobilebar.gk-mobilebar { display: none; }
+@media (max-width: 781px) {
+	.gk-mobilebar.gk-mobilebar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; margin: 0; gap: 0; }
+	.gk-mobilebar > p { flex: 1; margin: 0; text-align: center; }
+	.gk-mobilebar a { display: block; padding: 1rem 0.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; text-decoration: none; }
+	.gk-mobilebar__call a { background: #fff; color: var(--gk-black); }
+	.gk-mobilebar__book a { background: var(--gk-amber); color: var(--gk-black); }
+	.gk-footer { padding-bottom: 5rem !important; }
+	.gk-header__cta .gk-phone, .gk-header__cta .wp-block-buttons { display: none; }
+	.gk-header { position: static; }
+}
