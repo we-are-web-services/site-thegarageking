@@ -1,13 +1,15 @@
 # New WordPress site build (from waws-wp-site-template)
 
 Start in `waws-hub` (its `CLAUDE.md` has the shared rules; they apply here). This repo is the **build** of one client site,
-then its archive. Last updated: 2026-10-17.
+then its archive. Last updated: 2026-10-17 (rule 1 changed for this site).
 
 ## Rules
 
-1. **Placeholder content only.** This repo may be switched to public so David can open the Playground link. Never commit
-   real client copy, logos, contact details, customer data, passwords, keys or exports of a live database. Credentials are
-   referred to by name only.
+1. **Only what is already public.** This repo may be switched to public so David can open the Playground link. For this site
+   (David, 2026-10-17) text, photos, reviews and business contact details copied from the client's current public site
+   (thegarageking.com) are fine. Never commit anything private: client questionnaire answers, customer data, prices or
+   package terms not yet public, internal notes, passwords, keys, or exports of a live database. Raw client material stays
+   in Drive. Credentials are referred to by name only.
 2. Work on a `claude/<short-topic>` branch and open a pull request; never push to `main`. David says "merge."
 3. The repo is the source of truth while building. Edits made inside Playground are lost on reload, so every change goes
    into the repo (blueprint, `theme/`, `plugins/`, `content/`).
