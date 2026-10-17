@@ -26,6 +26,7 @@ Kept in one place; update it when an item is done. Last updated 2026-10-17. Noth
 - Test the blueprint in real Playground; read pages 15 to 18 of the questionnaire PDF as images for their colours.
 
 ## D. Found on the current site (not in the sitemap)
+Done 2026-10-17: the prototype now shows the current site's text and photos (see `docs/site-notes.md`), without the shop. Still to decide below.
 Checked 2026-10-17 from the site's public sitemaps and pages:
 - **A working shop and cart:** `/shop/`, `/cart/`, `/checkout/`, `/my-account/` and about 35 products, many of them "installation appointment" and packs (the client's answer says no online sales today, so confirm what these are for before removing them).
 - **`/steel-cabinets/`** already exists; the sitemap calls cabinets new at `/garage-cabinets`. Keep the old URL or redirect it.

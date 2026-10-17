@@ -5,10 +5,10 @@
  * Categories: garage-king
  */
 $cards = array(
-	array( '01', 'Overhead Storage Solutions', 'Get your garage floor back without throwing anything away.', '/overhead-racks' ),
+	array( '01', 'Overhead Storage Solutions', 'Adjustable, heavy duty overhead storage in nine sizes, to get your seasonal items up and out of the way.', '/overhead-racks' ),
 	array( '02', 'Motorized Overhead Storage', 'Press a button and the platform lowers to you. No ladders.', '/motorized-overhead-racks' ),
-	array( '03', 'Slatwall', 'Everything off the floor, visible and within reach.', '/slatwall' ),
-	array( '04', 'Garage Cabinets', 'Hide the clutter and lock up the tools.', '/garage-cabinets' ),
+	array( '03', 'Slatwall', 'Heavy duty storage with a dust free, durable surface and a full accessory system.', '/slatwall' ),
+	array( '04', 'Garage Cabinets', 'Fully welded steel cabinets. A new line is on the way.', '/steel-cabinets' ),
 	array( '05', 'Floor Coatings', 'A finished floor that looks like a showroom.', '/garage-floor-coatings' ),
 	array( '06', 'Garage Ventilation', 'Cool the garage down so you can actually use it.', '/garage-exhaust-fans' ),
 );

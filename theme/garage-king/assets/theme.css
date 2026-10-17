@@ -90,3 +90,22 @@
 	.gk-header__cta .gk-phone, .gk-header__cta .wp-block-buttons { display: none; }
 	.gk-header { position: static; }
 }
+
+/* Real-content pages */
+.gk-badge img { height: 64px; width: auto; max-width: 100%; }
+.gk-badges { align-items: center; }
+.gk-badges .wp-block-column { flex-basis: auto !important; flex-grow: 0; }
+.gk-offer { border-left: 4px solid var(--gk-amber); padding: 0.8rem 1.2rem; background: #fff7e0; font-weight: 600; }
+.gk-gallery-grid { gap: 0.6rem; }
+.gk-gallery-grid figure { margin: 0; }
+.gk-gallery-grid img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; height: 100%; }
+.gk-checks--light li::before { color: var(--gk-amber); }
+.gk-estimator--light { background: #fff; border-left: 4px solid var(--gk-amber); }
+.gk-review__who { margin: 0; font-weight: 700; }
+.gk-blog .wp-block-post-title a { text-decoration: none; }
+.gk-blog .wp-block-post-title a:hover { color: #b87d00; }
+.gk-blog .wp-block-post-template > li { margin-bottom: 2rem; }
+.gk-blog img { height: auto; max-width: 100%; }
+.gk-blog .wp-block-post-date { color: #6b6b66; }
+
+.gk-footer .wp-block-column p { overflow-wrap: anywhere; }
