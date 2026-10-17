@@ -1,8 +1,11 @@
-# Site notes (copy into each site repo and fill in)
+# Site notes: The Garage King
 
-- Client / domain:
-- Started from template commit:
-- Prototype link and its repo visibility right now:
-- Decisions and why:
-- Plugins added beyond the standard list, and why:
-- Not seen or not done:
+- **Client / domain:** The Garage King, thegarageking.com (current site on Divi; replaced at launch).
+- **Started from template:** waws-wp-site-template at 6950b64 (2026-10-17).
+- **Prototype link:** works only while this repo is public. Repo is private by default. Generate the blueprint with `python3 scripts/make-blueprint.py` after changing theme files; the link is
+  `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/blueprint.json`
+- **Raw client material:** Drive, `Clients/The Garage King/New Website Build Materials`. The brief is `docs/brief.md`.
+- **Decisions and why:** block theme and core blocks, not Divi (design in files, no licence in a public repo). Source order: questionnaire and current site decide content; the mockup is design reference only.
+- **Plugins added beyond the standard list:** none yet. Gravity Forms (client's current form tool) is paid and is not in the prototype.
+- **Real content pass (2026-10-17):** text and photos from the current site were copied into the prototype so the client can see a fuller site (David's request). Online sales (shop, cart, checkout, account, products) were left out on purpose. Pages: Home, Overhead Racks, Slatwall, Steel Cabinets (kept at `/steel-cabinets`, the existing URL; the site says "coming soon"), Pricing, Photo Gallery (34 photos), Testimonials, Contact, Privacy Policy, `/ga`, `/nextdoor` and `/sael`, plus the 21 blog posts. Pages that do not exist on the current site (How It Works, FAQ, About, Service Areas, Solutions hub, Motorized, Floor Coatings, Ventilation, Book a consultation) were built from the sitemap and questionnaire and are flagged on the page. Business phones, email, hours and showroom address come from the current site's public Contact page. Regenerate with `python3 scripts/import_content.py`, `python3 scripts/build_pages.py`, `python3 scripts/make-blueprint.py --php`.
+- **Not seen or not done:** the blueprint is untested in real Playground (the test tool needs Node 24; the build was checked in a local WordPress 7.1 with SQLite and Chromium screenshots). Before/after slider, price estimator, forms, scheduler, pop-up, GoHighLevel and Jobber links, real photos and video, and pages other than Home and Overhead Storage are not built.

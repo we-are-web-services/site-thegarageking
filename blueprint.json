@@ -1,23 +1,438 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "landingPage": "/",
-  "preferredVersions": { "php": "8.3", "wp": "latest" },
-  "features": { "networking": true },
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
   "steps": [
-    { "step": "login", "username": "admin", "password": "password" },
     {
-      "step": "setSiteOptions",
-      "options": { "blogname": "Sandbox Site", "blogdescription": "Prototype - placeholder content only" }
+      "step": "login",
+      "username": "admin",
+      "password": "password"
     },
     {
-      "step": "installPlugin",
-      "pluginData": { "resource": "wordpress.org/plugins", "slug": "duplicate-page" },
-      "options": { "activate": true }
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king"
     },
     {
-      "step": "installPlugin",
-      "pluginData": { "resource": "wordpress.org/plugins", "slug": "code-snippets" },
-      "options": { "activate": true }
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/parts"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/templates"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/theme.css",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/theme.css"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/functions.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/functions.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/parts/footer.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/parts/footer.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/parts/header-landing.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/parts/header-landing.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/parts/header.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/parts/header.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/cta-band.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/cta-band.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/faq-preview.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/faq-preview.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/home-hero.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/home-hero.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/how-it-works-preview.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/how-it-works-preview.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/king-difference.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/king-difference.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/packages.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/packages.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-about.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-about.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-channel-landing.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-channel-landing.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-contact.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-contact.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-faq.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-faq.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-floor-coatings.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-floor-coatings.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-ga.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-ga.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-gallery.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-gallery.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-how-it-works.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-how-it-works.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-motorized.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-motorized.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-overhead-racks.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-overhead-racks.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-pricing.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-pricing.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-privacy.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-privacy.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-schedule-quote.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-schedule-quote.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-service-areas.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-service-areas.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-slatwall.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-slatwall.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-solutions.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-solutions.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-steel-cabinets.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-steel-cabinets.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-stub.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-stub.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-testimonials.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-testimonials.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-thank-you.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-thank-you.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-ventilation.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-ventilation.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/projects.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/projects.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/reviews.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/reviews.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/service-area.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/service-area.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/solutions.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/solutions.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/sound-familiar.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/sound-familiar.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/trust-bar.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/trust-bar.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/welcome.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/welcome.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/style.css",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/style.css"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/404.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/404.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/front-page.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/front-page.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/home.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/home.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/index.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/index.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/page-landing.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/page-landing.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/page.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/page.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/single.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/single.html"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/theme.json",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/theme.json"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/gk-posts.json",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/content/posts.json"
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "garage-king"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nif (!function_exists('wp_insert_post')) { require_once '/wordpress/wp-load.php'; }\nupdate_option('blogname','The Garage King');\nupdate_option('blogdescription','Prototype: text and photos copied from the current site');\nupdate_option('permalink_structure','/%postname%/');\n$home = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));\n$pages = json_decode('{\"overhead-racks\": [\"Overhead Garage Storage Racks\", \"page-overhead-racks\", \"\"], \"slatwall\": [\"Slatwall\", \"page-slatwall\", \"\"], \"steel-cabinets\": [\"Steel Cabinets\", \"page-steel-cabinets\", \"\"], \"garage-storage-solutions\": [\"Garage Storage Solutions\", \"page-solutions\", \"\"], \"motorized-overhead-racks\": [\"Motorized Overhead Storage\", \"page-motorized\", \"\"], \"garage-floor-coatings\": [\"Garage Floor Coatings\", \"page-floor-coatings\", \"\"], \"garage-exhaust-fans\": [\"Garage Ventilation\", \"page-ventilation\", \"\"], \"garage-storage-photos\": [\"Our Work\", \"page-gallery\", \"\"], \"how-it-works\": [\"How It Works\", \"page-how-it-works\", \"\"], \"garage-storage-pricing\": [\"Pricing and Offers\", \"page-pricing\", \"\"], \"testimonials\": [\"Reviews\", \"page-testimonials\", \"\"], \"faq\": [\"FAQ\", \"page-faq\", \"\"], \"about\": [\"About\", \"page-about\", \"\"], \"contact-us\": [\"Contact\", \"page-contact\", \"\"], \"service-areas\": [\"Service Areas\", \"page-service-areas\", \"\"], \"schedule-quote\": [\"Book a Free Design Consultation\", \"page-schedule-quote\", \"\"], \"privacy-policy\": [\"Privacy Policy\", \"page-privacy\", \"\"], \"terms\": [\"Terms of Use and SMS Terms\", \"page-stub\", \"\"], \"thank-you\": [\"Thank You\", \"page-thank-you\", \"\"], \"ga\": [\"Garage Storage Offer\", \"page-ga\", \"page-landing\"], \"nextdoor\": [\"Nextdoor Offer\", \"page-channel-landing\", \"page-landing\"], \"sael\": [\"SAEL Offer\", \"page-channel-landing\", \"page-landing\"], \"blog\": [\"Garage Tips and Ideas\", \"\", \"\"]}', true);\nforeach ($pages as $slug => $row) {\n  if (get_page_by_path($slug)) { continue; }\n  $content = $row[1] ? '<!-- wp:pattern {\"slug\":\"garage-king/'.$row[1].'\"} /-->' : '';\n  $id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>$row[0],'post_name'=>$slug,'post_content'=>$content));\n  if ($row[2]) { update_post_meta($id, '_wp_page_template', $row[2]); }\n  if ($slug === 'blog') { $blog = $id; }\n}\nupdate_option('show_on_front','page'); update_option('page_on_front',$home); update_option('page_for_posts',$blog);\n$file = defined('GK_POSTS') ? GK_POSTS : '/wordpress/gk-posts.json';\nif (file_exists($file) && !get_posts(array('post_type'=>'post','numberposts'=>1))) {\n  foreach (json_decode(file_get_contents($file), true) as $p) {\n    wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));\n  }\n}\nflush_rewrite_rules();"
     }
   ]
 }
