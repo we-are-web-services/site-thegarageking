@@ -3,6 +3,7 @@
 Kept in one place; update it when an item is done. Last updated 2026-10-17. Nothing here is live.
 
 ## A. Waiting on David
+0. **Start with `docs/next-session.md`** (written 2026-10-18).
 1. Merge site-thegarageking#1, waws-hub#22, waws-wp-site-template#2; delete the merged branches (tick "Automatically delete head branches" in each repo's settings).
 2. Switch this repo to public, open the Playground link, switch it back. If the link fails, the blueprint's file-loading steps are the first suspect.
 3. Confirm: Under Construction on while building, off at launch? Prototype skips server-only plugins (backups, Hide Login, Redis, Postmark, Companion)?
@@ -19,6 +20,7 @@ Kept in one place; update it when an item is done. Last updated 2026-10-17. Noth
 - Legal review of the privacy policy and SMS terms.
 
 ## C. To build
+- **Two-step quote flow (client's steps, from questionnaire page 14 and the live `/ga` page):** step 1 lead details saved at once, step 2 optional details, photos and call scheduling, then the thank-you page. Not built yet; see `docs/next-session.md`.
 - Quote form next steps: connect to GoHighLevel and Jobber (set `GK_LEAD_WEBHOOK` or write an adapter once their details arrive); set `GK_LEAD_EMAIL`; build the step 2 scheduler; the Contact page form (its own thank-you URL); decide on invisible spam protection beyond the hidden field; lead photos are saved in the public uploads folder (move them to private storage before launch); data retention for leads; have the client's lawyer review the consent text.
 - Estimator: drop the $40 rule and add the buy-one-get-one rules once the client confirms (docs/follow-ups section B); the header nav wraps below about 1100 px (add a menu button on tablets).
 - Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
