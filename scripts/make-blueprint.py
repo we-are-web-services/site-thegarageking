@@ -17,33 +17,39 @@ theme = root / "theme" / "garage-king"
 dest = "/wordpress/wp-content/themes/garage-king"
 raw = f"https://raw.githubusercontent.com/{repo}/{ref}/theme/garage-king"
 
-# slug: (title, pattern, template)
+# slug: (title, pattern, template, parent slug)
 PAGES = {
-    "overhead-racks": ("Overhead Garage Storage Racks", "page-overhead-racks", ""),
-    "slatwall": ("Slatwall", "page-slatwall", ""),
-    "steel-cabinets": ("Steel Cabinets", "page-steel-cabinets", ""),
-    "garage-storage-solutions": ("Garage Storage Solutions", "page-solutions", ""),
-    "motorized-overhead-racks": ("Motorized Overhead Storage", "page-motorized", ""),
-    "garage-floor-coatings": ("Garage Floor Coatings", "page-floor-coatings", ""),
-    "garage-exhaust-fans": ("Garage Ventilation", "page-ventilation", ""),
-    "garage-storage-photos": ("Our Work", "page-gallery", ""),
-    "how-it-works": ("How It Works", "page-how-it-works", ""),
-    "garage-storage-pricing": ("Pricing and Offers", "page-pricing", ""),
-    "testimonials": ("Reviews", "page-testimonials", ""),
-    "faq": ("FAQ", "page-faq", ""),
-    "about": ("About", "page-about", ""),
-    "contact-us": ("Contact", "page-contact", ""),
-    "service-areas": ("Service Areas", "page-service-areas", ""),
-    "schedule-quote": ("Book a Free Design Consultation", "page-schedule-quote", ""),
-    "privacy-policy": ("Privacy Policy", "page-privacy", ""),
-    "terms": ("Terms of Use and SMS Terms", "page-stub", ""),
-    "thank-you": ("Thank You", "page-thank-you", ""),
-    "ga": ("Garage Storage Offer", "page-ga", "page-landing"),
-    "nextdoor": ("Nextdoor Offer", "page-channel-landing", "page-landing"),
-    "sael": ("SAEL Offer", "page-channel-landing", "page-landing"),
-    "blog": ("Garage Tips and Ideas", "", ""),
+    "overhead-racks": ("Overhead Garage Storage Racks", "page-overhead-racks", "", ""),
+    "slatwall": ("Slatwall", "page-slatwall", "", ""),
+    "steel-cabinets": ("Steel Cabinets", "page-steel-cabinets", "", ""),
+    "garage-storage-solutions": ("Garage Storage Solutions", "page-solutions", "", ""),
+    "motorized-overhead-racks": ("Motorized Overhead Storage", "page-motorized", "", ""),
+    "garage-floor-coatings": ("Garage Floor Coatings", "page-floor-coatings", "", ""),
+    "garage-exhaust-fans": ("Garage Ventilation", "page-ventilation", "", ""),
+    "garage-storage-photos": ("Our Work", "page-gallery", "", ""),
+    "how-it-works": ("How It Works", "page-how-it-works", "", ""),
+    "garage-storage-pricing": ("Pricing and Offers", "page-pricing", "", ""),
+    "testimonials": ("Reviews", "page-testimonials", "", ""),
+    "faq": ("FAQ", "page-faq", "", ""),
+    "about": ("About", "page-about", "", ""),
+    "contact-us": ("Contact", "page-contact", "", ""),
+    "service-areas": ("Service Areas", "page-service-areas", "", ""),
+    "schedule-quote": ("Book a Free Design Consultation", "page-schedule-quote", "", ""),
+    "privacy-policy": ("Privacy Policy", "page-privacy", "", ""),
+    "terms": ("Terms of Use and SMS Terms", "page-stub", "", ""),
+    "thank-you": ("Thank You", "page-thank-you", "", ""),
+    "ga": ("Garage Storage Offer", "page-ga", "page-landing", ""),
+    "nextdoor": ("Nextdoor Offer", "page-channel-landing", "page-landing", ""),
+    "sael": ("SAEL Offer", "page-channel-landing", "page-landing", ""),
+    "blog": ("Garage Tips and Ideas", "", "", ""),
+    # one thank-you URL per form, so each lead is counted once in analytics (sitemap page 15)
+    "quote": ("Thank You", "page-thank-you", "", "thank-you"),
+    "contact": ("Thank You", "page-thank-you", "", "thank-you"),
+    "ads": ("Thank You", "page-thank-you", "", "thank-you"),
 }
 
+plugins = root / "plugins"
+plugin_files = sorted(p for p in plugins.rglob("*") if p.is_file() and p.name != ".gitkeep")
 files = sorted(p for p in theme.rglob("*") if p.is_file())
 dirs = sorted({str(p.parent.relative_to(theme)) for p in files} - {"."})
 
@@ -54,6 +60,14 @@ for d in dirs:
 for p in files:
     rel = p.relative_to(theme).as_posix()
     steps.append({"step": "writeFile", "path": f"{dest}/{rel}", "data": {"resource": "url", "url": f"{raw}/{rel}"}})
+for p in plugin_files:
+    rel = p.relative_to(plugins)
+    if rel.parent != pathlib.Path("."):
+        steps.append({"step": "mkdir", "path": f"/wordpress/wp-content/plugins/{rel.parent.as_posix()}"})
+    steps.append({"step": "writeFile", "path": f"/wordpress/wp-content/plugins/{rel.as_posix()}",
+                  "data": {"resource": "url", "url": f"https://raw.githubusercontent.com/{repo}/{ref}/plugins/{rel.as_posix()}"}})
+for d in sorted({p.relative_to(plugins).parts[0] for p in plugin_files}):
+    steps.append({"step": "activatePlugin", "pluginPath": f"{d}/{d}.php"})
 steps.append({"step": "writeFile", "path": "/wordpress/gk-posts.json", "data": {"resource": "url", "url": f"https://raw.githubusercontent.com/{repo}/{ref}/content/posts.json"}})
 steps.append({"step": "activateTheme", "themeFolderName": "garage-king"})
 
@@ -62,16 +76,19 @@ php = ["<?php",
        "update_option('blogname','The Garage King');",
        "update_option('blogdescription','Prototype: text and photos copied from the current site');",
        "update_option('permalink_structure','/%postname%/');",
-       "$home = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));",
+       "$h = get_page_by_path('home');",
+       "$home = $h ? $h->ID : wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));",
        f"$pages = json_decode('{json.dumps(PAGES)}', true);",
        "foreach ($pages as $slug => $row) {",
-       "  if (get_page_by_path($slug)) { continue; }",
+       "  $path = $row[3] ? $row[3].'/'.$slug : $slug;",
+       "  if (get_page_by_path($path)) { continue; }",
+       "  $parent = $row[3] ? get_page_by_path($row[3]) : null;",
        "  $content = $row[1] ? '<!-- wp:pattern {\"slug\":\"garage-king/'.$row[1].'\"} /-->' : '';",
-       "  $id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>$row[0],'post_name'=>$slug,'post_content'=>$content));",
+       "  $id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>$row[0],'post_name'=>$slug,'post_parent'=>$parent ? $parent->ID : 0,'post_content'=>$content));",
        "  if ($row[2]) { update_post_meta($id, '_wp_page_template', $row[2]); }",
-       "  if ($slug === 'blog') { $blog = $id; }",
        "}",
-       "update_option('show_on_front','page'); update_option('page_on_front',$home); update_option('page_for_posts',$blog);",
+       "$blog = get_page_by_path('blog');",
+       "update_option('show_on_front','page'); update_option('page_on_front',$home); if ($blog) { update_option('page_for_posts',$blog->ID); }",
        "$file = defined('GK_POSTS') ? GK_POSTS : '/wordpress/gk-posts.json';",
        "if (file_exists($file) && !get_posts(array('post_type'=>'post','numberposts'=>1))) {",
        "  foreach (json_decode(file_get_contents($file), true) as $p) {",

@@ -18,6 +18,17 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'garage-king', get_theme_file_uri( 'assets/theme.css' ), array(), wp_get_theme()->get( 'Version' ) );
 } );
 
+add_action( 'wp_enqueue_scripts', function () {
+	if ( ! is_page( 'garage-storage-pricing' ) ) {
+		return;
+	}
+	wp_enqueue_script( 'gk-estimator', get_theme_file_uri( 'assets/estimator.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	wp_localize_script( 'gk-estimator', 'gkEstimator', array(
+		'pricingUrl' => get_theme_file_uri( 'assets/pricing.json' ),
+		'bookUrl'    => home_url( '/schedule-quote/' ),
+	) );
+} );
+
 add_action( 'init', function () {
 	register_block_pattern_category( 'garage-king', array( 'label' => 'The Garage King' ) );
 } );

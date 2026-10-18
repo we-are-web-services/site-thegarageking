@@ -241,10 +241,24 @@ body += grp(
 body += pattern("cta-band")
 write("page-steel-cabinets", "Steel cabinets page", body)
 
-# ---------- Pricing (existing page is a title and two buttons; packages are placeholders) ----------
-body = page_hero("Garage Storage Pricing", "Pricing and offers", "Packages, current offers and a project estimator.", UP + "2021/04/20190718_125822-scaled.jpg")
-body += grp(pa(OFFER, cls="gk-offer") + pa("The current site's Latest Deals link opens a Google Doc. In the new design the offers live on this page. Prices, packages and the estimator below are placeholders until the client confirms them.") + badges(), width="900px", pad="50")
-body += pattern("packages") + pattern("cta-band")
+# ---------- Pricing: offers, packages, working estimator (prices are sample values in assets/pricing.json) ----------
+PKG = [("The Emerson", "A starter combination of overhead racks and slatwall.", "Package contents and price to be confirmed"),
+       ("The Duke", "A larger combination for bigger garages.", "Package contents and price to be confirmed"),
+       ("The Earl", "Our top combination for the whole garage.", "Package contents and price to be confirmed")]
+EST = ('<!-- wp:html -->\n<div id="gk-estimator" class="gk-est" aria-live="polite">Loading the estimator…'
+       '<noscript> The estimator needs JavaScript. Call us for a quote.</noscript></div>\n<!-- /wp:html -->\n')
+body = page_hero("Garage Storage Pricing", "Pricing and offers", "See an estimate, pick a package, then book a free design consultation.", UP + "2021/04/20190718_125822-scaled.jpg")
+body += grp(hd(2, "What affects the price") + ul(["Garage size", "Ceiling height", "The mix of products you choose"], cls="gk-checks")
+            + pa("We plan the right combination with you on a free phone consultation, by phone or video, and give you a written price. Professional installation is included.")
+            + pa(OFFER, cls="gk-offer"), width="900px", pad="50")
+body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
+            + card_row([card(n, d, ) .replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
+            bg="ink", color="white")
+body += grp(pa("Price estimator", cls="gk-eyebrow") + hd(2, "Build your estimate", cls="gk-anchor") + pa("Choose your area and your solutions to see an estimated investment. It is an estimate only; your written price comes after the planning call.")
+            + EST, width="1180px", pad="60", cls="gk-section gk-section--estimator")
+body += grp(hd(2, "Financing") + pa("The client plans to offer financing. Details to come.")
+            + hd(2, "Compare to off-site storage") + pa("A garage that stores your things costs less than renting a storage unit month after month."), bg="grey", width="820px", pad="50")
+body += grp(badges(), width="900px", pad="40") + pattern("cta-band")
 write("page-pricing", "Pricing page", body)
 
 # ---------- Photo gallery (34 photos on the current page) ----------
@@ -378,11 +392,10 @@ write("page-service-areas", "Service areas page", body)
 
 body = page_hero("Book a Free Design Consultation", "Step 1 of 2", "Tell us about your garage. After you submit, you pick a time for your free phone consultation.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg").replace("min-height:46vh", "min-height:34vh").replace('"minHeight":46', '"minHeight":34')
 body += grp(cols([
-    hd(2, "Your details")
-    + grp(pa("Form goes here: first and last name, email, phone, city, garage size and what you want to store, plus an optional photo upload. A scheduler for step 2 follows. The form and scheduler are not built yet (GoHighLevel and Jobber details are pending).")
-          + btns(btn("Call 844-MY-GKING", f"tel:{TOLL_TEL}")), bg="grey", cls="gk-estimator gk-estimator--light", pad="40", full=False),
+    hd(2, "Your details") + "<!-- wp:shortcode -->\n[gk_quote_form]\n<!-- /wp:shortcode -->\n",
     hd(2, "What happens next")
     + ul(["We call at the time you choose, by phone or video.", "We plan the right mix for your ceiling height and space.", "You get a written price and an installation date."], cls="gk-checks")
+    + pa("Prefer to talk now? Call " + TOLL + ".", cls="")
     + badges(),
 ]), width="1180px")
 write("page-schedule-quote", "Schedule quote page", body)

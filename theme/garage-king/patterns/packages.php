@@ -18,7 +18,7 @@ $pk = array(
 <h2 class="wp-block-heading has-white-color has-text-color">Packages and a price estimator</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor":"muted"} -->
-<p class="has-muted-color has-text-color">Three popular combinations, plus a project estimator so you can see an investment range before you call. Prices and the estimator are placeholders until the client confirms them.</p>
+<p class="has-muted-color has-text-color">Three popular combinations, plus a project estimator so you can see an investment before you call.</p>
 <!-- /wp:paragraph -->
 <!-- wp:columns {"className":"gk-cards","style":{"spacing":{"blockGap":{"top":"1.25rem","left":"1.25rem"}}}} -->
 <div class="wp-block-columns gk-cards">
@@ -39,14 +39,14 @@ $pk = array(
 <!-- /wp:columns -->
 <!-- wp:group {"className":"gk-estimator","backgroundColor":"steel","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-group gk-estimator has-steel-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"textColor":"white"} -->
-<h3 class="wp-block-heading has-white-color has-text-color">Project estimator (placeholder)</h3>
+<h3 class="wp-block-heading has-white-color has-text-color">Project estimator</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor":"muted"} -->
-<p class="has-muted-color has-text-color">1. Choose your service area &nbsp;·&nbsp; 2. Choose your solutions &nbsp;·&nbsp; 3. Pick quantities &nbsp;·&nbsp; See an estimated investment. The calculator rules and prices are not decided yet.</p>
+<p class="has-muted-color has-text-color">Choose your service area and your solutions, pick quantities, and see an estimated investment. Sample prices until the client confirms them.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/garage-storage-pricing">See pricing</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/garage-storage-pricing/#gk-estimator">Try the estimator</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

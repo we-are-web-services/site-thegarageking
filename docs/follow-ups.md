@@ -3,12 +3,14 @@
 Kept in one place; update it when an item is done. Last updated 2026-10-17. Nothing here is live.
 
 ## A. Waiting on David
+0. **Start with `docs/next-session.md`** (written 2026-10-18).
 1. Merge site-thegarageking#1, waws-hub#22, waws-wp-site-template#2; delete the merged branches (tick "Automatically delete head branches" in each repo's settings).
 2. Switch this repo to public, open the Playground link, switch it back. If the link fails, the blueprint's file-loading steps are the first suspect.
 3. Confirm: Under Construction on while building, off at launch? Prototype skips server-only plugins (backups, Hide Login, Redis, Postmark, Companion)?
 4. Decide what to do with the old site's content that the sitemap does not mention (section D).
 
 ## B. Needs the client (through Rhonda)
+- Estimator: the real prices (now sample values in `assets/pricing.json`), which products and units to offer, what the multi-rack offer covers, whether the BOGO offers belong in the estimator, floor coating price per square foot, and whether to show an exact figure or a range.
 - Real prices, package contents and what the estimator multiplies; garages completed; Google review count; real reviews (or live feed).
 - Photos and video (shared Drive folder, not received); team photos; customer permission for photos and names.
 - Phone, email, hours, address for the footer; warranty and installation details; product specs (motorized racks, slatwall colours and finishes, cabinets, floor coating system, fans), which the client deferred to the designer.
@@ -18,7 +20,10 @@ Kept in one place; update it when an item is done. Last updated 2026-10-17. Noth
 - Legal review of the privacy policy and SMS terms.
 
 ## C. To build
-- Pricing and Offers page with the estimator and three packages; Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
+- **Two-step quote flow (client's steps, from questionnaire page 14 and the live `/ga` page):** step 1 lead details saved at once, step 2 optional details, photos and call scheduling, then the thank-you page. Not built yet; see `docs/next-session.md`.
+- Quote form next steps: connect to GoHighLevel and Jobber (set `GK_LEAD_WEBHOOK` or write an adapter once their details arrive); set `GK_LEAD_EMAIL`; build the step 2 scheduler; the Contact page form (its own thank-you URL); decide on invisible spam protection beyond the hidden field; lead photos are saved in the public uploads folder (move them to private storage before launch); data retention for leads; have the client's lawyer review the consent text.
+- Estimator: drop the $40 rule and add the buy-one-get-one rules once the client confirms (docs/follow-ups section B); the header nav wraps below about 1100 px (add a menu button on tablets).
+- Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
 - Quote page and forms: photo upload, "reason for contact" including existing customer, one thank-you URL per form (no "take photos" tip on the thank-you page, ask on the form).
 - Five more product pages from the overhead page; Lifts; a bookmarked Garage Door Installation and Repairs page; Service Areas and the city page template.
 - Ad landing page `/ga` and keyword variants; `/nextdoor` and `/sael` if still active; Privacy, Terms and SMS; 404.

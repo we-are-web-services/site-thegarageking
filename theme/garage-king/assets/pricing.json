@@ -1,0 +1,24 @@
+{
+  "sample": true,
+  "note": "Sample prices for the prototype. The real prices come from the client and are set here before launch.",
+  "areas": ["Austin area", "San Antonio area", "Bell County", "Hill Country and other Central Texas"],
+  "products": [
+    { "id": "motor", "label": "Motorized overhead racks", "unit": "racks", "price": 3000, "max": 10, "help": "Press a button and the platform lowers to you." },
+    { "id": "fixed", "label": "Overhead storage racks", "unit": "racks", "price": 1000, "max": 10, "help": "Nine sizes, installed into the roof trusses." },
+    { "id": "slat", "label": "Slatwall (cases)", "unit": "cases", "price": 1000, "max": 20, "help": "Panels, trim and accessories are quoted on the call." },
+    { "id": "floor", "label": "Floor coatings", "unit": "sq ft", "price": 6, "max": 1500, "step": 50, "help": "A one car garage is about 250 sq ft." },
+    { "id": "fan", "label": "Garage ventilation fans", "unit": "fans", "price": 2000, "max": 4, "help": "Cool the garage down in a Texas summer." }
+  ],
+  "quoteOnly": [
+    { "id": "cabinets", "label": "Steel cabinets", "help": "A new cabinet line is coming. We quote cabinets on the call." }
+  ],
+  "discounts": [
+    {
+      "type": "perUnitOver",
+      "products": ["motor", "fixed"],
+      "threshold": 1,
+      "amountPerUnit": 40,
+      "label": "Multi-rack offer: $40 off each rack when you buy more than one"
+    }
+  ]
+}
