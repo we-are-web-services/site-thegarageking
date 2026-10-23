@@ -24,12 +24,12 @@ Added 2026-10-23: what Lifts means; which garage door services and brands; are c
 - Legal review of the privacy policy and SMS terms.
 
 ## C. To build
-Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage Doors, Floor Coatings, How It Works, About, Terms and SMS Terms); keep `/garage-exhaust-fans` as the URL or move to `/garage-ventilation` (David's call); connect the form to GoHighLevel and Jobber and point the scheduler button at GoHighLevel's calendar when confirmed; confirm what the current site's form does, to match it (see `docs/next-session.md`).
-- ~~Two-step quote flow~~ **Built 2026-10-23** (step 2 uses the client's Calendly link until GoHighLevel's calendar is confirmed).
+Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage Doors, Floor Coatings, How It Works, About, Terms and SMS Terms); keep `/garage-exhaust-fans` as the URL or move to `/garage-ventilation` (David's call); connect the form to GoHighLevel and Jobber and point the scheduler at GoHighLevel's calendar when confirmed (the live site's leads go to LeadPages; where they are used next is unknown).
+- ~~Two-step quote flow~~ **Built 2026-10-23, matched to the live site's steps** (form, then Calendly on the thank-you page). Decide whether the Contact form should match the live Gravity Forms fields (address, how they heard, discount code, garage size, ceiling height).
 - Quote form next steps: connect to GoHighLevel and Jobber (set `GK_LEAD_WEBHOOK` or write an adapter once their details arrive); set `GK_LEAD_EMAIL`; build the step 2 scheduler; the Contact page form (its own thank-you URL); decide on invisible spam protection beyond the hidden field; lead photos are saved in the public uploads folder (move them to private storage before launch); data retention for leads; have the client's lawyer review the consent text.
 - ~~Estimator: drop the $40 rule~~ **Done 2026-10-23** (regular prices only). The header nav wraps below about 1100 px (add a menu button on tablets).
 - Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
-- ~~Quote page and forms~~ **Done 2026-10-23:** photo upload in step 2, reason for contact on the Contact form, one thank-you URL per form.
+- ~~Quote page and forms~~ **Done 2026-10-23:** reason for contact on the Contact form, one thank-you URL per form. Photo upload was dropped to keep the live site's steps; add it back only if the client asks.
 - Lifts and Garage Door Installation and Repairs pages exist as drafts (2026-10-23) and need the client's content; Project Stories is a Coming Soon page. Still to do: Floor Coatings, Cabinets and Terms content; the city page template.
 - Ad landing page `/ga` and keyword variants; `/nextdoor` and `/sael` if still active; Privacy, Terms and SMS; 404.
 - Scroll-triggered incentive pop-up; real logo; self-hosted fonts instead of Google Fonts; SEO (titles, descriptions, LocalBusiness, Review and FAQ schema); WebP images; accessibility check; tablet check of the header.

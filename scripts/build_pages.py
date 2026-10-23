@@ -430,10 +430,13 @@ body += grp(cols([
 ]), width="1180px")
 write("page-schedule-quote", "Schedule quote page", body)
 
-body = grp(hd(1, "Thank You", align="center") + pa("We received your request and will reply within 24 hours. If you have not picked a time for your free consultation yet, choose one now.", align="center")
+body = grp(hd(1, "Almost there!", align="center")
+           + pa("We received your details and will reply within 24 hours.", align="center")
+           + hd(2, "Step 2 of 2: schedule your free consultation", align="center")
+           + pa("Choose a time now to hear your current offers. If you join from a computer we can review garage layouts and pricing with you, and if you would like, we can even take a look at your garage on video.", align="center")
            + "<!-- wp:shortcode -->\n[gk_scheduler]\n<!-- /wp:shortcode -->\n"
-           + pa("While you wait, measure your ceiling height and look through our work.", align="center")
-           + btns(btn("See our work", "/garage-storage-photos"), center=True), width="720px", pad="60")
+           + pa("For quality assurance, we are unable to install materials that were purchased independently.", align="center", size="small")
+           + btns(btn("See our work", "/garage-storage-photos"), center=True), width="900px", pad="60")
 write("page-thank-you", "Thank you page", body)
 
 # ---------- Solutions hub and product pages without a page on the current site ----------
