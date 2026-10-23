@@ -14,8 +14,8 @@ Kept in one place; update it when an item is done. Last updated 2026-10-23. Noth
 
 ## B. Needs the client (through Rhonda)
 Added 2026-10-23: what Lifts means; which garage door services and brands; are cabinets for sale now (Deluxe Cabinet Package) or "coming soon"; slatwall capacity (200 lbs per panel on the current page vs 300 lbs per square foot in Latest Deals); approval of the footer tagline "Can't find a thing? Ask the Garage King!" (replaces "Call the Garage King!"); contents and prices of The Emerson, The Duke and The Earl; when the next limited-time offers start (the last ended 2026-10-19).
-- Estimator: the real prices (now sample values in `assets/pricing.json`), which products and units to offer, what the multi-rack offer covers, whether the BOGO offers belong in the estimator, floor coating price per square foot, and whether to show an exact figure or a range.
-- Real prices, package contents and what the estimator multiplies; garages completed; Google review count; real reviews (or live feed).
+- ~~Estimator~~ **Out of scope (David, 2026-10-23):** nothing on the current site to match it, and the client has not confirmed having the information to base estimates on. Revisit only if that changes; the last working version is in git history (commit e1a9cfd).
+- Package contents and prices (The Emerson, The Duke, The Earl); garages completed; Google review count; real reviews (or live feed).
 - Photos and video (shared Drive folder, not received); team photos; customer permission for photos and names.
 - Phone, email, hours, address for the footer; warranty and installation details; product specs (motorized racks, slatwall colours and finishes, cabinets, floor coating system, fans), which the client deferred to the designer.
 - Financing provider; the primary offer wording and the incentive pop-up offer; the tagline and branding tweaks; a name for "Slatwall" (red).
@@ -25,11 +25,11 @@ Added 2026-10-23: what Lifts means; which garage door services and brands; are c
 
 ## C. To build
 Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage Doors, Floor Coatings, How It Works, About, Terms and SMS Terms); keep `/garage-exhaust-fans` as the URL or move to `/garage-ventilation` (David's call); connect the form to GoHighLevel and Jobber and point the scheduler at GoHighLevel's calendar when confirmed (the live site's leads go to LeadPages; where they are used next is unknown).
-- ~~Two-step quote flow~~ **Built 2026-10-23, matched to the live site's steps** (form, then Calendly on the thank-you page). Decide whether the Contact form should match the live Gravity Forms fields (address, how they heard, discount code, garage size, ceiling height).
+- ~~Two-step quote flow~~ **Built 2026-10-23, matched to the live site's steps** (form, then Calendly on the thank-you page). The Contact form now has the live Gravity Forms fields (discount code is optional here although the live label shows an asterisk; confirm).
 - Quote form next steps: connect to GoHighLevel and Jobber (set `GK_LEAD_WEBHOOK` or write an adapter once their details arrive); set `GK_LEAD_EMAIL`; build the step 2 scheduler; the Contact page form (its own thank-you URL); decide on invisible spam protection beyond the hidden field; lead photos are saved in the public uploads folder (move them to private storage before launch); data retention for leads; have the client's lawyer review the consent text.
-- ~~Estimator: drop the $40 rule~~ **Done 2026-10-23** (regular prices only). The header nav wraps below about 1100 px (add a menu button on tablets).
+- ~~Estimator~~ **Removed from scope 2026-10-23.** The header nav wraps below about 1100 px (add a menu button on tablets).
 - Our Work with before/after sliders; project story template; How It Works (merge steps 2 and 3); FAQ; About; Reviews (Google feed); Contact.
-- ~~Quote page and forms~~ **Done 2026-10-23:** reason for contact on the Contact form, one thank-you URL per form. Photo upload was dropped to keep the live site's steps; add it back only if the client asks.
+- ~~Quote page and forms~~ **Done 2026-10-23:** quote form in two steps and the Contact form matched to the live site's fields; one thank-you URL per form. Photo upload and estimates are out of scope (David, 2026-10-23). reCAPTCHA: add later if needed (the forms use a hidden field and a minimum fill time for now).
 - Lifts and Garage Door Installation and Repairs pages exist as drafts (2026-10-23) and need the client's content; Project Stories is a Coming Soon page. Still to do: Floor Coatings, Cabinets and Terms content; the city page template.
 - Ad landing page `/ga` and keyword variants; `/nextdoor` and `/sael` if still active; Privacy, Terms and SMS; 404.
 - Scroll-triggered incentive pop-up; real logo; self-hosted fonts instead of Google Fonts; SEO (titles, descriptions, LocalBusiness, Review and FAQ schema); WebP images; accessibility check; tablet check of the header.

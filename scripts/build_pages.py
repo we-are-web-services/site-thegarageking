@@ -265,9 +265,7 @@ def price_table(rows, head=("Product", "Regular price")):
 PKG = [("The Emerson", "A starter combination of overhead storage and slatwall.", "Package contents and price to be confirmed"),
        ("The Duke", "A larger combination for bigger garages.", "Package contents and price to be confirmed"),
        ("The Earl", "Our top combination for the whole garage.", "Package contents and price to be confirmed")]
-EST = ('<!-- wp:html -->\n<div id="gk-estimator" class="gk-est" aria-live="polite">Loading the estimator…'
-       '<noscript> The estimator needs JavaScript. Complete our contact form for a quote.</noscript></div>\n<!-- /wp:html -->\n')
-body = page_hero("Garage Storage Pricing", "Pricing and offers", "Regular pricing, an estimator, then a free design consultation to plan your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
+body = page_hero("Garage Storage Pricing", "Pricing and offers", "Regular pricing and what each product includes, then a free design consultation to plan your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
 body += grp(hd(2, "Regular pricing") + price_table(PRICES)
             + pa("Pricing is for conventional garages. Professional installation is included.", size="small")
             + hd(3, "Accessories and add-ons") + price_table(EXTRAS, ("Item", "Price"))
@@ -287,8 +285,6 @@ body += grp(hd(2, "Current offers", color="white", align="center") + pa("We run 
 body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
             + card_row([card(n, d, ).replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
             bg="ink", color="white")
-body += grp(pa("Price estimator", cls="gk-eyebrow") + hd(2, "Build your estimate", cls="gk-anchor") + pa("Choose your area and your solutions to see an estimated investment at regular prices. It is an estimate only; your written price comes after your consultation.")
-            + EST, width="1180px", pad="60", cls="gk-section gk-section--estimator")
 body += grp(hd(2, "Financing") + pa("The client plans to offer financing. Details to come.")
             + hd(2, "Compare to off-site storage") + pa("A garage that stores your things costs less than renting a storage unit month after month."), bg="grey", width="820px", pad="50")
 body += grp(badges(), width="900px", pad="40") + pattern("cta-band")

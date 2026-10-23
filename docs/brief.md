@@ -62,7 +62,7 @@ Main navigation order: Solutions (dropdown), Our Work, How It Works, Pricing, Re
 
 - **Call to action order:** book a call first, tappable phone second.
 - **Wording:** use "overhead storage solutions" / "storage solution systems" and "automated or remote storage solutions" to convey luxury. Use "Garage Ventilation" instead of exhaust fans.
-- **Pricing page:** show regular pricing, a **cost estimator tool**, and three combo packages named The Emerson, The Duke and The Earl. Financing: planning to offer. Prices and package contents are in Drive, not here.
+- **Pricing page:** show regular pricing, a **cost estimator tool**, and three combo packages named The Emerson, The Duke and The Earl. Financing: planning to offer. Prices and package contents are in Drive, not here. **Update 2026-10-23: the estimator is out of scope** (nothing on the current site to match; client has not confirmed having the information).
 - **Offers:** recurring offers exist (rack, slatwall, cabinet packages). The pop-up should give an incentive **before** the visitor loses interest, for example "book now" and receive the current offer.
 - **Add:** Lifts as a product or service, and a page for Garage Door Installation and Repairs (bookmarked for later).
 - **Service area:** Austin, San Antonio and Bell County are ticked; mainly all of Central Texas, San Antonio and the Texas Hill Country, plus a list of suburbs (full list in Drive). Houston and Dallas not served; Houston not added to ad targeting.

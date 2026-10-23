@@ -14,7 +14,7 @@
 <h1 class="wp-block-heading has-white-color has-text-color">Garage Storage Pricing</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">Regular pricing, an estimator, then a free design consultation to plan your garage.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Regular pricing and what each product includes, then a free design consultation to plan your garage.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
@@ -187,21 +187,6 @@
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"className": "gk-section gk-section--estimator", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
-<div class="wp-block-group alignfull gk-section gk-section--estimator" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"className": "gk-eyebrow"} -->
-<p class="gk-eyebrow">Price estimator</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level": 2, "className": "gk-anchor"} -->
-<h2 class="wp-block-heading gk-anchor">Build your estimate</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Choose your area and your solutions to see an estimated investment at regular prices. It is an estimate only; your written price comes after your consultation.</p>
-<!-- /wp:paragraph -->
-<!-- wp:html -->
-<div id="gk-estimator" class="gk-est" aria-live="polite">Loading the estimator…<noscript> The estimator needs JavaScript. Complete our contact form for a quote.</noscript></div>
-<!-- /wp:html -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "820px"}, "align": "full", "backgroundColor": "grey", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->

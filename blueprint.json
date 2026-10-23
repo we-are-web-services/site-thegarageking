@@ -36,22 +36,6 @@
     },
     {
       "step": "writeFile",
-      "path": "/wordpress/wp-content/themes/garage-king/assets/estimator.js",
-      "data": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/estimator.js"
-      }
-    },
-    {
-      "step": "writeFile",
-      "path": "/wordpress/wp-content/themes/garage-king/assets/pricing.json",
-      "data": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/pricing.json"
-      }
-    },
-    {
-      "step": "writeFile",
       "path": "/wordpress/wp-content/themes/garage-king/assets/theme.css",
       "data": {
         "resource": "url",
@@ -468,18 +452,6 @@
       "data": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/plugins/gk-leads/assets/quote-form.css"
-      }
-    },
-    {
-      "step": "mkdir",
-      "path": "/wordpress/wp-content/plugins/gk-leads/assets"
-    },
-    {
-      "step": "writeFile",
-      "path": "/wordpress/wp-content/plugins/gk-leads/assets/quote-form.js",
-      "data": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/plugins/gk-leads/assets/quote-form.js"
       }
     },
     {

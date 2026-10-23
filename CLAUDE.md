@@ -8,7 +8,7 @@ then its archive. Last updated: 2026-10-17 (rule 1 changed for this site).
 1. **Only what is already public.** This repo may be switched to public so David can open the Playground link. For this site
    (David, 2026-10-17) text, photos, reviews and business contact details copied from the client's current public site
    (thegarageking.com) are fine. Never commit anything private: client questionnaire answers, customer data, prices or
-   package terms not yet public (exception 2026-10-23: the regular prices in `theme/garage-king/assets/pricing.json` come from the client's Latest Deals document, which the current site links to publicly; David to confirm), internal notes, passwords, keys, or exports of a live database. Raw client material stays
+   package terms not yet public (exception 2026-10-23: the regular prices on the Pricing page come from the client's Latest Deals document, which the current site links to publicly; David to confirm), internal notes, passwords, keys, or exports of a live database. Raw client material stays
    in Drive. Credentials are referred to by name only.
 2. Work on a `claude/<short-topic>` branch and open a pull request; never push to `main`. David says "merge."
 3. The repo is the source of truth while building. Edits made inside Playground are lost on reload, so every change goes
