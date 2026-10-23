@@ -22,6 +22,7 @@ Added 2026-10-23: what Lifts means; which garage door services and brands; are c
 - Final city-page list; whether /nextdoor and /sael are still used; which ad landing variants at launch; who approves new thank-you URLs in Google Ads.
 - GoHighLevel and Jobber details (waiting); Calendly to GoHighLevel move; Drip access; LeadPages decision; Gravity Forms licence; tracking containers (Tag Manager, Meta Pixel, call tracking) to carry over.
 - Legal review of the privacy policy and SMS terms.
+- Testimonials and the blog setup (David, 2026-10-23): should testimonials be a blog category, or pulled live from Google Reviews? And does the client want a traditional Posts page (for example `/blog`) for the articles? Not changed at launch; see `docs/later-scope.md` ("Post-launch restructuring").
 
 ## C. To build
 Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage Doors, Floor Coatings, How It Works, About, Terms and SMS Terms); keep `/garage-exhaust-fans` as the URL or move to `/garage-ventilation` (David's call); connect the form to GoHighLevel and Jobber and point the scheduler at GoHighLevel's calendar when confirmed (the live site's leads go to LeadPages; where they are used next is unknown).
