@@ -41,7 +41,7 @@ Done 2026-10-17: the prototype now shows the current site's text and photos (see
 Checked 2026-10-17 from the site's public sitemaps and pages:
 - **A working shop and cart:** `/shop/`, `/cart/`, `/checkout/`, `/my-account/` and about 35 products, many of them "installation appointment" and packs (the client's answer says no online sales today, so confirm what these are for before removing them).
 - **`/steel-cabinets/`** already exists; the Website Content Outline calls cabinets new at `/garage-cabinets`. **Decided (David, 2026-10-23):** keep `/steel-cabinets`, and `/garage-cabinets` redirects to it. Restructuring cabinets later is in `docs/later-scope.md` ("Post-launch restructuring").
-- **21 blog posts and 5 individual review posts** at root URLs (for example `/fall-garage-prep/`). **Included (David, 2026-10-23):** all 26 are imported at their current addresses; the 5 reviews are in the category "Customer Reviews". They carry search history.
+- **21 blog posts and 5 individual review posts** at root URLs (for example `/fall-garage-prep/`). **Included (David, 2026-10-23):** all 26 are imported at their current addresses; the posts keep the live categories (Blog, Testimonials), so `/category/blog/` and `/category/testimonials/` exist as on the live site. They carry search history.
 - `/lumpsumcontract/` and a test page `/test-woocommerce-page/`.
 - Pages that do **not** exist today: About, FAQ, How It Works, Service Areas, Blog index. `/ga`, `/nextdoor` and `/sael` do exist.
 

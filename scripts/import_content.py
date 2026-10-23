@@ -95,7 +95,8 @@ def main():
     pages = get("pages?per_page=100&_fields=slug,content")
     priv = next(p for p in pages if p["slug"] == "privacy-policy")
     (ROOT / "content" / "privacy.json").write_text(json.dumps(blocks(priv["content"]["rendered"]), indent=1))
-    posts = get("posts?per_page=100&_fields=slug,date,title,content")
+    cats = {c["id"]: c["name"] for c in get("categories?per_page=100&_fields=id,name")}
+    posts = get("posts?per_page=100&_fields=slug,date,title,content,categories")
     keep = []
     for p in posts:
         title = html.unescape(p["title"]["rendered"])
@@ -104,7 +105,8 @@ def main():
         bl = blocks(p["content"]["rendered"])
         text = [b for b in bl if b[0] == "p"]
         keep.append({"slug": p["slug"], "title": title, "date": p["date"],
-                     "category": "Customer Reviews" if p["slug"].startswith("review-by") else "",
+                     # same categories as the live site (Blog, Testimonials), so /category/blog/ and /category/testimonials/ exist too
+                     "category": next((cats[c] for c in p["categories"] if cats.get(c) != "Uncategorized"), ""),
                      "excerpt": (text[0][1][:180] + "…") if text else "", "content": markup(bl)})
     (ROOT / "content" / "posts.json").write_text(json.dumps(keep, indent=1))
     print("privacy blocks:", len(blocks(priv["content"]["rendered"])), "posts:", len(keep))
