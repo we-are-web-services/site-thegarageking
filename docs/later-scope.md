@@ -13,7 +13,7 @@ Ideas and features that are **not** in the current scope of work but may be buil
 | **Live Google reviews feed** | Reviews are copied text for now | Google review access; the real review count | `docs/follow-ups.md` section B |
 | **Scroll-triggered incentive pop-up** (not on the quote, thank-you, contact or ad pages) | Not built; the offer wording is not confirmed | The client's incentive offer | `docs/brief.md` sections 2 and 4 |
 | **City pages** (`/service-areas/[city]`) and a map | The service area is one statement for now (David, 2026-10-23); the city chips were removed | Final list of cities; local content for each | `docs/brief.md` section 4; old chips in git history (`patterns/service-area.php` on `main`) |
-| **Blog** (`/blog`) | Phase 2 in the client's Website Content Outline & Questionnaire; the 21 current posts are copied over | Who writes new posts; decision on redirecting or keeping old posts | `docs/follow-ups.md` section D |
+| **Blog** (`/blog`) | Phase 2 in the client's Website Content Outline & Questionnaire; the 21 current posts and 5 review posts are already imported (2026-10-23) | Who writes new posts; decision on redirecting or keeping old posts | `docs/follow-ups.md` section D |
 | **Video** (walkthroughs, motorized rack demo, install time-lapse, video testimonials) | Shoot not planned | Video files and captions | `docs/brief.md` section 4 |
 | **Financing section** | The client plans to offer financing; details unknown | Financing provider and terms | Pricing page |
 | **Offer display after booking** (limited-time offers shown to the visitor once they book) | Offers are given at booking by phone or video for now | Client's offer rules and dates (the last ones ended 2026-10-19) | Pricing page "Current offers" |

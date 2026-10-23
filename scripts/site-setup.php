@@ -19,7 +19,8 @@ update_option('show_on_front','page'); update_option('page_on_front',$home); if 
 $file = defined('GK_POSTS') ? GK_POSTS : '/wordpress/gk-posts.json';
 if (file_exists($file) && !get_posts(array('post_type'=>'post','numberposts'=>1))) {
   foreach (json_decode(file_get_contents($file), true) as $p) {
-    wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));
+    $pid = wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));
+    if (!empty($p['category']) && $pid && !is_wp_error($pid)) { require_once ABSPATH.'wp-admin/includes/taxonomy.php'; wp_set_post_categories($pid, array(wp_create_category($p['category']))); }
   }
 }
 flush_rewrite_rules();

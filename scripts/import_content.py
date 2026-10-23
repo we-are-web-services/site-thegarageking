@@ -99,11 +99,12 @@ def main():
     keep = []
     for p in posts:
         title = html.unescape(p["title"]["rendered"])
-        if p["slug"].startswith(("review-by", "google", "2653")) or "<meta" in title:
-            continue  # reviews are shown on the Reviews page; the others are verification files
+        if p["slug"].startswith(("google", "2653")) or "<meta" in title:
+            continue  # site verification files, not content
         bl = blocks(p["content"]["rendered"])
         text = [b for b in bl if b[0] == "p"]
         keep.append({"slug": p["slug"], "title": title, "date": p["date"],
+                     "category": "Customer Reviews" if p["slug"].startswith("review-by") else "",
                      "excerpt": (text[0][1][:180] + "…") if text else "", "content": markup(bl)})
     (ROOT / "content" / "posts.json").write_text(json.dumps(keep, indent=1))
     print("privacy blocks:", len(blocks(priv["content"]["rendered"])), "posts:", len(keep))
