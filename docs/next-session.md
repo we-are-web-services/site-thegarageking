@@ -33,4 +33,4 @@ Open a session in `waws-hub`, say "continue The Garage King", and attach `site-t
 - Unread: pages 15 to 18 of the questionnaire PDF as images (their colours).
 - Photos are linked from the current site; download them into the new site before launch, or they break when the old site is replaced.
 - Branches: delete merged branches (Delete branch button); tick "Automatically delete head branches" in each repo.
-- Full to-do list: `docs/follow-ups.md`. Decisions: `docs/site-notes.md`. What the site should be: `docs/brief.md`.
+- Items parked for another scope of work: `docs/later-scope.md`. Full to-do list: `docs/follow-ups.md`. Decisions: `docs/site-notes.md`. What the site should be: `docs/brief.md`.

@@ -1,6 +1,6 @@
 # Follow-ups: The Garage King
 
-Kept in one place; update it when an item is done. Last updated 2026-10-23. Nothing here is live.
+Kept in one place; update it when an item is done. Ideas set aside for another scope of work are in `docs/later-scope.md`. Last updated 2026-10-23. Nothing here is live.
 
 ## A. Waiting on David
 0. **Start with `docs/next-session.md`** (written 2026-10-23).
