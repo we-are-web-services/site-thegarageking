@@ -4,7 +4,7 @@
 The text below was copied from the live site's public pages (2026-10-17) so the client can see the new design
 with real content. Online-sales pages (shop, cart, checkout, my-account, products) are left out on purpose:
 the client has no online sales today. Run from the repo root:  python3 scripts/build_pages.py
-Pages that do not exist on the current site are built from the client's sitemap and are marked in docs/brief.md.
+Pages that do not exist on the current site are built from the client's Website Content Outline & Questionnaire and are marked in docs/brief.md.
 """
 import html
 import json
@@ -379,8 +379,8 @@ body = (page_hero("Privacy Policy", "Legal", "", UP + "2012/03/Slatwall-Garage-K
         + grp(privacy_blocks(priv), width="820px"))
 write("page-privacy", "Privacy policy page", body)
 
-# ---------- Pages built from the client's sitemap (not on the current site) ----------
-body = page_hero("How It Works", "From first call to finished garage", "Condensed from the sitemap: request, plan, install, enjoy.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
+# ---------- Pages built from the client's Website Content Outline & Questionnaire (not on the current site) ----------
+body = page_hero("How It Works", "From first call to finished garage", "Condensed from the Website Content Outline: request, plan, install, enjoy.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
 steps = [("Complete the contact form", "Tell us about your garage and pick a time for your free consultation."),
          ("Planning call and written price", "By phone or video: ceiling height, garage size, what you store, photos. You get a recommendation and a written price."),
          ("Installation day", "Arrival window, how the crew protects your home, how long it takes, and cleanup. Most storage installations are completed within one day."),
@@ -455,7 +455,7 @@ simple_product("page-motorized", "Motorized Overhead Storage Racks", "Automated 
                ["Wireless remote with keyed lockout", "Super duty seat belt webbing with 1,500 lb. break strength per corner", "Four-point outside corner lift system for platform stability", "No ladder, no lifting heavy bins overhead", "A short captioned demo video will go here"],
                UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg")
 simple_product("page-floor-coatings", "Garage Floor Coatings", "Floor coatings", "Finish the floor.",
-               ["A coated floor finishes the garage. This page is built from the client's sitemap; the current site has no floor coatings page.",
+               ["A coated floor finishes the garage. This page is built from the client's Website Content Outline & Questionnaire; the current site has no floor coatings page.",
                 "The coating system, installation steps, colour and flake options, cure time and warranty come from the client."],
                ["Coating system explained in plain language", "Surface prep, crack repair, base coat, flake and clear top coat", "Colour and flake chip gallery", "Professional coating versus a hardware-store kit"],
                UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")

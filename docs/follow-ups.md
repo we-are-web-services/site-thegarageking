@@ -8,7 +8,7 @@ Kept in one place; update it when an item is done. Ideas set aside for another s
 2. Switch this repo to public, open the Playground link, tell Claude what you see, switch it back. If it fails, the blueprint's file-loading steps are the first suspect.
 3. Confirm the regular prices may stay in the repo (from the client's publicly linked Latest Deals document; see `CLAUDE.md` rule 1).
 4. Confirm: Under Construction on while building, off at launch? Prototype skips server-only plugins (backups, Hide Login, Redis, Postmark, Companion)?
-5. Decide what to do with the old site's content that the sitemap does not mention (section D).
+5. Decide what to do with the old site's content that the Website Content Outline does not mention (section D).
 6. Decide whether the service area keeps the city chips (removed 2026-10-23; the old list is in git history, `patterns/service-area.php` before that commit).
 7. Hub to-do 21: design the deploy step from the repo to the server.
 
@@ -36,12 +36,12 @@ Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage
 - Scroll-triggered incentive pop-up; real logo; self-hosted fonts instead of Google Fonts; SEO (titles, descriptions, LocalBusiness, Review and FAQ schema); WebP images; accessibility check; tablet check of the header.
 - Test the blueprint in real Playground; read pages 15 to 18 of the questionnaire PDF as images for their colours.
 
-## D. Found on the current site (not in the sitemap)
+## D. Found on the current site (not in the Website Content Outline)
 Done 2026-10-17: the prototype now shows the current site's text and photos (see `docs/site-notes.md`), without the shop. Still to decide below.
 Checked 2026-10-17 from the site's public sitemaps and pages:
 - **A working shop and cart:** `/shop/`, `/cart/`, `/checkout/`, `/my-account/` and about 35 products, many of them "installation appointment" and packs (the client's answer says no online sales today, so confirm what these are for before removing them).
-- **`/steel-cabinets/`** already exists; the sitemap calls cabinets new at `/garage-cabinets`. Keep the old URL or redirect it.
-- **21 blog posts and 5 individual review posts** at root URLs (for example `/fall-garage-prep/`). The sitemap treats the blog as new and phase 2. Decide: bring them over, redirect them, or drop them. They carry search history.
+- **`/steel-cabinets/`** already exists; the Website Content Outline calls cabinets new at `/garage-cabinets`. Keep the old URL or redirect it.
+- **21 blog posts and 5 individual review posts** at root URLs (for example `/fall-garage-prep/`). The Website Content Outline treats the blog as new and phase 2. Decide: bring them over, redirect them, or drop them. They carry search history.
 - `/lumpsumcontract/` and a test page `/test-woocommerce-page/`.
 - Pages that do **not** exist today: About, FAQ, How It Works, Service Areas, Blog index. `/ga`, `/nextdoor` and `/sael` do exist.
 

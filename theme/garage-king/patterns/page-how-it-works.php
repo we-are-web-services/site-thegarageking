@@ -14,7 +14,7 @@
 <h1 class="wp-block-heading has-white-color has-text-color">How It Works</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">Condensed from the sitemap: request, plan, install, enjoy.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Condensed from the Website Content Outline: request, plan, install, enjoy.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->

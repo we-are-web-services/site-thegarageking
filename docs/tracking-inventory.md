@@ -24,6 +24,6 @@ The Tag Manager container, Meta Pixel, the Calendly listener and the other tags 
 
 ## Open items
 
-- `/ma`: a landing page on the live site that is not in the client's sitemap. Needs the same treatment as `/ga` (build it, or redirect to `/ga`; decide with the client).
+- `/ma`: a landing page on the live site that is not in the client's Website Content Outline & Questionnaire. Needs the same treatment as `/ga` (build it, or redirect to `/ga`; decide with the client).
 - Where the buttons on `/nextdoor` and `/sael` lead, and whether those pages record conversions.
 - Whether the Calendly scheduled-call conversion is recorded on the thank-you page (ask Justin, who has the Tag Manager and Google Ads access).

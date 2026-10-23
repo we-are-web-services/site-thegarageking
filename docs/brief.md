@@ -20,10 +20,10 @@ First fold and section list were read from the shared mockup. The mockup is a ro
 
 - **Look:** dark, high-contrast, bold italic uppercase headlines, thin vertical side navigation, large photography. Palette: near-black, white, light grey, and one amber accent (about `#FFB117`). Fonts in the mockup: Inter and Poppins. The logo is a gold crown "G" on black.
 - **Homepage sections in the mockup:** hero ("Own your garage space", family-owned message, estimate button, rating and years badges) -> offer strip -> Our Solutions (overhead storage, slatwall, full renovations, garage fans) -> "The King Difference" (not a franchise, local, direct pricing, guarantee, fast install) -> pricing section with a **project cost calculator** (service area, solution, quantity) -> before/after slider -> offer banner -> reviews -> service-area map and city list -> FAQ -> final call to action.
-- **Sitewide (from the sitemap):** sticky header with phone and one primary button; sticky mobile bar (Call Now / Book Consultation); trust bar; an incentive pop-up that appears **after scrolling** (client choice; not on quote, thank-you, contact, or ad pages; not built yet); pre-footer call to action band; footer with the tagline "Can't find a thing? Call the Garage King!" (yellow: branding and slogans to be tweaked).
+- **Sitewide (from the Website Content Outline):** sticky header with phone and one primary button; sticky mobile bar (Call Now / Book Consultation); trust bar; an incentive pop-up that appears **after scrolling** (client choice; not on quote, thank-you, contact, or ad pages; not built yet); pre-footer call to action band; footer with the tagline "Can't find a thing? Call the Garage King!" (yellow: branding and slogans to be tweaked).
 - **Readability:** comfortable text size, good contrast, pinch-to-zoom left on (the current site blocks it), captioned video.
 
-## 3. Pages (client's sitemap, 25 templates)
+## 3. Pages (client's Website Content Outline & Questionnaire, 25 templates)
 
 Keep the existing URL where marked.
 
@@ -94,11 +94,11 @@ Built on **Divi** (theme) with WooCommerce and add-ons for deposits and a QuickB
 5. **Photos and video** have not arrived, so the prototype uses placeholders.
 6. **GoHighLevel and Jobber** integration details are not specified.
 7. **Colour-coded comments** (red = no, yellow = tweak, green = go) were read from the PDF pages and are summarised in section 9.
-8. **Terminology.** The sitemap says "Pricing", the mockup uses "Pricing", "Gallery"; the client wants "Our Work". Follow the sitemap.
+8. **Terminology.** The Website Content Outline says "Pricing", the mockup uses "Pricing", "Gallery"; the client wants "Our Work". Follow the Website Content Outline.
 
 ## 8. What is built so far (first slice)
 
-Block theme `theme/garage-king` with the palette, fonts, sticky header, footer and mobile bar; the Home page (all sections from the mockup, with placeholders); one product page (Overhead Storage) to use as the template for the other five; and a placeholder page for every other page in the sitemap so every link works.
+Block theme `theme/garage-king` with the palette, fonts, sticky header, footer and mobile bar; the Home page (all sections from the mockup, with placeholders); one product page (Overhead Storage) to use as the template for the other five; and a placeholder page for every other page in the Website Content Outline so every link works.
 **Next:** Pricing page with the estimator, Our Work, How It Works, Service Areas, the quote page and form.
 Placeholder photos are linked from the current site, not copied. Phone, email and hours are placeholders (`000-000-0000`); real details are in Drive.
 
