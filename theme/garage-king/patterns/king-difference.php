@@ -21,7 +21,7 @@ $img = gk_placeholder( '2021/04/20210212_101134-scaled.jpg' );
 <h2 class="wp-block-heading">A family business, not a franchise</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>We are the boutique, family-owned and operated experts in full garage renovations: storage systems, floors and doors. You work directly with the people who own the business, and every installation is handled by our own local crew.</p>
+<p>We are the boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems. You work directly with the people who own the business, and every installation is handled by our own local crew.</p>
 <!-- /wp:paragraph -->
 <!-- wp:list {"className":"gk-checks"} -->
 <ul class="gk-checks"><!-- wp:list-item --><li><strong>Local and family run.</strong> Serving Central Texas since 2004.</li><!-- /wp:list-item -->

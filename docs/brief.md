@@ -2,7 +2,7 @@
 
 Drafted 2026-10-17 from the client folder in Drive (including the colour-coded comments on the questionnaire PDF), the email threads with the designer, the UX Pilot homepage mockup, and the live site.
 **Source order:** the questionnaire and the current site decide content and facts; the UX Pilot mockup is a design reference only; later client answers fill the placeholders.
-Written to be safe in a repo that may go public: no prices, contact details, logins or personal data. Those stay in Drive.
+Written 2026-10-17 to be safe in a repo that may go public. Updated 2026-10-23: the regular prices from the client's public Latest Deals document are now on the Pricing page; contact details come from the current public site. Logins and personal data still stay out.
 Everything here is a starting point; items marked **CONFIRM** are not settled.
 
 ## 1. Project snapshot

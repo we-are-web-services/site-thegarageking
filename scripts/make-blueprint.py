@@ -19,14 +19,17 @@ raw = f"https://raw.githubusercontent.com/{repo}/{ref}/theme/garage-king"
 
 # slug: (title, pattern, template, parent slug)
 PAGES = {
-    "overhead-racks": ("Overhead Garage Storage Racks", "page-overhead-racks", "", ""),
+    "overhead-racks": ("Overhead Storage Solutions", "page-overhead-racks", "", ""),
     "slatwall": ("Slatwall", "page-slatwall", "", ""),
     "steel-cabinets": ("Steel Cabinets", "page-steel-cabinets", "", ""),
     "garage-storage-solutions": ("Garage Storage Solutions", "page-solutions", "", ""),
-    "motorized-overhead-racks": ("Motorized Overhead Storage", "page-motorized", "", ""),
+    "motorized-overhead-racks": ("Motorized Overhead Racks", "page-motorized", "", ""),
     "garage-floor-coatings": ("Garage Floor Coatings", "page-floor-coatings", "", ""),
     "garage-exhaust-fans": ("Garage Ventilation", "page-ventilation", "", ""),
+    "lifts": ("Lifts", "page-lifts", "", ""),
+    "garage-door-installation-repairs": ("Garage Door Installation and Repairs", "page-garage-doors", "", ""),
     "garage-storage-photos": ("Our Work", "page-gallery", "", ""),
+    "project-stories": ("Project Stories", "page-project-stories", "", "garage-storage-photos"),
     "how-it-works": ("How It Works", "page-how-it-works", "", ""),
     "garage-storage-pricing": ("Pricing and Offers", "page-pricing", "", ""),
     "testimonials": ("Reviews", "page-testimonials", "", ""),
@@ -74,7 +77,7 @@ steps.append({"step": "activateTheme", "themeFolderName": "garage-king"})
 php = ["<?php",
        "if (!function_exists('wp_insert_post')) { require_once '/wordpress/wp-load.php'; }",
        "update_option('blogname','The Garage King');",
-       "update_option('blogdescription','Prototype: text and photos copied from the current site');",
+       "update_option('blogdescription','First draft: text and photos from the current site');",
        "update_option('permalink_structure','/%postname%/');",
        "$h = get_page_by_path('home');",
        "$home = $h ? $h->ID : wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));",

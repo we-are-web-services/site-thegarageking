@@ -2,7 +2,7 @@
 ( function () {
 	'use strict';
 
-	var form = document.querySelector( '.gk-qf' );
+	var form = document.querySelector( '.gk-qf:not(.gk-qf--step2)' );
 	if ( ! form ) {
 		return;
 	}

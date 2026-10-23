@@ -55,12 +55,12 @@
 		( cfg.quoteOnly || [] ).forEach( function ( q ) {
 			form.appendChild( el( 'div', { class: 'gk-est__row gk-est__row--quote' }, [
 				el( 'div', { class: 'gk-est__label' }, [ el( 'strong', { text: q.label } ), el( 'small', { text: q.help } ) ] ),
-				el( 'span', { class: 'gk-est__unit', text: 'quoted on the call' } )
+				el( 'span', { class: 'gk-est__unit', text: 'quoted at your consultation' } )
 			] ) );
 		} );
 
 		var out = el( 'div', { class: 'gk-est__result', 'aria-live': 'polite' } );
-		var cta = el( 'a', { class: 'wp-block-button__link wp-element-button gk-est__cta', href: window.gkEstimator.bookUrl, text: 'Book a Free Design Consultation to lock this in' } );
+		var cta = el( 'a', { class: 'wp-block-button__link wp-element-button gk-est__cta', href: window.gkEstimator.bookUrl, text: 'Book a call to claim current offers' } );
 
 		root.textContent = '';
 		root.appendChild( form );
@@ -134,12 +134,12 @@
 			} );
 			out.appendChild( list );
 			out.appendChild( el( 'p', { class: 'gk-est__total', text: money.format( Math.max( total, 0 ) ) } ) );
-			out.appendChild( el( 'p', { class: 'gk-est__area', text: 'Installed in the ' + areaSelect.value + '. Professional installation included.' } ) );
+			out.appendChild( el( 'p', { class: 'gk-est__area', text: 'Regular prices, ' + areaSelect.value + '. Professional installation included. Current offers are shared when you book.' } ) );
 			notes.forEach( function ( n ) {
 				out.appendChild( el( 'p', { class: 'gk-est__note', text: n } ) );
 			} );
 			if ( cfg.sample ) {
-				out.appendChild( el( 'p', { class: 'gk-est__sample', text: 'Sample prices for the prototype. Final prices come from the client.' } ) );
+				out.appendChild( el( 'p', { class: 'gk-est__sample', text: 'Sample prices. Final prices come from the client.' } ) );
 			}
 		}
 
@@ -153,6 +153,6 @@
 		} )
 		.then( build )
 		.catch( function () {
-			root.textContent = 'The estimator could not load. Call us for a quote.';
+			root.textContent = 'The estimator could not load. Complete our contact form for a quote.';
 		} );
 }() );

@@ -33,7 +33,7 @@
 <!-- /wp:details -->
 <!-- wp:details -->
 <details class="wp-block-details"><summary>What areas do you serve?</summary><!-- wp:paragraph -->
-<p>Austin, San Antonio, Bell County and the surrounding Texas Hill Country communities.</p>
+<p>We serve all Greater Austin, Greater San Antonio and surrounding areas. Don't see your town? Complete our contact form and we will let you know if we can provide for your needs and service area.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 <!-- wp:details -->
@@ -53,7 +53,7 @@
 <!-- /wp:details -->
 <!-- wp:details -->
 <details class="wp-block-details"><summary>How do I get a price?</summary><!-- wp:paragraph -->
-<p>Book a free phone consultation, with the option of video. We plan the right mix for your garage and give you a written price.</p>
+<p>Our regular pricing is on the Pricing page. For a plan and written price for your garage, complete our contact form and book a free consultation, by phone or video.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 <!-- wp:paragraph -->

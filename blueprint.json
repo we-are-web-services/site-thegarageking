@@ -196,10 +196,26 @@
     },
     {
       "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-garage-doors.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-garage-doors.php"
+      }
+    },
+    {
+      "step": "writeFile",
       "path": "/wordpress/wp-content/themes/garage-king/patterns/page-how-it-works.php",
       "data": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-how-it-works.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-lifts.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-lifts.php"
       }
     },
     {
@@ -232,6 +248,14 @@
       "data": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-privacy.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/page-project-stories.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/page-project-stories.php"
       }
     },
     {
@@ -488,7 +512,7 @@
     },
     {
       "step": "runPHP",
-      "code": "<?php\nif (!function_exists('wp_insert_post')) { require_once '/wordpress/wp-load.php'; }\nupdate_option('blogname','The Garage King');\nupdate_option('blogdescription','Prototype: text and photos copied from the current site');\nupdate_option('permalink_structure','/%postname%/');\n$h = get_page_by_path('home');\n$home = $h ? $h->ID : wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));\n$pages = json_decode('{\"overhead-racks\": [\"Overhead Garage Storage Racks\", \"page-overhead-racks\", \"\", \"\"], \"slatwall\": [\"Slatwall\", \"page-slatwall\", \"\", \"\"], \"steel-cabinets\": [\"Steel Cabinets\", \"page-steel-cabinets\", \"\", \"\"], \"garage-storage-solutions\": [\"Garage Storage Solutions\", \"page-solutions\", \"\", \"\"], \"motorized-overhead-racks\": [\"Motorized Overhead Storage\", \"page-motorized\", \"\", \"\"], \"garage-floor-coatings\": [\"Garage Floor Coatings\", \"page-floor-coatings\", \"\", \"\"], \"garage-exhaust-fans\": [\"Garage Ventilation\", \"page-ventilation\", \"\", \"\"], \"garage-storage-photos\": [\"Our Work\", \"page-gallery\", \"\", \"\"], \"how-it-works\": [\"How It Works\", \"page-how-it-works\", \"\", \"\"], \"garage-storage-pricing\": [\"Pricing and Offers\", \"page-pricing\", \"\", \"\"], \"testimonials\": [\"Reviews\", \"page-testimonials\", \"\", \"\"], \"faq\": [\"FAQ\", \"page-faq\", \"\", \"\"], \"about\": [\"About\", \"page-about\", \"\", \"\"], \"contact-us\": [\"Contact\", \"page-contact\", \"\", \"\"], \"service-areas\": [\"Service Areas\", \"page-service-areas\", \"\", \"\"], \"schedule-quote\": [\"Book a Free Design Consultation\", \"page-schedule-quote\", \"\", \"\"], \"privacy-policy\": [\"Privacy Policy\", \"page-privacy\", \"\", \"\"], \"terms\": [\"Terms of Use and SMS Terms\", \"page-stub\", \"\", \"\"], \"thank-you\": [\"Thank You\", \"page-thank-you\", \"\", \"\"], \"ga\": [\"Garage Storage Offer\", \"page-ga\", \"page-landing\", \"\"], \"nextdoor\": [\"Nextdoor Offer\", \"page-channel-landing\", \"page-landing\", \"\"], \"sael\": [\"SAEL Offer\", \"page-channel-landing\", \"page-landing\", \"\"], \"blog\": [\"Garage Tips and Ideas\", \"\", \"\", \"\"], \"quote\": [\"Thank You\", \"page-thank-you\", \"\", \"thank-you\"], \"contact\": [\"Thank You\", \"page-thank-you\", \"\", \"thank-you\"], \"ads\": [\"Thank You\", \"page-thank-you\", \"\", \"thank-you\"]}', true);\nforeach ($pages as $slug => $row) {\n  $path = $row[3] ? $row[3].'/'.$slug : $slug;\n  if (get_page_by_path($path)) { continue; }\n  $parent = $row[3] ? get_page_by_path($row[3]) : null;\n  $content = $row[1] ? '<!-- wp:pattern {\"slug\":\"garage-king/'.$row[1].'\"} /-->' : '';\n  $id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>$row[0],'post_name'=>$slug,'post_parent'=>$parent ? $parent->ID : 0,'post_content'=>$content));\n  if ($row[2]) { update_post_meta($id, '_wp_page_template', $row[2]); }\n}\n$blog = get_page_by_path('blog');\nupdate_option('show_on_front','page'); update_option('page_on_front',$home); if ($blog) { update_option('page_for_posts',$blog->ID); }\n$file = defined('GK_POSTS') ? GK_POSTS : '/wordpress/gk-posts.json';\nif (file_exists($file) && !get_posts(array('post_type'=>'post','numberposts'=>1))) {\n  foreach (json_decode(file_get_contents($file), true) as $p) {\n    wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));\n  }\n}\nflush_rewrite_rules();"
+      "code": "<?php\nif (!function_exists('wp_insert_post')) { require_once '/wordpress/wp-load.php'; }\nupdate_option('blogname','The Garage King');\nupdate_option('blogdescription','First draft: text and photos from the current site');\nupdate_option('permalink_structure','/%postname%/');\n$h = get_page_by_path('home');\n$home = $h ? $h->ID : wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));\n$pages = json_decode('{\"overhead-racks\": [\"Overhead Storage Solutions\", \"page-overhead-racks\", \"\", \"\"], \"slatwall\": [\"Slatwall\", \"page-slatwall\", \"\", \"\"], \"steel-cabinets\": [\"Steel Cabinets\", \"page-steel-cabinets\", \"\", \"\"], \"garage-storage-solutions\": [\"Garage Storage Solutions\", \"page-solutions\", \"\", \"\"], \"motorized-overhead-racks\": [\"Motorized Overhead Racks\", \"page-motorized\", \"\", \"\"], \"garage-floor-coatings\": [\"Garage Floor Coatings\", \"page-floor-coatings\", \"\", \"\"], \"garage-exhaust-fans\": [\"Garage Ventilation\", \"page-ventilation\", \"\", \"\"], \"lifts\": [\"Lifts\", \"page-lifts\", \"\", \"\"], \"garage-door-installation-repairs\": [\"Garage Door Installation and Repairs\", \"page-garage-doors\", \"\", \"\"], \"garage-storage-photos\": [\"Our Work\", \"page-gallery\", \"\", \"\"], \"project-stories\": [\"Project Stories\", \"page-project-stories\", \"\", \"garage-storage-photos\"], \"how-it-works\": [\"How It Works\", \"page-how-it-works\", \"\", \"\"], \"garage-storage-pricing\": [\"Pricing and Offers\", \"page-pricing\", \"\", \"\"], \"testimonials\": [\"Reviews\", \"page-testimonials\", \"\", \"\"], \"faq\": [\"FAQ\", \"page-faq\", \"\", \"\"], \"about\": [\"About\", \"page-about\", \"\", \"\"], \"contact-us\": [\"Contact\", \"page-contact\", \"\", \"\"], \"service-areas\": [\"Service Areas\", \"page-service-areas\", \"\", \"\"], \"schedule-quote\": [\"Book a Free Design Consultation\", \"page-schedule-quote\", \"\", \"\"], \"privacy-policy\": [\"Privacy Policy\", \"page-privacy\", \"\", \"\"], \"terms\": [\"Terms of Use and SMS Terms\", \"page-stub\", \"\", \"\"], \"thank-you\": [\"Thank You\", \"page-thank-you\", \"\", \"\"], \"ga\": [\"Garage Storage Offer\", \"page-ga\", \"page-landing\", \"\"], \"nextdoor\": [\"Nextdoor Offer\", \"page-channel-landing\", \"page-landing\", \"\"], \"sael\": [\"SAEL Offer\", \"page-channel-landing\", \"page-landing\", \"\"], \"blog\": [\"Garage Tips and Ideas\", \"\", \"\", \"\"], \"quote\": [\"Thank You\", \"page-thank-you\", \"\", \"thank-you\"], \"contact\": [\"Thank You\", \"page-thank-you\", \"\", \"thank-you\"], \"ads\": [\"Thank You\", \"page-thank-you\", \"\", \"thank-you\"]}', true);\nforeach ($pages as $slug => $row) {\n  $path = $row[3] ? $row[3].'/'.$slug : $slug;\n  if (get_page_by_path($path)) { continue; }\n  $parent = $row[3] ? get_page_by_path($row[3]) : null;\n  $content = $row[1] ? '<!-- wp:pattern {\"slug\":\"garage-king/'.$row[1].'\"} /-->' : '';\n  $id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>$row[0],'post_name'=>$slug,'post_parent'=>$parent ? $parent->ID : 0,'post_content'=>$content));\n  if ($row[2]) { update_post_meta($id, '_wp_page_template', $row[2]); }\n}\n$blog = get_page_by_path('blog');\nupdate_option('show_on_front','page'); update_option('page_on_front',$home); if ($blog) { update_option('page_for_posts',$blog->ID); }\n$file = defined('GK_POSTS') ? GK_POSTS : '/wordpress/gk-posts.json';\nif (file_exists($file) && !get_posts(array('post_type'=>'post','numberposts'=>1))) {\n  foreach (json_decode(file_get_contents($file), true) as $p) {\n    wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));\n  }\n}\nflush_rewrite_rules();"
     }
   ]
 }

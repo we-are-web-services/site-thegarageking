@@ -11,7 +11,13 @@
 <h1 class="wp-block-heading has-text-align-center">Thank You</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"align": "center"} -->
-<p class="has-text-align-center">We received your request and will reply within 24 hours. While you wait, measure your ceiling height and look through our work.</p>
+<p class="has-text-align-center">We received your request and will reply within 24 hours. If you have not picked a time for your free consultation yet, choose one now.</p>
+<!-- /wp:paragraph -->
+<!-- wp:shortcode -->
+[gk_scheduler]
+<!-- /wp:shortcode -->
+<!-- wp:paragraph {"align": "center"} -->
+<p class="has-text-align-center">While you wait, measure your ceiling height and look through our work.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->

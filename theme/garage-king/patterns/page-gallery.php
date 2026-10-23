@@ -131,6 +131,9 @@
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a Free Design Consultation</a></div>
 <!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/garage-storage-photos/project-stories">Project stories</a></div>
+<!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
 </div>

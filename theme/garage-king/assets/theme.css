@@ -84,7 +84,6 @@
 	.gk-mobilebar.gk-mobilebar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; margin: 0; gap: 0; }
 	.gk-mobilebar > p { flex: 1; margin: 0; text-align: center; }
 	.gk-mobilebar a { display: block; padding: 1rem 0.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; text-decoration: none; }
-	.gk-mobilebar__call a { background: #fff; color: var(--gk-black); }
 	.gk-mobilebar__book a { background: var(--gk-amber); color: var(--gk-black); }
 	.gk-footer { padding-bottom: 5rem !important; }
 	.gk-header__cta .gk-phone, .gk-header__cta .wp-block-buttons { display: none; }
@@ -144,3 +143,10 @@
 	.gk-btn-small .wp-block-button__link { padding: 0.7rem 0.85rem; font-size: 0.68rem; }
 	.gk-header__cta { gap: 0.75rem; }
 }
+
+/* Pricing tables */
+.gk-prices table { width: 100%; border-collapse: collapse; }
+.gk-prices th, .gk-prices td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--gk-steel, #d9d9d9); }
+.gk-prices th { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+.gk-prices td:last-child { font-weight: 700; white-space: nowrap; }
+@media (max-width: 600px) { .gk-prices td:last-child { white-space: normal; } }

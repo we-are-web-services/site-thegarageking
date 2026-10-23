@@ -5,7 +5,7 @@
  * Categories: garage-king
  */
 $pk = array(
-	array( 'The Emerson', 'A starter combination of overhead racks and slatwall.' ),
+	array( 'The Emerson', 'A starter combination of overhead storage and slatwall.' ),
 	array( 'The Duke', 'Our larger combination for bigger garages.' ),
 	array( 'The Earl', 'Package details to come from the client.' ),
 );

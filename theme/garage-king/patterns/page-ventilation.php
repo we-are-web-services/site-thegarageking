@@ -8,7 +8,7 @@
 ?>
 <!-- wp:cover {"url":"https://thegarageking.com/wp-content/uploads/2021/04/20190718_125822-scaled.jpg","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://thegarageking.com/wp-content/uploads/2021/04/20190718_125822-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
-<p class="gk-eyebrow has-amber-color has-text-color">Garage exhaust fans</p>
+<p class="gk-eyebrow has-amber-color has-text-color">Garage ventilation</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
 <h1 class="wp-block-heading has-white-color has-text-color">Garage Ventilation</h1>
@@ -22,10 +22,10 @@
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph -->
-<p>A garage that is too hot to use in the Texas summer is wasted space. Our garage exhaust fans move the heat out.</p>
+<p>A garage that is too hot to use in the Texas summer is wasted space. Our garage ventilation system cools your garage up to 20 degrees and your attic up to 40 degrees.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Specifications, power, noise level and thermostat control come from the client. The current site has no page for this product.</p>
+<p>Each system includes a thermostat and two premium aluminum intake vents with insect screens and an auxiliary frame for a double skin insulated door (insulation not included). Reflective garage door insulation is available as an add-on.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
@@ -38,10 +38,16 @@
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:list {"className":"gk-checks"} -->
 <ul class="gk-checks"><!-- wp:list-item -->
-<li>How the fan works and how it is installed</li>
+<li>Cools the garage up to 20 degrees, the attic up to 40</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Thermostat controlled</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Pairs with storage for a usable workshop or hobby space</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>How the system is installed: details from the client</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->

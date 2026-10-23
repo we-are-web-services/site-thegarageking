@@ -23,10 +23,7 @@
 <p>Cabinets coming soon! We are in research and development of a new cabinet line that we are confident will continue to lead the industry for quality, durability, and security.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Feel free to contact us for other garage storage options available right now. You can also call us to find out more about our overhead racks and slatwall garage organization solutions, or contact us if you just want to find out when our steel cabinets will be back.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Austin: <a href="tel:+15125902590">(512) 590-2590</a><br>San Antonio: <a href="tel:+12107142590">(210) 714-2590</a><br>Email: <a href="mailto:info@thegarageking.com">info@thegarageking.com</a></p>
+<p>Complete our contact form to hear about the storage solution systems available right now, including overhead storage and slatwall, or to find out when our steel cabinets will be back.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->

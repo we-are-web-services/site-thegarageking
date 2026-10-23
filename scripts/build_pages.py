@@ -176,16 +176,21 @@ def card_row(cards):
 
 
 SIZES = ["8×4 Enduro Deck", "8×3", "8×2", "6×4", "6×3", "6×2", "4×4", "4×3", "4×2"]
-TAG = "Can't find a thing? Call the Garage King!"
-OFFER = "Contact us today and receive a $40 discount off each overhead rack when you purchase more than one large rack."
+TAG = "Can't find a thing? Ask the Garage King!"
+POSITION = "The boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems."
+OFFER = "Complete our contact form to book your free design consultation and hear our current offers."
+SERVICE_AREA = "We serve all Greater Austin, Greater San Antonio and surrounding areas."
+SERVICE_CTA = "Don't see your town? Complete our contact form for a consultation to see if we can provide for your needs and service area."
 
 # ---------- Overhead racks (current page copy) ----------
-body = page_hero("Overhead Garage Storage Racks", "Overhead storage solutions",
-                 "Great for storing large, bulky items up and out of the way.", UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg")
+body = page_hero("Overhead Storage Solutions", "Overhead storage racks",
+                 "Storage solution systems for large, bulky items, up and out of the way.", UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg")
 body += grp(
     cols([
-        pa("Overhead garage storage racks are great for storing large bulky items up and out of the way. Typically these items are used seasonally and would otherwise take up valuable floor space preventing parking, walking, and cleaning.")
-        + pa("Rather than building a cumbersome wood loft our strong yet lightweight steel overhead storage racks are assembled and installed directly into the base of the roof trusses anywhere in the garage, even above garage doors! The open channel platform allows you to see your belongings from below so nothing is lost or forgotten."),
+        pa("Our overhead storage solutions are great for storing large bulky items up and out of the way. Typically these items are used seasonally and would otherwise take up valuable floor space preventing parking, walking, and cleaning.")
+        + pa("Rather than building a cumbersome wood loft our strong yet lightweight steel overhead storage racks are assembled and installed directly into the base of the roof trusses anywhere in the garage, even above garage doors! The open channel platform allows you to see your belongings from below so nothing is lost or forgotten.")
+        + pa("Nine sizes are available. We mount our stationary racks across multiple ceiling joists and bolt them into your wall framing, or flush to the wall, and we accommodate all ceiling heights.")
+        + btns(btn("Book a Free Design Consultation", "/schedule-quote"), btn("See pricing", "/garage-storage-pricing", outline=True)),
         im(UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg", "Overhead storage racks above a garage door"),
     ]) + hd(2, "Layout options for our steel overhead racks")
     + hd(3, "One car layout")
@@ -204,11 +209,11 @@ body += pattern("cta-band")
 write("page-overhead-racks", "Overhead racks page", body)
 
 # ---------- Slatwall ----------
-body = page_hero("Slatwall Garage Storage and Organization", "Slatwall", "A fully finished look, with complete flexibility of storage.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
+body = page_hero("Slatwall Garage Storage and Organization", "Slatwall", "A fully finished look, with complete flexibility of storage. A storage solution system built around your garage.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
 body += grp(
     cols([
         pa("Slatwall is a heavy duty storage and organization system designed to carry heavy loads of weight while providing a dust free durable surface. It will give your garage a fully finished look, with complete flexibility of storage. It quickly covers up messy drywall work or unsightly concrete block walls.")
-        + pa("Contact us to learn how we can help organize your garage.") + btns(btn("Book a Free Design Consultation", "/schedule-quote")),
+        + pa("Slatwall is sold by the case of four 12″ × 96″ panels, with a hidden fastening system, and it accepts heavy duty shelves and accessories. Complete our contact form to learn how we can help organize your garage.") + btns(btn("Book a Free Design Consultation", "/schedule-quote"), btn("See pricing", "/garage-storage-pricing", outline=True)),
         im(UP + "2013/01/slatwall.jpg", "Slatwall panels with storage accessories"),
     ]) + hd(2, "Current options")
     + cols([
@@ -235,26 +240,54 @@ write("page-slatwall", "Slatwall page", body)
 body = page_hero("Steel Cabinets", "Garage cabinets", "Coming soon: a new cabinet line built for quality, durability and security.", UP + "2012/03/Slatwall-Garage-King-882x563.jpg")
 body += grp(
     pa("Cabinets coming soon! We are in research and development of a new cabinet line that we are confident will continue to lead the industry for quality, durability, and security.")
-    + pa("Feel free to contact us for other garage storage options available right now. You can also call us to find out more about our overhead racks and slatwall garage organization solutions, or contact us if you just want to find out when our steel cabinets will be back.")
-    + pa(f'Austin: <a href="tel:{AUS_TEL}">{AUS}</a><br>San Antonio: <a href="tel:{SA_TEL}">{SA}</a><br>Email: <a href="mailto:{EMAIL}">{EMAIL}</a>', raw=True)
+    + pa("Complete our contact form to hear about the storage solution systems available right now, including overhead storage and slatwall, or to find out when our steel cabinets will be back.")
     + btns(btn("Book a Free Design Consultation", "/schedule-quote")), width="820px")
 body += pattern("cta-band")
 write("page-steel-cabinets", "Steel cabinets page", body)
 
-# ---------- Pricing: offers, packages, working estimator (prices are sample values in assets/pricing.json) ----------
-PKG = [("The Emerson", "A starter combination of overhead racks and slatwall.", "Package contents and price to be confirmed"),
+# ---------- Pricing: regular prices from the client's "Latest Deals" document, offers shown at booking ----------
+# Regular prices come from the client's public pricing document (linked from the current site's Pricing tab, read 2026-10-23).
+# The limited-time promotions in that document had an end date of 2026-10-19 and are not published here; offers are given when the visitor books.
+PRICES = [("Motorized overhead storage racks", "$4,600 each"), ("Overhead storage racks (fixed)", "$1,480 each"),
+          ("Slatwall, per case of four 12″ × 96″ panels", "$1,480 per case"), ("Floor coatings", "$7 per square foot"),
+          ("Garage ventilation, two car garage", "$3,380"), ("Steel cabinets", "Custom quote; the Deluxe Cabinet Package is $8,380")]
+EXTRAS = [("Deluxe hook bundle", "$650"), ("Basic hook bundle", "$350"), ("Three 30″ metal shelves", "$720"),
+          ("Reflective garage door insulation, standard 16′ two car door (sold with ventilation only)", "$570"),
+          ("Reflective garage door insulation, 16′ two car door and 8′ one car door (sold with ventilation only)", "$750")]
+
+
+def price_table(rows, head=("Product", "Regular price")):
+    body = "".join(f"<tr><td>{e(a)}</td><td>{e(b)}</td></tr>" for a, b in rows)
+    return (f'<!-- wp:table {{"className":"gk-prices"}} -->\n<figure class="wp-block-table gk-prices"><table><thead><tr><th>{e(head[0])}</th><th>{e(head[1])}</th></tr></thead>'
+            f'<tbody>{body}</tbody></table></figure>\n<!-- /wp:table -->\n')
+
+
+PKG = [("The Emerson", "A starter combination of overhead storage and slatwall.", "Package contents and price to be confirmed"),
        ("The Duke", "A larger combination for bigger garages.", "Package contents and price to be confirmed"),
        ("The Earl", "Our top combination for the whole garage.", "Package contents and price to be confirmed")]
 EST = ('<!-- wp:html -->\n<div id="gk-estimator" class="gk-est" aria-live="polite">Loading the estimator…'
-       '<noscript> The estimator needs JavaScript. Call us for a quote.</noscript></div>\n<!-- /wp:html -->\n')
-body = page_hero("Garage Storage Pricing", "Pricing and offers", "See an estimate, pick a package, then book a free design consultation.", UP + "2021/04/20190718_125822-scaled.jpg")
-body += grp(hd(2, "What affects the price") + ul(["Garage size", "Ceiling height", "The mix of products you choose"], cls="gk-checks")
-            + pa("We plan the right combination with you on a free phone consultation, by phone or video, and give you a written price. Professional installation is included.")
-            + pa(OFFER, cls="gk-offer"), width="900px", pad="50")
-body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
-            + card_row([card(n, d, ) .replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
+       '<noscript> The estimator needs JavaScript. Complete our contact form for a quote.</noscript></div>\n<!-- /wp:html -->\n')
+body = page_hero("Garage Storage Pricing", "Pricing and offers", "Regular pricing, an estimator, then a free design consultation to plan your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
+body += grp(hd(2, "Regular pricing") + price_table(PRICES)
+            + pa("Pricing is for conventional garages. Professional installation is included.", size="small")
+            + hd(3, "Accessories and add-ons") + price_table(EXTRAS, ("Item", "Price"))
+            + hd(3, "What counts as a conventional garage") + ul(["A 9′ ceiling height (typically no additional charge for ceilings under 11′)", "A flat ceiling, rather than cathedral, vaulted, gable or sloped", "A garage attached to a home built after 2004"], cls="gk-checks")
+            + pa("Have a taller ceiling? We specialize in tall ceilings. Complete our contact form for a customized quote.")
+            + btns(btn("Book a Free Design Consultation", "/schedule-quote")), width="900px", pad="50")
+body += grp(hd(2, "What each product includes", color="white")
+            + card_row([card("Motorized overhead storage racks", "A wireless remote with keyed lockout, super duty seat belt webbing with 1,500 lb. break strength per corner, and a four-point outside corner lift system for platform stability.", "/motorized-overhead-racks"),
+                        card("Overhead storage racks", "Nine sizes. Mounted across multiple ceiling joists and bolted into your wall framing, or flush to the wall, for all ceiling heights.", "/overhead-racks"),
+                        card("Slatwall", "Sold by the case of four 12″ × 96″ panels. Hidden fastening system, 300 lbs. per square foot at the surface, and it accepts heavy duty shelves and accessories.", "/slatwall")])
+            + card_row([card("Steel cabinets", "Powder coated steel, soft self-closing drawers and doors, 18 and 24 gauge available, 1,000 lb. capacity, 80″ tall lockers, mounted off the floor. The Deluxe Cabinet Package has two tall, two upper and two lower cabinets with a bamboo counter top.", "/steel-cabinets"),
+                        card("Floor coatings", "Priced by the square foot. A one car garage is about 250 square feet.", "/garage-floor-coatings"),
+                        card("Garage ventilation", "Cools your garage up to 20 degrees and the attic up to 40 degrees. Includes a thermostat and two premium aluminum intake vents with insect screens.", "/garage-exhaust-fans")]),
             bg="ink", color="white")
-body += grp(pa("Price estimator", cls="gk-eyebrow") + hd(2, "Build your estimate", cls="gk-anchor") + pa("Choose your area and your solutions to see an estimated investment. It is an estimate only; your written price comes after the planning call.")
+body += grp(hd(2, "Current offers", color="white", align="center") + pa("We run limited-time offers on racks, slatwall and cabinet packages. Complete our contact form and book your free design consultation to hear what is available now.", "muted", align="center")
+            + btns(btn("Book a call to claim current offers", "/schedule-quote"), center=True), bg="black", color="white", width="900px", pad="50")
+body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
+            + card_row([card(n, d, ).replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
+            bg="ink", color="white")
+body += grp(pa("Price estimator", cls="gk-eyebrow") + hd(2, "Build your estimate", cls="gk-anchor") + pa("Choose your area and your solutions to see an estimated investment at regular prices. It is an estimate only; your written price comes after your consultation.")
             + EST, width="1180px", pad="60", cls="gk-section gk-section--estimator")
 body += grp(hd(2, "Financing") + pa("The client plans to offer financing. Details to come.")
             + hd(2, "Compare to off-site storage") + pa("A garage that stores your things costs less than renting a storage unit month after month."), bg="grey", width="820px", pad="50")
@@ -272,7 +305,7 @@ GAL = """2021/04/20170303_180905-scaled.jpg 2021/04/20210212_101134-scaled.jpg 2
 body = page_hero("Our Work", "Photo gallery", "Photos of our team and installations in Greater Austin and San Antonio.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
 body += grp(pa("Below are some photos of our team and installation packages. We enjoy installing our garage organizers for you in Greater Austin and San Antonio. If you are interested in finding the right garage storage solution for you, contact us to provide some information about your garage.", align="center")
             + gallery([UP + g for g in GAL], "The Garage King installation photo")
-            + btns(btn("Book a Free Design Consultation", "/schedule-quote"), center=True), width="1280px")
+            + btns(btn("Book a Free Design Consultation", "/schedule-quote"), btn("Project stories", "/garage-storage-photos/project-stories", outline=True), center=True), width="1280px")
 body += pattern("cta-band")
 write("page-gallery", "Gallery page", body)
 
@@ -319,17 +352,15 @@ body += pattern("cta-band")
 write("page-testimonials", "Testimonials page", body)
 
 # ---------- Contact ----------
-body = page_hero("Contact Us", "Call the Garage King", "Schedule your free phone consultation, with the option of video.", UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg")
+body = page_hero("Contact Us", "Get in touch", "Complete the form to schedule your free consultation, by phone or video.", UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg")
 body += grp(cols([
     hd(2, "Get in touch")
-    + pa("Don't forget to schedule your free phone consultation with the option of video, and to claim your discount, after you provide your information.")
-    + pa("The Garage King: the number one garage outfitter in Austin and San Antonio.")
+    + pa("Complete the form and we will reach out within 24 hours. You can then schedule your free consultation, by phone or video.")
+    + pa(POSITION)
     + ul([f'Toll free: <a href="tel:{TOLL_TEL}">{TOLL} (844-694-5464)</a>', f'Austin: <a href="tel:{AUS_TEL}">{AUS}</a>', f'San Antonio: <a href="tel:{SA_TEL}">{SA}</a>',
           f'Email: <a href="mailto:{EMAIL}">{EMAIL}</a>', "E-fax: (512) 879-9111", "Business hours: Monday to Friday, 8 am to 4 pm",
           "Austin showroom, by appointment only: 12900 Trails End Rd, Ste. 2A, Leander, TX 78641"], cls="gk-checks") + badges(),
-    hd(2, "Send us a message")
-    + grp(pa("The contact form goes here: name, phone, city, reason for contact (new project, existing customer or service, other) and an optional message. Not built yet.")
-          + btns(btn("Book a Free Design Consultation", "/schedule-quote")), bg="grey", cls="gk-estimator gk-estimator--light", pad="40", full=False),
+    hd(2, "Send us a message") + "<!-- wp:shortcode -->\n[gk_quote_form source=\"contact\"]\n<!-- /wp:shortcode -->\n",
 ]), width="1180px")
 write("page-contact", "Contact page", body)
 
@@ -354,7 +385,7 @@ write("page-privacy", "Privacy policy page", body)
 
 # ---------- Pages built from the client's sitemap (not on the current site) ----------
 body = page_hero("How It Works", "From first call to finished garage", "Condensed from the sitemap: request, plan, install, enjoy.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
-steps = [("Request a consultation", "Short form or a phone call. Tell us about your garage."),
+steps = [("Complete the contact form", "Tell us about your garage and pick a time for your free consultation."),
          ("Planning call and written price", "By phone or video: ceiling height, garage size, what you store, photos. You get a recommendation and a written price."),
          ("Installation day", "Arrival window, how the crew protects your home, how long it takes, and cleanup. Most storage installations are completed within one day."),
          ("After the install", "Care tips and support.")]
@@ -366,11 +397,11 @@ write("page-how-it-works", "How it works page", body)
 FAQ = [("Are you a franchise?", "No. The Garage King is an independent, family-owned and operated Central Texas business, and every installation is done by our own crew."),
        ("How long does an installation take?", "Most storage solution installations are completed within one day."),
        ("Do you offer a warranty?", "Yes: a workmanship guarantee and a product warranty. Details to be confirmed with the client."),
-       ("What areas do you serve?", "Austin, San Antonio, Bell County and the surrounding Texas Hill Country communities."),
+       ("What areas do you serve?", "We serve all Greater Austin, Greater San Antonio and surrounding areas. Don't see your town? Complete our contact form and we will let you know if we can provide for your needs and service area."),
        ("How do overhead racks attach?", "Our steel racks are assembled and installed directly into the base of the roof trusses, anywhere in the garage, even above garage doors."),
        ("What fits on an overhead rack?", "Seasonal and bulky items: holiday decorations, camping gear, bins, luggage and sports equipment. The open channel platform lets you see your belongings from below."),
        ("What does slatwall hold?", "Standard duty panels hold up to 200 lbs per panel, and heavy duty panels are even stronger. Slatwall works with our accessory system and trim."),
-       ("How do I get a price?", "Book a free phone consultation, with the option of video. We plan the right mix for your garage and give you a written price.")]
+       ("How do I get a price?", "Our regular pricing is on the Pricing page. For a plan and written price for your garage, complete our contact form and book a free consultation, by phone or video.")]
 body = page_hero("Frequently Asked Questions", "FAQ", "", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg").replace("min-height:46vh", "min-height:30vh").replace('"minHeight":46', '"minHeight":30')
 body += grp("".join(details(q, a) for q, a in FAQ) + pa("Answers drafted from the current site and the client's questionnaire; the client approves the final text.", cls=""), width="820px")
 body += pattern("cta-band")
@@ -378,34 +409,35 @@ write("page-faq", "FAQ page", body)
 
 body = page_hero("About The Garage King", "Family owned and operated since 2004", "", UP + "2021/04/20101129-IMG_4456-scaled.jpg").replace("min-height:46vh", "min-height:36vh").replace('"minHeight":46', '"minHeight":36')
 body += grp(cols([
-    hd(2, "A specialist, not a franchise")
-    + pa("We specialize in professional grade garage storage, including overhead storage racks and slatwall. We strive to offer the highest quality products at an affordable price. As a specialist, we are experts at what we do and we will work with you to come up with the best solution for your garage organizational needs.")
+    hd(2, "A specialist, not a franchise") + pa(POSITION)
+    + pa("We specialize in professional grade garage storage, including overhead storage racks and slatwall. We strive to offer the highest quality products and a luxury finish. As a specialist, we are experts at what we do and we will work with you to come up with the best solution for your garage organizational needs.")
     + pa("The company story, the owner's first name and the team photos go here. The client will supply them.") + badges(),
     im(UP + "2017/07/Garage-Organization-Garage-King-1.png", "The Garage King team under an overhead storage rack"),
 ]), width="1180px")
 body += pattern("cta-band")
 write("page-about", "About page", body)
 
-body = page_hero("Service Areas", "Central Texas and the Hill Country", "Central Texas garage storage products and installation, covering greater Austin and San Antonio.", UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg")
+body = page_hero("Service Areas", "Greater Austin and Greater San Antonio", SERVICE_AREA, UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg")
 body += pattern("service-area") + cta()
 write("page-service-areas", "Service areas page", body)
 
-body = page_hero("Book a Free Design Consultation", "Step 1 of 2", "Tell us about your garage. After you submit, you pick a time for your free phone consultation.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg").replace("min-height:46vh", "min-height:34vh").replace('"minHeight":46', '"minHeight":34')
+body = page_hero("Book a Free Design Consultation", "Step 1 of 2", "Tell us about your garage. After you submit, you pick a time for your free consultation, by phone or video.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg").replace("min-height:46vh", "min-height:34vh").replace('"minHeight":46', '"minHeight":34')
 body += grp(cols([
-    hd(2, "Your details") + "<!-- wp:shortcode -->\n[gk_quote_form]\n<!-- /wp:shortcode -->\n",
+    hd(2, "Your details") + "<!-- wp:shortcode -->\n[gk_quote_form source=\"quote\"]\n<!-- /wp:shortcode -->\n",
     hd(2, "What happens next")
-    + ul(["We call at the time you choose, by phone or video.", "We plan the right mix for your ceiling height and space.", "You get a written price and an installation date."], cls="gk-checks")
-    + pa("Prefer to talk now? Call " + TOLL + ".", cls="")
+    + ul(["We meet at the time you choose, by phone or video.", "We plan the right mix for your ceiling height and space.", "You get a written price and an installation date."], cls="gk-checks")
     + badges(),
 ]), width="1180px")
 write("page-schedule-quote", "Schedule quote page", body)
 
-body = grp(hd(1, "Thank You", align="center") + pa("We received your request and will reply within 24 hours. While you wait, measure your ceiling height and look through our work.", align="center")
+body = grp(hd(1, "Thank You", align="center") + pa("We received your request and will reply within 24 hours. If you have not picked a time for your free consultation yet, choose one now.", align="center")
+           + "<!-- wp:shortcode -->\n[gk_scheduler]\n<!-- /wp:shortcode -->\n"
+           + pa("While you wait, measure your ceiling height and look through our work.", align="center")
            + btns(btn("See our work", "/garage-storage-photos"), center=True), width="720px", pad="60")
 write("page-thank-you", "Thank you page", body)
 
 # ---------- Solutions hub and product pages without a page on the current site ----------
-body = page_hero("Garage Storage Solutions", "Six product lines", "Shop by problem or by product. Every garage gets a plan.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
+body = page_hero("Garage Storage Solutions", "Eight product lines", "Shop by problem or by product. Every garage gets a plan.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
 body += pattern("solutions") + cta()
 write("page-solutions", "Solutions hub page", body)
 
@@ -418,31 +450,49 @@ def simple_product(slug, title, eyebrow, lead, paras, bullets, img):
     write(slug, title, b)
 
 
-simple_product("page-motorized", "Motorized Overhead Storage Racks", "Motorized overhead storage", "Press a button, the platform lowers to you.",
-               ["Are you in need of garage storage space but want to avoid having to climb up a ladder? Our motorized overhead storage racks allow you to effortlessly lower the platform with the simple press of a button.",
+simple_product("page-motorized", "Motorized Overhead Storage Racks", "Automated overhead storage solution", "Press a button, the platform lowers to you.",
+               ["Are you in need of garage storage space but want to avoid having to climb up a ladder? Our automated, remote-controlled storage solution systems allow you to effortlessly lower the platform with the simple press of a button.",
                 "This feature makes it easy for you to load or unload the storage rack and safely return it to the ceiling where it will be out of the way."],
-               ["No ladder, no lifting heavy bins overhead", "Great for heavy or frequently used items and high ceilings", "A short captioned demo video will go here", "Capacity, safety features, ceiling and power requirements: details from the client"],
+               ["Wireless remote with keyed lockout", "Super duty seat belt webbing with 1,500 lb. break strength per corner", "Four-point outside corner lift system for platform stability", "No ladder, no lifting heavy bins overhead", "A short captioned demo video will go here"],
                UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg")
 simple_product("page-floor-coatings", "Garage Floor Coatings", "Floor coatings", "Finish the floor.",
                ["A coated floor finishes the garage. This page is built from the client's sitemap; the current site has no floor coatings page.",
                 "The coating system, installation steps, colour and flake options, cure time and warranty come from the client."],
                ["Coating system explained in plain language", "Surface prep, crack repair, base coat, flake and clear top coat", "Colour and flake chip gallery", "Professional coating versus a hardware-store kit"],
                UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
-simple_product("page-ventilation", "Garage Ventilation", "Garage exhaust fans", "Cool the garage down so you can actually use it.",
-               ["A garage that is too hot to use in the Texas summer is wasted space. Our garage exhaust fans move the heat out.",
-                "Specifications, power, noise level and thermostat control come from the client. The current site has no page for this product."],
-               ["How the fan works and how it is installed", "Pairs with storage for a usable workshop or hobby space"], UP + "2021/04/20190718_125822-scaled.jpg")
+simple_product("page-ventilation", "Garage Ventilation", "Garage ventilation", "Cool the garage down so you can actually use it.",
+               ["A garage that is too hot to use in the Texas summer is wasted space. Our garage ventilation system cools your garage up to 20 degrees and your attic up to 40 degrees.",
+                "Each system includes a thermostat and two premium aluminum intake vents with insect screens and an auxiliary frame for a double skin insulated door (insulation not included). Reflective garage door insulation is available as an add-on."],
+               ["Cools the garage up to 20 degrees, the attic up to 40", "Thermostat controlled", "Pairs with storage for a usable workshop or hobby space", "How the system is installed: details from the client"], UP + "2021/04/20190718_125822-scaled.jpg")
+simple_product("page-lifts", "Lifts", "Lifts", "Part of a complete garage renovation.",
+               ["Lifts are part of the full garage renovations The Garage King offers, alongside storage solution systems, floors and doors.",
+                "The products, specifications and photos for this page come from the client. Complete our contact form to ask about lifts for your garage."],
+               ["Product types and specifications: details from the client", "Garage and ceiling requirements: details from the client", "Installation and warranty: details from the client"],
+               UP + "2021/04/20190227_103359-scaled.jpg")
+simple_product("page-garage-doors", "Garage Door Installation and Repairs", "Garage doors", "Part of a complete garage renovation.",
+               ["A full garage renovation includes the door. The Garage King offers garage door installation and repairs alongside storage solution systems and floors.",
+                "The services, brands, photos and service details for this page come from the client. Complete our contact form to ask about your garage door."],
+               ["Installation and repair services: details from the client", "Door styles and brands: details from the client", "Warranty and service area: details from the client"],
+               UP + "2021/04/20190718_125822-scaled.jpg")
+
+# ---------- Project Stories (placeholder) ----------
+body = page_hero("Project Stories", "Coming soon", "Before and after stories from real Greater Austin and Greater San Antonio garages.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
+body += grp(hd(2, "Coming soon", align="center")
+            + pa("We are putting together project stories: the garage we started with, the plan, and the finished result. In the meantime, see photos of our work or complete our contact form to start planning yours.", align="center")
+            + btns(btn("See our photo gallery", "/garage-storage-photos"), btn("Book a Free Design Consultation", "/schedule-quote", outline=True), center=True), width="720px")
+body += pattern("cta-band")
+write("page-project-stories", "Project stories page", body)
 
 # ---------- Ad landing pages (current /ga, /nextdoor, /sael) ----------
 body = grp(hd(1, "Transform Your Garage With Custom Storage Solutions", color="white")
            + pa("Our team of experts will help you find the perfect storage solution to transform your space.", "muted", size="medium")
-           + ul(["Motorized overhead storage racks", "Overhead storage racks", "Slatwall", "Steel cabinets", "Floor coatings", "Garage exhaust fans"], cls="gk-checks gk-checks--light")
-           + pa("Serving Central Texas.", "amber")
-           + grp(hd(3, "Step 1: Fill out the form") + pa("Step 2: Book your free phone quote to receive current package details. After submitting the form you will be directed to schedule your call. The form is not built yet.")
-                 + btns(btn("Call an expert", f"tel:{TOLL_TEL}")), bg="steel", color="white", cls="gk-estimator", pad="40", full=False),
+           + ul(["Motorized overhead storage racks", "Overhead storage solutions", "Slatwall", "Steel cabinets", "Floor coatings", "Garage ventilation"], cls="gk-checks gk-checks--light")
+           + pa(SERVICE_AREA, "amber")
+           + grp(hd(3, "Step 1: Fill out the form") + pa("Step 2: Book your free consultation to receive current offers and package details.")
+                 + "<!-- wp:shortcode -->\n[gk_quote_form source=\"ads\"]\n<!-- /wp:shortcode -->\n", bg="steel", color="white", cls="gk-estimator", pad="40", full=False),
            bg="black", color="white", width="900px")
 body += grp(hd(2, "Transforming garages for over 20 years", align="center") + pa("4.9 Google rating", align="center") + review_rows(GREV[:3]), bg="grey", width="1180px")
-body += grp(hd(2, "Affordable, professional grade solutions", align="center")
+body += grp(hd(2, "Professional grade storage solution systems", align="center")
             + cols([hd(3, "Stationary overhead storage racks") + pa("Store large and bulky items up and out of the way, freeing up valuable floor space that can be used for parking, walking, and cleaning. The open channel platform design allows easy visibility and access to your items."),
                     hd(3, "Motorized overhead storage racks") + pa("Avoid climbing a ladder. Lower the platform with the simple press of a button, load or unload it, and safely return it to the ceiling."),
                     hd(3, "Slatwall") + pa("Designed to carry heavy loads, with a dust-free, durable surface that can withstand wear and tear."),
@@ -452,7 +502,7 @@ body += grp(hd(2, "Superior storage solutions", align="center")
                     pa("Increased efficiency: quickly locate items."), pa("Protect items: keep them safe from damage.")], cls="gk-problems"), bg="grey", pad="50")
 body += grp(hd(2, TAG, color="black", align="center") + pa("Schedule your free, no-obligation consultation today!", align="center")
             + btns(btn("Book a Free Design Consultation", "/schedule-quote"), center=True)
-            + pa("Central Texas garage storage products and installation, covering greater Austin and San Antonio, Texas.", align="center", size="small"),
+            + pa(SERVICE_AREA, align="center", size="small"),
             bg="amber", color="black", cls="gk-cta", pad="50")
 write("page-ga", "Google Ads landing page", body)
 
@@ -472,8 +522,9 @@ print("pages written:", len(list(PAT.glob("page-*.php"))))
 body = grp(cols([
     im(UP + "2017/07/Garage-Organization-Garage-King-1.png", "The Garage King team under an overhead storage rack"),
     pa("Organize your garage!", cls="gk-eyebrow")
-    + hd(2, "Central Texas garage storage products and installation")
-    + pa("We specialize in garage overhead storage and slatwall. We offer the highest quality garage storage products at an affordable price.")
+    + hd(2, "Luxury garage renovations, from floors to storage")
+    + pa(POSITION)
+    + pa("We specialize in garage overhead storage and slatwall. We offer the highest quality garage storage products, installed by our own crew.")
     + pa("As a specialist, we are experts at what we do and we will work with you to come up with the best garage organization solution. Let us show you how we put our garage storage solutions to the test.")
     + pa(OFFER, cls="gk-offer") + badges(),
 ]), width="1180px", pad="60")

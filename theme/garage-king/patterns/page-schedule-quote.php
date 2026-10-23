@@ -14,7 +14,7 @@
 <h1 class="wp-block-heading has-white-color has-text-color">Book a Free Design Consultation</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">Tell us about your garage. After you submit, you pick a time for your free phone consultation.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Tell us about your garage. After you submit, you pick a time for your free consultation, by phone or video.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
@@ -25,7 +25,7 @@
 <h2 class="wp-block-heading">Your details</h2>
 <!-- /wp:heading -->
 <!-- wp:shortcode -->
-[gk_quote_form]
+[gk_quote_form source="quote"]
 <!-- /wp:shortcode -->
 </div>
 <!-- /wp:column -->
@@ -35,7 +35,7 @@
 <!-- /wp:heading -->
 <!-- wp:list {"className":"gk-checks"} -->
 <ul class="gk-checks"><!-- wp:list-item -->
-<li>We call at the time you choose, by phone or video.</li>
+<li>We meet at the time you choose, by phone or video.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>We plan the right mix for your ceiling height and space.</li>
@@ -45,9 +45,6 @@
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>Prefer to talk now? Call 844-MY-GKING.</p>
-<!-- /wp:paragraph -->
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->

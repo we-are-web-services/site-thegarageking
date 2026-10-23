@@ -15,3 +15,5 @@
 .gk-qf__total { font-family: Poppins, sans-serif; font-style: italic; font-weight: 800; font-size: 1.5rem; color: #ffb117; margin: 0.4rem 0; }
 .gk-qf__small, .gk-qf__noestimate { font-size: 0.85rem; }
 @media (max-width: 640px) { .gk-qf__grid { grid-template-columns: 1fr; } }
+.gk-qf__skip { margin-left: 1.25rem; }
+.gk-qf--step2 .wp-block-buttons { margin: 1rem 0 1.5rem; }

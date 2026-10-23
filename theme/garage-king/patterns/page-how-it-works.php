@@ -25,10 +25,10 @@
 <p class="gk-card__num has-amber-color has-text-color">01</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"textColor":"white"} -->
-<h3 class="wp-block-heading has-white-color has-text-color">Request a consultation</h3>
+<h3 class="wp-block-heading has-white-color has-text-color">Complete the contact form</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted"} -->
-<p class="has-muted-color has-text-color">Short form or a phone call. Tell us about your garage.</p>
+<p class="has-muted-color has-text-color">Tell us about your garage and pick a time for your free consultation.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
