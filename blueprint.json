@@ -388,6 +388,14 @@
     },
     {
       "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/templates/archive.html",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/templates/archive.html"
+      }
+    },
+    {
+      "step": "writeFile",
       "path": "/wordpress/wp-content/themes/garage-king/templates/front-page.html",
       "data": {
         "resource": "url",
