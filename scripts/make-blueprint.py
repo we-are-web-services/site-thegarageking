@@ -40,15 +40,12 @@ PAGES = {
     "schedule-quote": ("Book a Free Design Consultation", "page-schedule-quote", "", ""),
     "privacy-policy": ("Privacy Policy", "page-privacy", "", ""),
     "terms": ("Terms of Use and SMS Terms", "page-stub", "", ""),
-    "thank-you": ("Thank You", "page-thank-you", "", ""),
     "ga": ("Garage Storage Offer", "page-ga", "page-landing", ""),
     "nextdoor": ("Nextdoor Offer", "page-channel-landing", "page-landing", ""),
     "sael": ("SAEL Offer", "page-channel-landing", "page-landing", ""),
     "blog": ("Garage Tips and Ideas", "", "", ""),
-    # one thank-you URL per form, so each lead is counted once in analytics (sitemap page 15)
-    "quote": ("Thank You", "page-thank-you", "", "thank-you"),
-    "contact": ("Thank You", "page-thank-you", "", "thank-you"),
-    "ads": ("Thank You", "page-thank-you", "", "thank-you"),
+    # the live site's thank-you address, kept as is so the Google Ads conversion tied to it keeps working (David, 2026-10-23)
+    "ga-thank-you-page-garage-talk": ("Thank You", "page-thank-you", "page-landing", ""),
 }
 
 plugins = root / "plugins"

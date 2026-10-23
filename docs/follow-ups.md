@@ -25,6 +25,7 @@ Added 2026-10-23: what Lifts means; which garage door services and brands; are c
 
 ## C. To build
 Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage Doors, Floor Coatings, How It Works, About, Terms and SMS Terms); keep `/garage-exhaust-fans` as the URL or move to `/garage-ventilation` (David's call); connect the form to GoHighLevel and Jobber and point the scheduler at GoHighLevel's calendar when confirmed (the live site's leads go to LeadPages; where they are used next is unknown).
+- Tracking carry-over at launch and the open items about `/ma`, `/nextdoor` and `/sael`: `docs/tracking-inventory.md`. **No new conversion triggers in this scope** (David, 2026-10-23).
 - ~~Two-step quote flow~~ **Built 2026-10-23, matched to the live site's steps** (form, then Calendly on the thank-you page). The Contact form now has the live Gravity Forms fields (discount code is optional here although the live label shows an asterisk; confirm).
 - Quote form next steps: connect to GoHighLevel and Jobber (set `GK_LEAD_WEBHOOK` or write an adapter once their details arrive); set `GK_LEAD_EMAIL`; build the step 2 scheduler; the Contact page form (its own thank-you URL); decide on invisible spam protection beyond the hidden field; lead photos are saved in the public uploads folder (move them to private storage before launch); data retention for leads; have the client's lawyer review the consent text.
 - ~~Estimator~~ **Removed from scope 2026-10-23.** The header nav wraps below about 1100 px (add a menu button on tablets).

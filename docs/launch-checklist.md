@@ -11,3 +11,7 @@ Follow the hub's ground rules: say exactly what will change, back up first, wait
    (see `waws-hub/docs/cloud-access-plan.md` and `impossible-socks-server/docs/admin-accounts.md`).
 7. Add the site to In The Loop, Matomo and WHMCS where they apply.
 8. Check the live site, record the launch date here, then turn this repo into an archive.
+
+## Garage King additions (2026-10-23)
+
+9. **Forms and tracking must work exactly as on the current site** (`docs/tracking-inventory.md`): install the Tag Manager container, Meta Pixel and the Calendly listener as they are today; keep `/ga` and `/ga-thank-you-page-garage-talk` at the same addresses; decide `/ma`, `/nextdoor` and `/sael` with the client; redirect every retired address. Confirm in Tag Assistant and Google Ads that the lead form, scheduled call and contact form conversions still record (Justin has the Tag Manager, Analytics and Google Ads access).

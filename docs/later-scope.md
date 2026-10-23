@@ -18,6 +18,7 @@ Ideas and features that are **not** in the current scope of work but may be buil
 | **Financing section** | The client plans to offer financing; details unknown | Financing provider and terms | Pricing page |
 | **Offer display after booking** (limited-time offers shown to the visitor once they book) | Offers are given at booking by phone or video for now | Client's offer rules and dates (the last ones ended 2026-10-19) | Pricing page "Current offers" |
 | **Self-hosted fonts, SEO and schema** (LocalBusiness, Review, FAQ), WebP images, accessibility check | Polish work after content is final | Final content; launch plan | `docs/follow-ups.md` section C |
+| **One thank-you page per form** (`/thank-you/quote`, `/contact`, `/ads`, from the client's sitemap) | The new build matches the current site's conversion setup exactly (David, 2026-10-23); changing conversion triggers is for later | Client decision and a matching change to the Google Ads conversion actions and Tag Manager | `docs/tracking-inventory.md` |
 | **Tablet menu button** (the header wraps below about 1100 px) | Small fix, not yet scheduled | None | `docs/follow-ups.md` section C |
 | **Ad landing variants** (`/ga/overhead-storage`, `/ga/garage-cabinets`, `/ga/floor-coatings`) | Which variants are live at launch is not decided | Client's ad plan | `docs/brief.md` section 3 (16) |
 

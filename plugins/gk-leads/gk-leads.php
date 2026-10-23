@@ -36,13 +36,22 @@ function gk_leads_scheduler_url() {
 	return esc_url( apply_filters( 'gk_scheduler_url', $url ) );
 }
 
-/** The three forms, each with its own thank-you page so every lead is counted once in analytics. */
+/** The three forms. */
 function gk_leads_sources() {
 	return array( 'quote', 'contact', 'ads' );
 }
 
+/**
+ * Where each form ends, exactly as on the client's current site (no new steps or conversion triggers):
+ * the landing page forms (quote and ads) go to the thank-you page that holds the scheduler, at the same address as today
+ * (the Google Ads conversion is tied to it). The contact form stays on its page and shows a confirmation, as the current
+ * Gravity Form does.
+ */
 function gk_leads_thank_you_url( $source ) {
-	return home_url( '/thank-you/' . ( in_array( $source, gk_leads_sources(), true ) ? $source : 'quote' ) . '/' );
+	if ( 'contact' === $source ) {
+		return add_query_arg( 'gk_sent', '1', home_url( '/contact-us/' ) );
+	}
+	return home_url( '/ga-thank-you-page-garage-talk/' );
 }
 
 /** Fields the form accepts: slug => label. Everything else is ignored. */
@@ -87,6 +96,20 @@ add_shortcode( 'gk_quote_form', function ( $atts ) {
 	$source = in_array( $atts['source'], gk_leads_sources(), true ) ? $atts['source'] : 'quote';
 	$c      = ( 'contact' === $source );
 	wp_enqueue_style( 'gk-leads', plugins_url( 'assets/quote-form.css', __FILE__ ), array(), GK_LEADS_VERSION );
+
+	// Contact form: the page shows a confirmation instead of the form, and sends the same tracking event as the current Gravity Form.
+	if ( $c && isset( $_GET['gk_sent'] ) ) {
+		ob_start();
+		?>
+		<div class="gk-qf__sent" role="status"><p>Thanks for contacting us! We will get in touch with you shortly.</p></div>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({ event: 'form_lead_submit', cov_form_type: 'Gravity Form Plugin', cov_form_id: 2, cov_form_name: 'Form id-2' });
+			if (window.history && history.replaceState) { history.replaceState(null, '', location.pathname); }
+		</script>
+		<?php
+		return ob_get_clean();
+	}
 
 	$err = isset( $_GET['gk_err'] ) ? preg_replace( '/[^a-z_,]/', '', wp_unslash( $_GET['gk_err'] ) ) : '';
 	$id  = function ( $name ) use ( $source ) {
