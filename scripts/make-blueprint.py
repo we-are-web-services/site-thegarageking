@@ -43,7 +43,6 @@ PAGES = {
     "ga": ("Garage Storage Offer", "page-ga", "page-landing", ""),
     "nextdoor": ("Nextdoor Offer", "page-channel-landing", "page-landing", ""),
     "sael": ("SAEL Offer", "page-channel-landing", "page-landing", ""),
-    "blog": ("Garage Tips and Ideas", "", "", ""),
     # the live site's thank-you address, kept as is so the Google Ads conversion tied to it keeps working (David, 2026-10-23)
     "ga-thank-you-page-garage-talk": ("Thank You", "page-thank-you", "page-landing", ""),
 }
@@ -87,12 +86,12 @@ php = ["<?php",
        "  $id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>$row[0],'post_name'=>$slug,'post_parent'=>$parent ? $parent->ID : 0,'post_content'=>$content));",
        "  if ($row[2]) { update_post_meta($id, '_wp_page_template', $row[2]); }",
        "}",
-       "$blog = get_page_by_path('blog');",
-       "update_option('show_on_front','page'); update_option('page_on_front',$home); if ($blog) { update_option('page_for_posts',$blog->ID); }",
+       "update_option('show_on_front','page'); update_option('page_on_front',$home);",
        "$file = defined('GK_POSTS') ? GK_POSTS : '/wordpress/gk-posts.json';",
        "if (file_exists($file) && !get_posts(array('post_type'=>'post','numberposts'=>1))) {",
        "  foreach (json_decode(file_get_contents($file), true) as $p) {",
-       "    wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));",
+       "    $pid = wp_insert_post(array('post_type'=>'post','post_status'=>'publish','post_title'=>$p['title'],'post_name'=>$p['slug'],'post_date'=>$p['date'],'post_excerpt'=>$p['excerpt'],'post_content'=>$p['content']));",
+       "    if (!empty($p['category']) && $pid && !is_wp_error($pid)) { require_once ABSPATH.'wp-admin/includes/taxonomy.php'; wp_set_post_categories($pid, array(wp_create_category($p['category']))); }",
        "  }",
        "}",
        "flush_rewrite_rules();"]

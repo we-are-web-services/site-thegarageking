@@ -47,7 +47,7 @@ Keep the existing URL where marked.
 | 9 | Contact | `/contact-us` | redesign, keep URL |
 | 10 | Service Areas | `/service-areas` | new |
 | 10a | City page (optional) | `/service-areas/[city]` | new, template |
-| 11 | Blog | `/blog` | new, **phase 2** |
+| 11 | Blog | `/blog` | new, **phase 2** (not built; the menu's Blog link goes to the live blog list, `/category/blog/`) |
 | 12 | Privacy Policy | `/privacy-policy` | keep URL |
 | 13 | Terms and SMS Terms | `/terms` | new |
 | 14 | Schedule Your Phone Quote | `/schedule-quote` | new, hidden |
