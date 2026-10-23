@@ -3,13 +3,17 @@
 Kept in one place; update it when an item is done. Last updated 2026-10-23. Nothing here is live.
 
 ## A. Waiting on David
-0. **Start with `docs/next-session.md`** (written 2026-10-18).
-1. Merge site-thegarageking#1, waws-hub#22, waws-wp-site-template#2; delete the merged branches (tick "Automatically delete head branches" in each repo's settings).
-2. Switch this repo to public, open the Playground link, switch it back. If the link fails, the blueprint's file-loading steps are the first suspect.
-3. Confirm: Under Construction on while building, off at launch? Prototype skips server-only plugins (backups, Hide Login, Redis, Postmark, Companion)?
-4. Decide what to do with the old site's content that the sitemap does not mention (section D).
+0. **Start with `docs/next-session.md`** (written 2026-10-23).
+1. Merge site-thegarageking#4 and waws-hub#28 (first complete draft); then delete the merged branches (tick "Automatically delete head branches" in each repo's settings).
+2. Switch this repo to public, open the Playground link, tell Claude what you see, switch it back. If it fails, the blueprint's file-loading steps are the first suspect.
+3. Confirm the regular prices may stay in the repo (from the client's publicly linked Latest Deals document; see `CLAUDE.md` rule 1).
+4. Confirm: Under Construction on while building, off at launch? Prototype skips server-only plugins (backups, Hide Login, Redis, Postmark, Companion)?
+5. Decide what to do with the old site's content that the sitemap does not mention (section D).
+6. Decide whether the service area keeps the city chips (removed 2026-10-23; the old list is in git history, `patterns/service-area.php` before that commit).
+7. Hub to-do 21: design the deploy step from the repo to the server.
 
 ## B. Needs the client (through Rhonda)
+Added 2026-10-23: what Lifts means; which garage door services and brands; are cabinets for sale now (Deluxe Cabinet Package) or "coming soon"; slatwall capacity (200 lbs per panel on the current page vs 300 lbs per square foot in Latest Deals); approval of the footer tagline "Can't find a thing? Ask the Garage King!" (replaces "Call the Garage King!"); contents and prices of The Emerson, The Duke and The Earl; when the next limited-time offers start (the last ended 2026-10-19).
 - Estimator: the real prices (now sample values in `assets/pricing.json`), which products and units to offer, what the multi-rack offer covers, whether the BOGO offers belong in the estimator, floor coating price per square foot, and whether to show an exact figure or a range.
 - Real prices, package contents and what the estimator multiplies; garages completed; Google review count; real reviews (or live feed).
 - Photos and video (shared Drive folder, not received); team photos; customer permission for photos and names.
@@ -20,6 +24,7 @@ Kept in one place; update it when an item is done. Last updated 2026-10-23. Noth
 - Legal review of the privacy policy and SMS terms.
 
 ## C. To build
+Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage Doors, Floor Coatings, How It Works, About, Terms and SMS Terms); keep `/garage-exhaust-fans` as the URL or move to `/garage-ventilation` (David's call); connect the form to GoHighLevel and Jobber and point the scheduler button at GoHighLevel's calendar when confirmed; confirm what the current site's form does, to match it (see `docs/next-session.md`).
 - ~~Two-step quote flow~~ **Built 2026-10-23** (step 2 uses the client's Calendly link until GoHighLevel's calendar is confirmed).
 - Quote form next steps: connect to GoHighLevel and Jobber (set `GK_LEAD_WEBHOOK` or write an adapter once their details arrive); set `GK_LEAD_EMAIL`; build the step 2 scheduler; the Contact page form (its own thank-you URL); decide on invisible spam protection beyond the hidden field; lead photos are saved in the public uploads folder (move them to private storage before launch); data retention for leads; have the client's lawyer review the consent text.
 - ~~Estimator: drop the $40 rule~~ **Done 2026-10-23** (regular prices only). The header nav wraps below about 1100 px (add a menu button on tablets).
