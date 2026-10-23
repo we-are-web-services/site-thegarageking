@@ -36,3 +36,17 @@ add_filter( 'render_block', function ( $content ) {
 		$content
 	);
 } );
+
+/*
+ * Old or planned addresses that point at a page that exists. Kept short on purpose: at launch, redirects for retired addresses
+ * move to the redirect tool chosen for the site (docs/later-scope.md, "Post-launch restructuring").
+ * /garage-cabinets is the address the client's Website Content Outline planned for cabinets; the live page stays at /steel-cabinets.
+ */
+add_action( 'template_redirect', function () {
+	$map  = array( 'garage-cabinets' => '/steel-cabinets/' );
+	$path = trim( (string) wp_parse_url( isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '', PHP_URL_PATH ), '/' );
+	if ( isset( $map[ $path ] ) ) {
+		wp_safe_redirect( home_url( $map[ $path ] ), 301 );
+		exit;
+	}
+} );

@@ -23,3 +23,19 @@ Ideas and features that are **not** in the current scope of work but may be buil
 | **Ad landing variants** (`/ga/overhead-storage`, `/ga/garage-cabinets`, `/ga/floor-coatings`) | Which variants are live at launch is not decided | Client's ad plan | `docs/brief.md` section 3 (16) |
 
 Add new rows at the bottom. Keep each row to one line of "why" and "what it needs".
+
+## Post-launch restructuring: finishing the Outline's vision, and what happens to old addresses
+
+**Rule (David, 2026-10-23):** the new site launches matching the current site. The client's Website Content Outline & Questionnaire sometimes describes more than the current site ever built, and the client may later ask us to finish that vision. Those changes come after launch, in another scope. **Every such change needs a decision about the old addresses first** (301 redirect to the new page, keep the old page, or something else), so search history and old links are not lost. Add to this list whenever a case like this turns up.
+
+| Case | Today and at launch | What the Outline or the client's direction points to | Address question for later |
+|---|---|---|---|
+| **Steel cabinets** | `/steel-cabinets` stays (the live address; its page says "coming soon"). `/garage-cabinets`, the Outline's address, redirects to it (done 2026-10-23) | David: cabinets may sit under a larger category and/or page, with real cabinet content and the Deluxe Cabinet Package | Where `/steel-cabinets` and `/garage-cabinets` should point once the larger page exists |
+| **Garage Ventilation** | Page at `/garage-exhaust-fans` (not on the live site; the name changed from "exhaust fans") | Outline address and name | Keep the address or move to `/garage-ventilation`, with a redirect from the old one |
+| **Our Work and Project Stories** | Gallery at `/garage-storage-photos`; Project Stories is a Coming Soon page | One page per project under `/garage-storage-photos/[project]` | Redirects only if the gallery moves |
+| **Blog** | 26 posts (21 articles, 5 reviews) at their live root addresses; `/blog` is the list | Outline treats the blog as phase 2 and new | If posts move under `/blog/...`, redirect every root address |
+| **Service areas and city pages** | One statement and one call to action; `/service-areas` | City pages at `/service-areas/[city]` and a map | None unless city pages replace the statement |
+| **Landing pages and ad variants** | `/ga` and its thank-you address as on the live site; `/ma`, `/nextdoor` and `/sael` still to decide | Variants such as `/ga/overhead-storage`, and one thank-you page per form | Changing a thank-you address changes the Google Ads conversion: ask first (`docs/tracking-inventory.md`) |
+| **Pricing** | Pricing page with the regular prices (the live site links to a document) | Outline adds the estimator, packages and financing | None, the address is kept |
+| **Lifts and Garage Door Installation and Repairs** | New draft pages, waiting on the client's content | Added at David's request | None yet |
+| **Shop, cart and account** | On the live site, left out (the client has no online sales) | Not in the Outline | Redirects if the old shop addresses are retired |
