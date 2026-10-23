@@ -8,7 +8,7 @@ $qa = array(
 	array( 'Are you a franchise?', 'No. The Garage King is an independent, family-owned and operated Central Texas business, and every installation is done by our own crew.' ),
 	array( 'How long does an installation take?', 'Most storage solution installations are completed within one day.' ),
 	array( 'Do you offer a warranty?', 'Yes. We stand behind our workmanship with a guarantee, and our products carry a product warranty. Details to be confirmed with the client.' ),
-	array( 'What areas do you serve?', 'Austin, San Antonio, Bell County and the surrounding Texas Hill Country communities.' ),
+	array( 'What areas do you serve?', 'We serve all Greater Austin, Greater San Antonio and surrounding areas. Don\'t see your town? Complete our contact form and we will let you know if we can provide for your needs and service area.' ),
 );
 ?>
 <!-- wp:group {"align":"full","className":"gk-section","layout":{"type":"constrained","contentSize":"820px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->

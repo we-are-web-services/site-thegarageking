@@ -14,7 +14,7 @@
 <h1 class="wp-block-heading has-white-color has-text-color">Slatwall Garage Storage and Organization</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">A fully finished look, with complete flexibility of storage.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">A fully finished look, with complete flexibility of storage. A storage solution system built around your garage.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
@@ -25,11 +25,14 @@
 <p>Slatwall is a heavy duty storage and organization system designed to carry heavy loads of weight while providing a dust free durable surface. It will give your garage a fully finished look, with complete flexibility of storage. It quickly covers up messy drywall work or unsightly concrete block walls.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Contact us to learn how we can help organize your garage.</p>
+<p>Slatwall is sold by the case of four 12″ × 96″ panels, with a hidden fastening system, and it accepts heavy duty shelves and accessories. Complete our contact form to learn how we can help organize your garage.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a Free Design Consultation</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/garage-storage-pricing">See pricing</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->

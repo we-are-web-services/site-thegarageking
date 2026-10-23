@@ -8,13 +8,13 @@
 ?>
 <!-- wp:cover {"url":"https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
-<p class="gk-eyebrow has-amber-color has-text-color">Call the Garage King</p>
+<p class="gk-eyebrow has-amber-color has-text-color">Get in touch</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
 <h1 class="wp-block-heading has-white-color has-text-color">Contact Us</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">Schedule your free phone consultation, with the option of video.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Complete the form to schedule your free consultation, by phone or video.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
@@ -25,10 +25,10 @@
 <h2 class="wp-block-heading">Get in touch</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Don't forget to schedule your free phone consultation with the option of video, and to claim your discount, after you provide your information.</p>
+<p>Complete the form and we will reach out within 24 hours. You can then schedule your free consultation, by phone or video.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>The Garage King: the number one garage outfitter in Austin and San Antonio.</p>
+<p>The boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems.</p>
 <!-- /wp:paragraph -->
 <!-- wp:list {"className":"gk-checks"} -->
 <ul class="gk-checks"><!-- wp:list-item -->
@@ -75,18 +75,9 @@
 <div class="wp-block-column"><!-- wp:heading -->
 <h2 class="wp-block-heading">Send us a message</h2>
 <!-- /wp:heading -->
-<!-- wp:group {"className": "gk-estimator gk-estimator--light", "layout": {"type": "constrained"}, "backgroundColor": "grey", "style": {"spacing": {"padding": {"top": "var:preset|spacing|40", "bottom": "var:preset|spacing|40"}}}} -->
-<div class="wp-block-group gk-estimator gk-estimator--light has-grey-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:paragraph -->
-<p>The contact form goes here: name, phone, city, reason for contact (new project, existing customer or service, other) and an optional message. Not built yet.</p>
-<!-- /wp:paragraph -->
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a Free Design Consultation</a></div>
-<!-- /wp:button -->
-</div>
-<!-- /wp:buttons -->
-</div>
-<!-- /wp:group -->
+<!-- wp:shortcode -->
+[gk_quote_form source="contact"]
+<!-- /wp:shortcode -->
 </div>
 <!-- /wp:column -->
 </div>

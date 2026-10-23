@@ -22,7 +22,10 @@
 <h2 class="wp-block-heading">A specialist, not a franchise</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>We specialize in professional grade garage storage, including overhead storage racks and slatwall. We strive to offer the highest quality products at an affordable price. As a specialist, we are experts at what we do and we will work with you to come up with the best solution for your garage organizational needs.</p>
+<p>The boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>We specialize in professional grade garage storage, including overhead storage racks and slatwall. We strive to offer the highest quality products and a luxury finish. As a specialist, we are experts at what we do and we will work with you to come up with the best solution for your garage organizational needs.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>The company story, the owner's first name and the team photos go here. The client will supply them.</p>

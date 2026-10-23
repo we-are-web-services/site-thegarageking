@@ -19,14 +19,17 @@ raw = f"https://raw.githubusercontent.com/{repo}/{ref}/theme/garage-king"
 
 # slug: (title, pattern, template, parent slug)
 PAGES = {
-    "overhead-racks": ("Overhead Garage Storage Racks", "page-overhead-racks", "", ""),
+    "overhead-racks": ("Overhead Storage Solutions", "page-overhead-racks", "", ""),
     "slatwall": ("Slatwall", "page-slatwall", "", ""),
     "steel-cabinets": ("Steel Cabinets", "page-steel-cabinets", "", ""),
     "garage-storage-solutions": ("Garage Storage Solutions", "page-solutions", "", ""),
-    "motorized-overhead-racks": ("Motorized Overhead Storage", "page-motorized", "", ""),
+    "motorized-overhead-racks": ("Motorized Overhead Racks", "page-motorized", "", ""),
     "garage-floor-coatings": ("Garage Floor Coatings", "page-floor-coatings", "", ""),
     "garage-exhaust-fans": ("Garage Ventilation", "page-ventilation", "", ""),
+    "lifts": ("Lifts", "page-lifts", "", ""),
+    "garage-door-installation-repairs": ("Garage Door Installation and Repairs", "page-garage-doors", "", ""),
     "garage-storage-photos": ("Our Work", "page-gallery", "", ""),
+    "project-stories": ("Project Stories", "page-project-stories", "", "garage-storage-photos"),
     "how-it-works": ("How It Works", "page-how-it-works", "", ""),
     "garage-storage-pricing": ("Pricing and Offers", "page-pricing", "", ""),
     "testimonials": ("Reviews", "page-testimonials", "", ""),
@@ -37,15 +40,12 @@ PAGES = {
     "schedule-quote": ("Book a Free Design Consultation", "page-schedule-quote", "", ""),
     "privacy-policy": ("Privacy Policy", "page-privacy", "", ""),
     "terms": ("Terms of Use and SMS Terms", "page-stub", "", ""),
-    "thank-you": ("Thank You", "page-thank-you", "", ""),
     "ga": ("Garage Storage Offer", "page-ga", "page-landing", ""),
     "nextdoor": ("Nextdoor Offer", "page-channel-landing", "page-landing", ""),
     "sael": ("SAEL Offer", "page-channel-landing", "page-landing", ""),
     "blog": ("Garage Tips and Ideas", "", "", ""),
-    # one thank-you URL per form, so each lead is counted once in analytics (sitemap page 15)
-    "quote": ("Thank You", "page-thank-you", "", "thank-you"),
-    "contact": ("Thank You", "page-thank-you", "", "thank-you"),
-    "ads": ("Thank You", "page-thank-you", "", "thank-you"),
+    # the live site's thank-you address, kept as is so the Google Ads conversion tied to it keeps working (David, 2026-10-23)
+    "ga-thank-you-page-garage-talk": ("Thank You", "page-thank-you", "page-landing", ""),
 }
 
 plugins = root / "plugins"
@@ -74,7 +74,7 @@ steps.append({"step": "activateTheme", "themeFolderName": "garage-king"})
 php = ["<?php",
        "if (!function_exists('wp_insert_post')) { require_once '/wordpress/wp-load.php'; }",
        "update_option('blogname','The Garage King');",
-       "update_option('blogdescription','Prototype: text and photos copied from the current site');",
+       "update_option('blogdescription','First draft: text and photos from the current site');",
        "update_option('permalink_structure','/%postname%/');",
        "$h = get_page_by_path('home');",
        "$home = $h ? $h->ID : wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Home','post_name'=>'home','post_content'=>''));",

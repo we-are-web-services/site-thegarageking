@@ -22,7 +22,7 @@
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph -->
-<p>A coated floor finishes the garage. This page is built from the client's sitemap; the current site has no floor coatings page.</p>
+<p>A coated floor finishes the garage. This page is built from the client's Website Content Outline &amp; Questionnaire; the current site has no floor coatings page.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>The coating system, installation steps, colour and flake options, cure time and warranty come from the client.</p>

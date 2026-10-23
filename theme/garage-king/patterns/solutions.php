@@ -5,12 +5,14 @@
  * Categories: garage-king
  */
 $cards = array(
-	array( '01', 'Overhead Storage Solutions', 'Adjustable, heavy duty overhead storage in nine sizes, to get your seasonal items up and out of the way.', '/overhead-racks' ),
-	array( '02', 'Motorized Overhead Storage', 'Press a button and the platform lowers to you. No ladders.', '/motorized-overhead-racks' ),
-	array( '03', 'Slatwall', 'Heavy duty storage with a dust free, durable surface and a full accessory system.', '/slatwall' ),
+	array( '01', 'Overhead Storage Solutions', 'Heavy duty overhead storage racks in nine sizes, to get your seasonal items up and out of the way.', '/overhead-racks' ),
+	array( '02', 'Motorized Overhead Racks', 'Automated, remote controlled storage: press a button and the platform lowers to you. No ladders.', '/motorized-overhead-racks' ),
+	array( '03', 'Slatwall', 'A heavy duty storage solution system with a dust free, durable surface and a full accessory system.', '/slatwall' ),
 	array( '04', 'Garage Cabinets', 'Fully welded steel cabinets. A new line is on the way.', '/steel-cabinets' ),
 	array( '05', 'Floor Coatings', 'A finished floor that looks like a showroom.', '/garage-floor-coatings' ),
 	array( '06', 'Garage Ventilation', 'Cool the garage down so you can actually use it.', '/garage-exhaust-fans' ),
+	array( '07', 'Lifts', 'Part of a complete garage renovation.', '/lifts' ),
+	array( '08', 'Garage Door Installation and Repairs', 'The door finishes the renovation.', '/garage-door-installation-repairs' ),
 );
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"black","textColor":"white","className":"gk-section","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
@@ -20,7 +22,7 @@ $cards = array(
 <!-- wp:heading {"textColor":"white"} -->
 <h2 class="wp-block-heading has-white-color has-text-color">Storage solution systems, built for the Texas heat</h2>
 <!-- /wp:heading -->
-<?php foreach ( array_chunk( $cards, 3 ) as $row ) : ?>
+<?php foreach ( array_chunk( $cards, 4 ) as $row ) : ?>
 <!-- wp:columns {"className":"gk-cards","style":{"spacing":{"blockGap":{"top":"1.25rem","left":"1.25rem"}}}} -->
 <div class="wp-block-columns gk-cards">
 <?php foreach ( $row as $c ) : ?>

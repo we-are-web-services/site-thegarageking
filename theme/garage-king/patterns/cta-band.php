@@ -10,7 +10,7 @@
 <h2 class="wp-block-heading has-text-align-center has-black-color has-text-color">Ready to reclaim your garage?</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Book a free design consultation or call <a href="tel:+18446945464"><strong>844-MY-GKING</strong></a>.</p>
+<p class="has-text-align-center">Complete our short form and pick a time for your free consultation, by phone or video.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"black","textColor":"white"} -->

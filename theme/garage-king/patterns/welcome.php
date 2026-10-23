@@ -19,16 +19,19 @@
 <p class="gk-eyebrow">Organize your garage!</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Central Texas garage storage products and installation</h2>
+<h2 class="wp-block-heading">Luxury garage renovations, from floors to storage</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>We specialize in garage overhead storage and slatwall. We offer the highest quality garage storage products at an affordable price.</p>
+<p>The boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>We specialize in garage overhead storage and slatwall. We offer the highest quality garage storage products, installed by our own crew.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>As a specialist, we are experts at what we do and we will work with you to come up with the best garage organization solution. Let us show you how we put our garage storage solutions to the test.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className": "gk-offer"} -->
-<p class="gk-offer">Contact us today and receive a $40 discount off each overhead rack when you purchase more than one large rack.</p>
+<p class="gk-offer">Complete our contact form to book your free design consultation and hear our current offers.</p>
 <!-- /wp:paragraph -->
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->

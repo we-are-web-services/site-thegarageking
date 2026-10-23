@@ -14,32 +14,131 @@
 <h1 class="wp-block-heading has-white-color has-text-color">Garage Storage Pricing</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">See an estimate, pick a package, then book a free design consultation.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Regular pricing and what each product includes, then a free design consultation to plan your garage.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "900px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
-<h2 class="wp-block-heading">What affects the price</h2>
+<h2 class="wp-block-heading">Regular pricing</h2>
+<!-- /wp:heading -->
+<!-- wp:table {"className":"gk-prices"} -->
+<figure class="wp-block-table gk-prices"><table><thead><tr><th>Product</th><th>Regular price</th></tr></thead><tbody><tr><td>Motorized overhead storage racks</td><td>$4,600 each</td></tr><tr><td>Overhead storage racks (fixed)</td><td>$1,480 each</td></tr><tr><td>Slatwall, per case of four 12″ × 96″ panels</td><td>$1,480 per case</td></tr><tr><td>Floor coatings</td><td>$7 per square foot</td></tr><tr><td>Garage ventilation, two car garage</td><td>$3,380</td></tr><tr><td>Steel cabinets</td><td>Custom quote; the Deluxe Cabinet Package is $8,380</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph {"fontSize": "small"} -->
+<p class="has-small-font-size">Pricing is for conventional garages. Professional installation is included.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Accessories and add-ons</h3>
+<!-- /wp:heading -->
+<!-- wp:table {"className":"gk-prices"} -->
+<figure class="wp-block-table gk-prices"><table><thead><tr><th>Item</th><th>Price</th></tr></thead><tbody><tr><td>Deluxe hook bundle</td><td>$650</td></tr><tr><td>Basic hook bundle</td><td>$350</td></tr><tr><td>Three 30″ metal shelves</td><td>$720</td></tr><tr><td>Reflective garage door insulation, standard 16′ two car door (sold with ventilation only)</td><td>$570</td></tr><tr><td>Reflective garage door insulation, 16′ two car door and 8′ one car door (sold with ventilation only)</td><td>$750</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">What counts as a conventional garage</h3>
 <!-- /wp:heading -->
 <!-- wp:list {"className":"gk-checks"} -->
 <ul class="gk-checks"><!-- wp:list-item -->
-<li>Garage size</li>
+<li>A 9′ ceiling height (typically no additional charge for ceilings under 11′)</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Ceiling height</li>
+<li>A flat ceiling, rather than cathedral, vaulted, gable or sloped</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>The mix of products you choose</li>
+<li>A garage attached to a home built after 2004</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
-<p>We plan the right combination with you on a free phone consultation, by phone or video, and give you a written price. Professional installation is included.</p>
+<p>Have a taller ceiling? We specialize in tall ceilings. Complete our contact form for a customized quote.</p>
 <!-- /wp:paragraph -->
-<!-- wp:paragraph {"className": "gk-offer"} -->
-<p class="gk-offer">Contact us today and receive a $40 discount off each overhead rack when you purchase more than one large rack.</p>
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a Free Design Consultation</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained"}, "align": "full", "backgroundColor": "ink", "textColor": "white", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
+<div class="wp-block-group alignfull gk-section has-ink-background-color has-background has-white-color has-text-color" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:heading {"level": 2, "textColor": "white"} -->
+<h2 class="wp-block-heading has-white-color has-text-color">What each product includes</h2>
+<!-- /wp:heading -->
+<!-- wp:columns {"className": "gk-cards", "style": {"spacing": {"blockGap": {"top": "1.25rem", "left": "1.25rem"}}}} -->
+<div class="wp-block-columns gk-cards"><!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color"><a href="/motorized-overhead-racks">Motorized overhead storage racks</a></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">A wireless remote with keyed lockout, super duty seat belt webbing with 1,500 lb. break strength per corner, and a four-point outside corner lift system for platform stability.</p>
 <!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color"><a href="/overhead-racks">Overhead storage racks</a></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">Nine sizes. Mounted across multiple ceiling joists and bolted into your wall framing, or flush to the wall, for all ceiling heights.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color"><a href="/slatwall">Slatwall</a></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">Sold by the case of four 12″ × 96″ panels. Hidden fastening system, 300 lbs. per square foot at the surface, and it accepts heavy duty shelves and accessories.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:columns {"className": "gk-cards", "style": {"spacing": {"blockGap": {"top": "1.25rem", "left": "1.25rem"}}}} -->
+<div class="wp-block-columns gk-cards"><!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color"><a href="/steel-cabinets">Steel cabinets</a></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">Powder coated steel, soft self-closing drawers and doors, 18 and 24 gauge available, 1,000 lb. capacity, 80″ tall lockers, mounted off the floor. The Deluxe Cabinet Package has two tall, two upper and two lower cabinets with a bamboo counter top.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color"><a href="/garage-floor-coatings">Floor coatings</a></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">Priced by the square foot. A one car garage is about 250 square feet.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color"><a href="/garage-exhaust-fans">Garage ventilation</a></h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">Cools your garage up to 20 degrees and the attic up to 40 degrees. Includes a thermostat and two premium aluminum intake vents with insect screens.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "900px"}, "align": "full", "backgroundColor": "black", "textColor": "white", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section has-black-background-color has-background has-white-color has-text-color" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading {"level": 2, "textAlign": "center", "textColor": "white"} -->
+<h2 class="wp-block-heading has-text-align-center has-white-color has-text-color">Current offers</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align": "center", "textColor": "muted"} -->
+<p class="has-text-align-center has-muted-color has-text-color">We run limited-time offers on racks, slatwall and cabinet packages. Complete our contact form and book your free design consultation to hear what is available now.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a call to claim current offers</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained"}, "align": "full", "backgroundColor": "ink", "textColor": "white", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
@@ -55,7 +154,7 @@
 <h3 class="wp-block-heading has-white-color has-text-color">The Emerson</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted"} -->
-<p class="has-muted-color has-text-color">A starter combination of overhead racks and slatwall.</p>
+<p class="has-muted-color has-text-color">A starter combination of overhead storage and slatwall.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor": "white", "fontSize": "small"} -->
 <p class="has-white-color has-text-color has-small-font-size">Package contents and price to be confirmed</p>
@@ -88,21 +187,6 @@
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"className": "gk-section gk-section--estimator", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
-<div class="wp-block-group alignfull gk-section gk-section--estimator" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"className": "gk-eyebrow"} -->
-<p class="gk-eyebrow">Price estimator</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level": 2, "className": "gk-anchor"} -->
-<h2 class="wp-block-heading gk-anchor">Build your estimate</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Choose your area and your solutions to see an estimated investment. It is an estimate only; your written price comes after the planning call.</p>
-<!-- /wp:paragraph -->
-<!-- wp:html -->
-<div id="gk-estimator" class="gk-est" aria-live="polite">Loading the estimator…<noscript> The estimator needs JavaScript. Call us for a quote.</noscript></div>
-<!-- /wp:html -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "820px"}, "align": "full", "backgroundColor": "grey", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->

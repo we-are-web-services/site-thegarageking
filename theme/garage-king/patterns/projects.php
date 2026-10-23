@@ -15,7 +15,7 @@ $ph = array(
 <h2 class="wp-block-heading has-text-align-center">See the transformation</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Before and after sliders will go here. These are placeholder photos from the current site.</p>
+<p class="has-text-align-center">Before and after sliders will go here. These are photos from the current site.</p>
 <!-- /wp:paragraph -->
 <!-- wp:columns {"className":"gk-gallery"} -->
 <div class="wp-block-columns gk-gallery">
@@ -31,6 +31,9 @@ $ph = array(
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/garage-storage-photos">See our work</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/garage-storage-photos/project-stories">Project stories (coming soon)</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
