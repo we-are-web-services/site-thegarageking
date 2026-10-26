@@ -22,6 +22,12 @@ Ideas and features that are **not** in the current scope of work but may be buil
 | **Tablet menu button** (the header wraps below about 1100 px) | Small fix, not yet scheduled | None | `docs/follow-ups.md` section C |
 | **Ad landing variants** (`/ga/overhead-storage`, `/ga/garage-cabinets`, `/ga/floor-coatings`) | Which variants are live at launch is not decided | Client's ad plan | `docs/brief.md` section 3 (16) |
 
+| **Photo upload on the forms**: client asked again (Oct 19 call) | See above; was parked 2026-10-23 | Client decision and private photo storage | `docs/follow-ups.md` section F |
+| **Incentive pop-up with a coupon code** quoted when booking | Offer wording not confirmed; the Contact form already has a discount code field | The current offer list | `docs/follow-ups.md` section F |
+| **Size chart as a visual diagram** (Outline site map) | Today matches the live site | Decision and the size data | `docs/follow-ups.md` section F |
+| **Starter city pages**: Cedar Park, Boerne, Horseshoe Bay, Hill Country Village | The service area stays one statement | Local content for each | `docs/follow-ups.md` section F |
+| **GoHighLevel setup and CRM clean-up** for the client | New request on the Oct 19 call; not quoted; separate from the website | Client details; a scope and quote | `docs/follow-ups.md` section F |
+
 Add new rows at the bottom. Keep each row to one line of "why" and "what it needs".
 
 ## Post-launch restructuring: finishing the Outline's vision, and what happens to old addresses

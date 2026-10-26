@@ -32,6 +32,9 @@ The new build adds no steps, functions, conversion triggers or actions that diff
 - Do they approve the footer tagline "Can't find a thing? Ask the Garage King!" instead of "Call the Garage King!"?
 - Photos and video, team photos, hours, warranty and install details, financing; items in `docs/follow-ups.md` section B.
 
+## Added 2026-10-26
+Read `docs/follow-ups.md` section F first (David's notes of the Oct 19 call, sorted into built, new requests and client to-dos). New requests (photo upload, coupon pop-up, size chart diagram, city pages) are parked in `docs/later-scope.md` until David decides.
+
 ## Things to remember
 - Unread: pages 15 to 18 of the questionnaire PDF as images (their colours).
 - Photos are linked from the current site; download them into the new site before launch, or they break when the old site is replaced.

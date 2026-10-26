@@ -27,3 +27,7 @@ The Tag Manager container, Meta Pixel, the Calendly listener and the other tags 
 - `/ma`: a landing page on the live site that is not in the client's Website Content Outline & Questionnaire. Needs the same treatment as `/ga` (build it, or redirect to `/ga`; decide with the client).
 - Where the buttons on `/nextdoor` and `/sael` lead, and whether those pages record conversions.
 - Whether the Calendly scheduled-call conversion is recorded on the thank-you page (ask Justin, who has the Tag Manager and Google Ads access).
+
+## Added 2026-10-26 (David's notes of the Oct 19 call)
+- **A conversion is a form submission; the true conversion is the Calendly booking.** The booking is the event that matters most for the ads. Because the Calendly listener was only found on the contact page, **before launch confirm in Tag Manager (read access needed from the client) that a booking made on the embedded Calendly page of `/ga-thank-you-page-garage-talk` sends a conversion**, and that the new site keeps doing so.
+- The ad plan, budget and keywords are private and live in Drive (`Ads/Google Ads/Plans`), not here.
