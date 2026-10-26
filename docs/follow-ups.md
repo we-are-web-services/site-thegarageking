@@ -51,3 +51,27 @@ Checked 2026-10-17 from the site's public sitemaps and pages:
 - Follow `docs/launch-checklist.md`: the server's new-site checklist, the standard access (`claude-waws`, `cdt24`, Simple History), In The Loop, Matomo, WHMCS; Under Construction off; archive banner.
 - Plan 301 redirects for every retired URL before launch; keep `/ga` and its conversion tracking intact.
 - Hub: `docs/site-todo.md` (plugin items on the live sites) is still open.
+
+## F. From David's notes of the Oct 19 call (added 2026-10-26)
+Compared against everything above. Items already built need no action; new requests are sorted by the rule for this scope (nothing new that differs from the current site) and parked in `docs/later-scope.md` until David decides.
+
+**Already built or already decided (no action):** form first and phone number only in contact areas; "boutique, family owned and operated expert in luxury full garage renovations" and no "affordable"; "Overhead Storage Solutions" with "Motorized Overhead Racks" and "Slatwall" kept as headings; "Garage Ventilation"; Lifts and Garage Door Installation and Repairs pages (drafts); Project Stories "Coming soon"; no online sales (shop left out); one service-area statement with "Don't see your town?"; Houston, Waco and Dallas are not mentioned anywhere on the site (checked 2026-10-26); regular prices on the Pricing page.
+
+**New requests that differ from the current site (David to decide; none built):**
+1. **Photo upload** on the quote, scheduling and contact forms: the client wants it (Outline step 2 also lists it). Earlier set out of scope on 2026-10-23. Needs a decision, private storage for the photos, and a note on `/schedule-quote`.
+2. **Incentive pop-up with a coupon code** the visitor can quote when booking (the Contact form already has an optional discount code field). Not built; the offer wording is not confirmed.
+3. **Size chart as a visual diagram** (the Outline's site map says a diagram, not a table). Today the size charts and ceiling-height visuals are untouched, as on the live site.
+4. **Price estimator and financing**: client says possibly a new small scope of work. Already parked.
+5. **City pages**: starter set Cedar Park, Boerne (the notes say "Bourne"), Horseshoe Bay, Hill Country Village. Not in this scope; the service-area statement stays. The reason to build them later: the ads should never show a city the site does not mention.
+6. **Offers placed on the site** (not in a linked document): the client has the list of ongoing offers from the questionnaire; the last limited-time offers ended 2026-10-19 and are not published. Need the current list and who updates it. David offered to show the client how to update the Pricing page himself.
+7. **Testimonials**: how were they collected, and should Google reviews be integrated? (already in section B).
+8. **Drip**: David wants to review it to see how it connects to new features.
+
+**Needs the client (added to section B):** tweaks to branding and slogans such as the brand sign-off; GoHighLevel, Jobber and Wisestack information (and a decision on GoHighLevel: the client will probably go with it but has not); details of the three combo packages; details of Lifts and Garage Door Installation and Repairs (**we think Lifts means attic lifts, including Versalift products: confirm**); an estimate of garages completed; wording for guarantees and product warranties; all social media links; the shared Google Drive folder of photos (not received); a full installation description (could be a separate small project); a broad Privacy Policy and Terms are fine, say if specific wording is wanted.
+
+**Other:**
+- **Gravity Forms is giving errors on the live site** (raised again on the call). The new build does not use it (it uses the `gk-leads` plugin), so it will not carry this error over. The live site's problem is for the client to decide on.
+- **Conversions:** a form submission is a conversion; the true conversion is the Calendly booking. The new site must keep the live site's Calendly booking tracking working: `docs/tracking-inventory.md`.
+- **Possible new scope** (not quoted): help implementing GoHighLevel and cleaning up the client's CRM processes.
+- **David's deliverable at the end:** build down the site map and the questionnaire as a checklist, with one-to-one answers to the Website Design Template and Questionnaire explaining how each item was met. Plan: `docs/deliverable-checklist.md` (not started).
+- **Ads:** the client's ad plan (budget, keywords, geography) is private and lives in Drive, not in this repo. Website points that touch the ads: keep `/ga` and its thank-you address; keep the service-area wording in step with the ads; no "affordable" in any ad or page.
