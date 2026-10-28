@@ -169,6 +169,8 @@ def cta():
 def write(slug, title, body):
     # "gk-local:name.jpg" points at a photo in theme/garage-king/assets/images (photos from the client's shared folder, resized, location data removed)
     body = re.sub(r"gk-local:([\w.\-]+)", lambda m: "<?php echo esc_url( get_theme_file_uri( 'assets/images/" + m.group(1) + "' ) ); ?>", body)
+    # photos that were linked from the client's current site are served from the theme (see gk_placeholder in functions.php)
+    body = re.sub(r"https://thegarageking\.com/wp-content/uploads/([A-Za-z0-9_./%()\-]+)", lambda m: "<?php echo gk_placeholder( '" + m.group(1) + "' ); ?>", body)
     head = f"<?php\n/**\n * Title: {title}\n * Slug: garage-king/{slug}\n * Categories: garage-king\n * Inserter: no\n */\n?>\n"
     (PAT / f"{slug}.php").write_text(head + body)
 

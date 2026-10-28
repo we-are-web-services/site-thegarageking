@@ -6,8 +6,8 @@
  * Inserter: no
  */
 ?>
-<!-- wp:cover {"url":"https://thegarageking.com/wp-content/uploads/2021/04/20101129-IMG_4456-scaled.jpg","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://thegarageking.com/wp-content/uploads/2021/04/20101129-IMG_4456-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
+<!-- wp:cover {"url":"<?php echo gk_placeholder( '2021/04/20101129-IMG_4456-scaled.jpg' ); ?>","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo gk_placeholder( '2021/04/20101129-IMG_4456-scaled.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
 <p class="gk-eyebrow has-amber-color has-text-color">Photo gallery</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
@@ -63,106 +63,106 @@
 <!-- /wp:paragraph -->
 <!-- wp:gallery {"linkTo":"none","className":"gk-gallery-grid"} -->
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped gk-gallery-grid"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20170303_180905-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20170303_180905-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20210212_101134-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20210212_101134-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20101129-IMG_4462-1-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20101129-IMG_4462-1-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20101129-IMG_4456-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20101129-IMG_4456-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20101129-IMG_4491-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20101129-IMG_4491-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190225_135201-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190225_135201-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20210329_134101-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20210329_134101-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/Copy-of-20170623_122354-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/Copy-of-20170623_122354-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190227_103359-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190227_103359-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/Copy-of-20170522_132812-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/Copy-of-20170522_132812-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190227_141838-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190227_141838-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190227_141618-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190227_141618-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2023/01/20220715_174055-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2023/01/20220715_174055-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2023/01/20220712_175832-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2023/01/20220712_175832-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190718_125822-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190718_125822-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190828_134644-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190828_134644-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190225_134757-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190225_134757-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190225_134936-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190225_134936-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2021/04/20190225_135004-scaled.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2021/04/20190225_135004-scaled.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA010394.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA010394.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020395.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020395.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020396.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020396.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020397.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020397.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020398.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020398.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020399.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020399.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020401.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020401.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020402.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020402.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020403.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020403.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020404.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020404.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020405.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020405.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020406.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020406.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020408.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020408.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020409.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020409.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://thegarageking.com/wp-content/uploads/2012/03/PA020410.jpg" alt="The Garage King installation photo"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo gk_placeholder( '2012/03/PA020410.jpg' ); ?>" alt="The Garage King installation photo"/></figure>
 <!-- /wp:image -->
 </figure>
 <!-- /wp:gallery -->

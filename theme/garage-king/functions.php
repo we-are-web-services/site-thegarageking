@@ -3,9 +3,15 @@
  * The Garage King block theme.
  */
 
-// Placeholder photos come from the client's current public site until real media is supplied.
+// Photos that used to be linked from the client's current public site now live in the theme (assets/images/old-site, resized),
+// so they keep working when the old site is replaced. Falls back to the old address only for a file that is not in the theme.
 function gk_placeholder( $path ) {
-	return esc_url( 'https://thegarageking.com/wp-content/uploads/' . ltrim( $path, '/' ) );
+	$path  = ltrim( $path, '/' );
+	$local = 'assets/images/old-site/' . $path;
+	if ( file_exists( get_theme_file_path( $local ) ) ) {
+		return esc_url( get_theme_file_uri( $local ) );
+	}
+	return esc_url( 'https://thegarageking.com/wp-content/uploads/' . $path );
 }
 
 add_action( 'wp_enqueue_scripts', function () {

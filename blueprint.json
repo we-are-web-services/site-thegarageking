@@ -28,6 +28,30 @@
     },
     {
       "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2013/01"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2013/03"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2017/07"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2023/01"
+    },
+    {
+      "step": "mkdir",
       "path": "/wordpress/wp-content/themes/garage-king/parts"
     },
     {
@@ -148,6 +172,414 @@
       "data": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/motorized-two-racks-dark.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks-One-Care-Layout-351x247.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks-One-Care-Layout-351x247.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Garage-Storage-Racks.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Racks-One-Car-Garage-Layout-High-Ceiling.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Racks-One-Car-Garage-Layout-High-Ceiling.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Racks-One-Car-Garage-Layout.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Racks-One-Car-Garage-Layout.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Racks-Two-Car-Garage-Layout-High-Ceilings.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Racks-Two-Car-Garage-Layout-High-Ceilings.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Overhead-Racks-Two-Car-Garage-Layout.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Overhead-Racks-Two-Car-Garage-Layout.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA010394.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA010394.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020395.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020395.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020396.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020396.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020397.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020397.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020398.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020398.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020399.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020399.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020401.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020401.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020402.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020402.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020403.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020403.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020404.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020404.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020405.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020405.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020406.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020406.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020408.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020408.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020409.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020409.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/PA020410.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/PA020410.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-King-621x1000.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-King-621x1000.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-King-882x563.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-King-882x563.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-Panels-433x149.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/Slatwall-Garage-Panels-433x149.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2013/01/12-slatwall.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2013/01/12-slatwall.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2013/01/slatwall.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2013/01/slatwall.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2013/03/seal.png",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2013/03/seal.png"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2017/07/Garage-Organization-Garage-King-1.png",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2017/07/Garage-Organization-Garage-King-1.png"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20101129-IMG_4456-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20101129-IMG_4456-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20101129-IMG_4462-1-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20101129-IMG_4462-1-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20101129-IMG_4491-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20101129-IMG_4491-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20170303_180905-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20170303_180905-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190225_134757-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190225_134757-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190225_134936-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190225_134936-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190225_135004-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190225_135004-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190225_135201-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190225_135201-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190227_103359-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190227_103359-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190227_141618-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190227_141618-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190227_141838-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190227_141838-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190718_125822-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190718_125822-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20190828_134644-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20190828_134644-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20210212_101134-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20210212_101134-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/20210329_134101-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/20210329_134101-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/Copy-of-20170522_132812-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/Copy-of-20170522_132812-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2021/04/Copy-of-20170623_122354-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2021/04/Copy-of-20170623_122354-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2023/01/20220712_175832-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2023/01/20220712_175832-scaled.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/images/old-site/2023/01/20220715_174055-scaled.jpg",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/images/old-site/2023/01/20220715_174055-scaled.jpg"
       }
     },
     {
