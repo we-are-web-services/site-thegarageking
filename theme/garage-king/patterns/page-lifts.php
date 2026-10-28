@@ -14,18 +14,48 @@
 <h1 class="wp-block-heading has-white-color has-text-color">Lifts</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">Part of a complete garage renovation.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Bring your storage down to you, and put the attic to work.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
-<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
-<div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph -->
-<p>Lifts are part of the full garage renovations The Garage King offers, alongside storage solution systems, floors and doors.</p>
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"className":"gk-draft","layout":{"type":"constrained"}} -->
+<div class="wp-block-group gk-draft"><!-- wp:paragraph {"className": "gk-draft__tag"} -->
+<p class="gk-draft__tag">Draft: needs real content from Justin</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>The products, specifications and photos for this page come from the client. Complete our contact form to ask about lifts for your garage.</p>
+<p>This page assumes "lifts" means attic lifts, which lower storage from the attic to the garage floor. Justin needs to confirm what the product is and supply the details below.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Which lift products The Garage King sells (attic lifts, other lifts)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Sizes, weight capacity and attic opening requirements</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Brands and warranty</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>How long an installation takes and what the crew does</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Photos or a short video of a lift installed and working</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Price, or a custom quote</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>A lift raises and lowers stored items between your attic and your garage floor, so you are not carrying heavy bins up a ladder.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>It puts attic space you already have to work, and keeps seasonal and bulky items out of the way until you need them.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
@@ -38,13 +68,19 @@
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:list {"className":"gk-checks"} -->
 <ul class="gk-checks"><!-- wp:list-item -->
-<li>Product types and specifications: details from the client</li>
+<li>No ladder and no carrying heavy items overhead</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Garage and ceiling requirements: details from the client</li>
+<li>Uses attic space that is hard to reach otherwise</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Installation and warranty: details from the client</li>
+<li>Pairs with overhead racks, slatwall and cabinets for a complete garage</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Professional installation by our own crew</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Sizes, capacity and requirements: details from the client</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->

@@ -4,10 +4,11 @@
  * Slug: garage-king/packages
  * Categories: garage-king
  */
+// From the client's comments in the Website Content Outline (current combination packages; the client will tweak them later).
 $pk = array(
-	array( 'The Emerson', 'A starter combination of overhead storage and slatwall.' ),
-	array( 'The Duke', 'Our larger combination for bigger garages.' ),
-	array( 'The Earl', 'Package details to come from the client.' ),
+	array( 'The Emerson', 'Buy two racks, get one case of slatwall free.', '$2,960' ),
+	array( 'The Duke', 'Buy four cases of slatwall or four racks, get two cases of slatwall or two racks free.', '$5,920' ),
+	array( 'The Earl', 'Contents and price to come from the client.', 'To be confirmed' ),
 );
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"ink","textColor":"white","className":"gk-section","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
@@ -31,7 +32,7 @@ $pk = array(
 <p class="has-muted-color has-text-color"><?php echo esc_html( $c[1] ); ?></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"white","fontSize":"small"} -->
-<p class="has-white-color has-text-color has-small-font-size"><strong>Price: to be confirmed</strong></p>
+<p class="has-white-color has-text-color has-small-font-size"><strong><?php echo esc_html( $c[2] ); ?></strong></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 <?php endforeach; ?>

@@ -39,7 +39,7 @@ PAGES = {
     "service-areas": ("Service Areas", "page-service-areas", "", ""),
     "schedule-quote": ("Book a Free Design Consultation", "page-schedule-quote", "", ""),
     "privacy-policy": ("Privacy Policy", "page-privacy", "", ""),
-    "terms": ("Terms of Use and SMS Terms", "page-stub", "", ""),
+    "terms": ("Terms of Use and SMS Terms", "page-terms", "", ""),
     "ga": ("Garage Storage Offer", "page-ga", "page-landing", ""),
     "nextdoor": ("Nextdoor Offer", "page-channel-landing", "page-landing", ""),
     "sael": ("SAEL Offer", "page-channel-landing", "page-landing", ""),

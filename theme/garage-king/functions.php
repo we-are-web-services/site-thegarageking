@@ -144,3 +144,30 @@ add_action( 'wp_head', function () {
 		echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "</script>\n";
 	}
 }, 1 );
+
+/*
+ * Before and after slider. Two photos from assets/images, a range input that reveals the "before" photo.
+ * Used as a sample on Our Work until the client supplies real before and after pairs.
+ */
+function gk_before_after( $before, $after, $alt, $caption = '' ) {
+	$b = esc_url( get_theme_file_uri( 'assets/images/' . $before ) );
+	$a = esc_url( get_theme_file_uri( 'assets/images/' . $after ) );
+	ob_start();
+	?>
+	<figure class="gk-ba-figure">
+		<div class="gk-ba" data-gk-ba>
+			<img class="gk-ba__after" src="<?php echo $a; ?>" alt="<?php echo esc_attr( $alt . ' (after)' ); ?>" loading="lazy" />
+			<div class="gk-ba__before"><img src="<?php echo $b; ?>" alt="<?php echo esc_attr( $alt . ' (before)' ); ?>" loading="lazy" /></div>
+			<span class="gk-ba__tag gk-ba__tag--before">Before</span><span class="gk-ba__tag gk-ba__tag--after">After</span>
+			<span class="gk-ba__handle" aria-hidden="true"></span>
+			<input type="range" min="0" max="100" value="50" aria-label="Move to compare before and after" />
+		</div>
+		<?php if ( $caption ) : ?><figcaption><?php echo esc_html( $caption ); ?></figcaption><?php endif; ?>
+	</figure>
+	<?php
+	return ob_get_clean();
+}
+
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_script( 'gk-before-after', get_theme_file_uri( 'assets/before-after.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+} );

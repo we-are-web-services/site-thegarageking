@@ -137,6 +137,17 @@ def photos(items, per=3):
     return out
 
 
+def draft_note(title, items):
+    """A visible dashed box on a draft page. Remove every .gk-draft box before launch (docs/launch-checklist.md)."""
+    inner = (pa("Draft: needs real content from Justin", cls="gk-draft__tag") + pa(title) + ul(items))
+    return (f'<!-- wp:group {{"className":"gk-draft","layout":{{"type":"constrained"}}}} -->\n<div class="wp-block-group gk-draft">{inner}</div>\n<!-- /wp:group -->\n')
+
+
+def before_after(before, after, alt, caption):
+    inner = f"<?php echo gk_before_after( '{before}', '{after}', '{alt}', '{caption}' ); ?>"
+    return f"<!-- wp:html -->\n{inner}\n<!-- /wp:html -->\n"
+
+
 def chips(items, light=True):
     c = "gk-chips gk-chips--light" if light else "gk-chips"
     inner = "".join(pa(x, cls="gk-chip") for x in items)
@@ -363,9 +374,10 @@ def price_table(rows, head=("Product", "Regular price")):
             f'<tbody>{body}</tbody></table></figure>\n<!-- /wp:table -->\n')
 
 
-PKG = [("The Emerson", "A starter combination of overhead storage and slatwall.", "Package contents and price to be confirmed"),
-       ("The Duke", "A larger combination for bigger garages.", "Package contents and price to be confirmed"),
-       ("The Earl", "Our top combination for the whole garage.", "Package contents and price to be confirmed")]
+# From the client's comments in the Website Content Outline (answer 3, "current Combination Packages as of right now"). The Earl was not listed; the client will tweak these later.
+PKG = [("The Emerson", "Buy two racks, get one case of slatwall free.", "$2,960"),
+       ("The Duke", "Buy four cases of slatwall or four racks, get two cases of slatwall or two racks free.", "$5,920"),
+       ("The Earl", "Contents and price to come from the client.", "To be confirmed")]
 body = page_hero("Garage Storage Pricing", "Pricing and offers", "Regular pricing and what each product includes, then a free design consultation to plan your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
 body += grp(hd(2, "Regular pricing") + price_table(PRICES)
             + pa("Pricing is for conventional garages. Professional installation is included.", size="small")
@@ -401,6 +413,9 @@ GAL = """2021/04/20170303_180905-scaled.jpg 2021/04/20210212_101134-scaled.jpg 2
 2012/03/PA020396.jpg 2012/03/PA020397.jpg 2012/03/PA020398.jpg 2012/03/PA020399.jpg 2012/03/PA020401.jpg 2012/03/PA020402.jpg 2012/03/PA020403.jpg
 2012/03/PA020404.jpg 2012/03/PA020405.jpg 2012/03/PA020406.jpg 2012/03/PA020408.jpg 2012/03/PA020409.jpg 2012/03/PA020410.jpg""".split()
 body = page_hero("Our Work", "Photo gallery", "Photos of our team and installations in Greater Austin and San Antonio.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
+body += grp(hd(2, "Before and after")
+            + pa("Drag the slider to see a wall before and after. This is a sample pair of photos from a slatwall install, to preview how the sliders will work. Real before and after pairs come from the client.")
+            + before_after("sample-before-slatwall.jpg", "sample-after-slatwall.jpg", "A wall before and after slatwall was installed", "Sample: slatwall install"), width="1280px", pad="50")
 body += grp(hd(2, "Recent installs")
             + gallery(["gk-local:" + f for f in ["garage-complete-1.jpg", "garage-complete-2.jpg", "garage-complete-3.jpg", "overhead-racks-two-car.jpg", "garage-complete-4.jpg",
                                                   "motorized-two-racks-dark.jpg", "overhead-rack-slatwall-door.jpg", "steel-cabinets-wall.jpg", "steel-cabinets-workbench.jpg", "motorized-rack-net-closeup.jpg"]],
@@ -568,11 +583,6 @@ simple_product("page-motorized", "Motorized Overhead Storage Racks", "Automated 
                      ("motorized-rack-lowered.jpg", "A motorized overhead rack lowered for loading"),
                      ("motorized-rack-net-closeup.jpg", "A motorized overhead rack with a safety net, seen from below")],
                pics_title="Motorized racks in real garages")
-simple_product("page-floor-coatings", "Garage Floor Coatings", "Floor coatings", "Finish the floor.",
-               ["A coated floor finishes the garage. This page is built from the client's Website Content Outline & Questionnaire; the current site has no floor coatings page.",
-                "The coating system, installation steps, colour and flake options, cure time and warranty come from the client."],
-               ["Coating system explained in plain language", "Surface prep, crack repair, base coat, flake and clear top coat", "Colour and flake chip gallery", "Professional coating versus a hardware-store kit"],
-               UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
 simple_product("page-ventilation", "Garage Ventilation", "Garage ventilation", "Cool the garage down so you can actually use it.",
                ["A garage that is too hot to use in the Texas summer is wasted space. Our garage ventilation system cools your garage up to 20 degrees and your attic up to 40 degrees.",
                 "Each system includes a thermostat and two premium aluminum intake vents with insect screens and an auxiliary frame for a double skin insulated door (insulation not included). Reflective garage door insulation is available as an add-on."],
@@ -582,16 +592,6 @@ simple_product("page-ventilation", "Garage Ventilation", "Garage ventilation", "
                      ("garage-door-vent-closeup.jpg", "A close-up of a louvered garage door vent"),
                      ("garage-door-vent-inside.jpg", "An intake vent seen from inside the garage door")],
                pics_title="Garage door vents we install", per=2)
-simple_product("page-lifts", "Lifts", "Lifts", "Part of a complete garage renovation.",
-               ["Lifts are part of the full garage renovations The Garage King offers, alongside storage solution systems, floors and doors.",
-                "The products, specifications and photos for this page come from the client. Complete our contact form to ask about lifts for your garage."],
-               ["Product types and specifications: details from the client", "Garage and ceiling requirements: details from the client", "Installation and warranty: details from the client"],
-               UP + "2021/04/20190227_103359-scaled.jpg")
-simple_product("page-garage-doors", "Garage Door Installation and Repairs", "Garage doors", "Part of a complete garage renovation.",
-               ["A full garage renovation includes the door. The Garage King offers garage door installation and repairs alongside storage solution systems and floors.",
-                "The services, brands, photos and service details for this page come from the client. Complete our contact form to ask about your garage door."],
-               ["Installation and repair services: details from the client", "Door styles and brands: details from the client", "Warranty and service area: details from the client"],
-               UP + "2021/04/20190718_125822-scaled.jpg")
 
 # ---------- Project Stories (placeholder) ----------
 body = page_hero("Project Stories", "Coming soon", "Before and after stories from real Greater Austin and Greater San Antonio garages.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
@@ -651,6 +651,92 @@ write("welcome", "Welcome", body)
 body = grp(hd(2, "Trusted across Central Texas", align="center") + pa("4.9 Google rating. A few words from our customers.", align="center")
            + review_rows(GREV[:3]) + btns(btn("Read more reviews", "/testimonials"), center=True), bg="grey", width="1180px")
 write("reviews", "Reviews", body)
+
+# ---------- Draft pages: built from what the page needs; real content comes from the client ----------
+# Lifts. The client's notes only say "add Lifts as a product/service". The ads records say attic lifts are sold, so this draft assumes attic lifts.
+body = page_hero("Lifts", "Lifts", "Bring your storage down to you, and put the attic to work.", UP + "2021/04/20190227_103359-scaled.jpg")
+body += grp(draft_note("This page assumes \"lifts\" means attic lifts, which lower storage from the attic to the garage floor. Justin needs to confirm what the product is and supply the details below.",
+                       ["Which lift products The Garage King sells (attic lifts, other lifts)", "Sizes, weight capacity and attic opening requirements",
+                        "Brands and warranty", "How long an installation takes and what the crew does", "Photos or a short video of a lift installed and working", "Price, or a custom quote"])
+            + cols([pa("A lift raises and lowers stored items between your attic and your garage floor, so you are not carrying heavy bins up a ladder.")
+                    + pa("It puts attic space you already have to work, and keeps seasonal and bulky items out of the way until you need them.")
+                    + btns(btn("Book a Free Design Consultation", "/schedule-quote")),
+                    ul(["No ladder and no carrying heavy items overhead", "Uses attic space that is hard to reach otherwise", "Pairs with overhead racks, slatwall and cabinets for a complete garage",
+                        "Professional installation by our own crew", "Sizes, capacity and requirements: details from the client"], cls="gk-checks")]),
+            width="1180px", pad="60")
+body += pattern("cta-band")
+write("page-lifts", "Lifts", body)
+
+# Garage door installation and repairs. The client's notes only say "bookmark a page for Garage Door Installation and Repairs".
+body = page_hero("Garage Door Installation and Repairs", "Garage doors", "Part of a complete garage renovation.", UP + "2021/04/20190718_125822-scaled.jpg")
+body += grp(draft_note("The services below are typical for garage door work, listed so the page has its shape. Justin needs to confirm which ones The Garage King offers and supply the details below.",
+                       ["Which services are offered: installation, repair, openers, springs and cables, replacement panels", "Door brands and styles", "Whether repairs are offered in the whole service area and how fast",
+                        "Warranty on doors and on repairs", "Photos of finished doors", "Price, or a custom quote"])
+            + cols([pa("A full garage renovation includes the door. The Garage King offers garage door installation and repairs alongside storage solution systems and floors.")
+                    + pa("Complete our contact form to ask about your garage door, and we will plan it with the rest of your garage.")
+                    + btns(btn("Book a Free Design Consultation", "/schedule-quote")),
+                    hd(3, "Typical services (to be confirmed)")
+                    + ul(["New garage door installation", "Garage door repair", "Springs, cables and rollers", "Opener installation and repair", "Replacement panels and weather seals"], cls="gk-checks")]),
+            width="1180px", pad="60")
+body += pattern("cta-band")
+write("page-garage-doors", "Garage doors", body)
+
+# Floor coatings. Price from the client's public Latest Deals document; the steps are the generic ones in the client's Website Content Outline.
+body = page_hero("Garage Floor Coatings", "Floor coatings", "Finish the floor.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
+body += grp(draft_note("The steps and comparison below are generic, from the client's Website Content Outline. Justin needs to confirm how The Garage King actually does floors and supply the details below.",
+                       ["The coating system used (epoxy, polyaspartic, polyurea, a combination)", "The real installation steps and how long the job takes", "Colour and flake options, with photos of finished floors",
+                        "Cure time, durability and warranty", "Why the coating beats a hardware-store kit, in the client's words"])
+            + cols([pa("A coated floor finishes the garage. It is priced by the square foot, and a one car garage is about 250 square feet.")
+                    + pa("Regular price: $7 per square foot, for conventional garages.", cls="gk-offer")
+                    + btns(btn("Book a Free Design Consultation", "/schedule-quote")),
+                    hd(3, "How a floor coating goes in (draft)")
+                    + ul(["Prepare the surface", "Repair cracks", "Apply the base coat", "Broadcast the colour flake", "Seal with a clear top coat"], cls="gk-checks")]),
+            width="1180px", pad="60")
+body += grp(hd(2, "Why professional installation matters (draft)")
+            + pa("A coating is only as good as the surface under it. Professional preparation and materials are what make a floor last, and what a hardware-store kit usually leaves out. Details and proof points to come from the client."), width="820px", pad="40")
+body += pattern("cta-band")
+write("page-floor-coatings", "Floor coatings", body)
+
+# Terms of Use and SMS Terms: standard language, a draft for the client's review (questionnaire answer 40: "We'll review").
+TERMS = [("h", "Terms of Use"),
+ ("p", "These terms apply to your use of thegarageking.com. By using the site you agree to them."),
+ ("h", "Use of the website"),
+ ("p", "You may use this site for lawful purposes only, to learn about our products and services and to contact us. You may not interfere with the site, try to gain unauthorized access, or copy or republish its content without our permission."),
+ ("h", "Information, prices and offers"),
+ ("p", "Content on this site is general information. Prices and offers can change and may end on the date shown. Prices shown are for conventional garages. A written price for your garage comes after your design consultation."),
+ ("h", "Quotes, scheduling and installation"),
+ ("p", "Consultations are by phone or video. Installation dates, details and any warranty are confirmed in writing for your project."),
+ ("h", "Ownership of content"),
+ ("p", "The text, photos, logos and other content on this site belong to The Garage King LLC or its licensors. You may not use them without written permission."),
+ ("h", "Links to other websites"),
+ ("p", "This site may link to other websites. We are not responsible for their content or practices."),
+ ("h", "No warranty for the website, and limits on liability"),
+ ("p", "The site is provided as is. To the extent the law allows, The Garage King LLC is not liable for losses arising from your use of the site. This does not limit any written warranty we give for products or installation."),
+ ("h", "Changes to these terms"),
+ ("p", "We may update these terms. The date of the latest update will be shown here."),
+ ("h", "Governing law"),
+ ("p", "These terms are governed by the laws of the State of Texas."),
+ ("h", "SMS Terms (text messages)"),
+ ("p", "The Garage King may send you text messages about your appointment and project, such as appointment confirmations and reminders, scheduling and project updates."),
+ ("h", "Your consent"),
+ ("p", "By giving us your mobile number and checking the consent box on a form, you agree to receive these text messages. Consent is not a condition of any purchase."),
+ ("h", "Message frequency and rates"),
+ ("p", "Message frequency varies with your project. Message and data rates may apply."),
+ ("h", "Opting out and help"),
+ ("p", "Reply STOP at any time to stop receiving texts. Reply HELP for help, or contact us at info@thegarageking.com or 844-694-5464."),
+ ("h", "Carriers"),
+ ("p", "Mobile carriers are not liable for delayed or undelivered messages."),
+ ("h", "Your information"),
+ ("p", "How we handle your information is described in our Privacy Policy. We do not share mobile numbers with third parties for their marketing."),
+ ("h", "Contact"),
+ ("p", "The Garage King LLC, info@thegarageking.com, 844-694-5464.")]
+body = (page_hero("Terms of Use and SMS Terms", "Legal", "", UP + "2012/03/Slatwall-Garage-King-882x563.jpg")
+        .replace("min-height:46vh", "min-height:28vh").replace('"minHeight":46', '"minHeight":28')
+        + grp(draft_note("These are standard website terms and text-message terms, written as a draft. This is not legal advice. Justin (or his attorney) must review and approve them before launch.",
+                         ["Confirm The Garage King LLC is the right legal name and Texas the right governing law", "Confirm the business sends the text messages described (appointment confirmations)",
+                          "Confirm the statement that mobile numbers are not shared with third parties for their marketing", "Add the last-updated date once approved"])
+              + privacy_blocks(TERMS), width="820px"))
+write("page-terms", "Terms of Use and SMS Terms", body)
 
 # ---------- Home page: offers band ----------
 write("offers-band", "Offers band", grp(hd(2, "Current offers", color="white", align="center") + offers_block()

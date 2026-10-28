@@ -15,3 +15,9 @@ Follow the hub's ground rules: say exactly what will change, back up first, wait
 ## Garage King additions (2026-10-23)
 
 9. **Forms and tracking must work exactly as on the current site** (`docs/tracking-inventory.md`): install the Tag Manager container, Meta Pixel and the Calendly listener as they are today; keep `/ga` and `/ga-thank-you-page-garage-talk` at the same addresses; decide `/ma`, `/nextdoor` and `/sael` with the client; redirect every retired address. Confirm in Tag Assistant and Google Ads that the lead form, scheduled call and contact form conversions still record (Justin has the Tag Manager, Analytics and Google Ads access).
+
+## Draft content to resolve before launch (added 2026-10-28)
+10. **Remove every draft box.** Pages with a dashed "Draft: needs real content from Justin" box (`.gk-draft`): Lifts, Garage Door Installation and Repairs, Floor Coatings, Terms of Use and SMS Terms. Replace the content with Justin's real details first, then delete the box. Search the theme for `gk-draft`.
+11. **Replace the sample content:** the before and after slider uses a sample pair of photos (`sample-before-slatwall.jpg`, `sample-after-slatwall.jpg`); the offers and the pop-up are samples (see `docs/later-scope.md`, "Built 2026-10-28").
+12. **Terms of Use and SMS Terms** are standard draft language, not legal advice. Justin (or his attorney) must approve them, and confirm the legal name, Texas law, the text messages described, and the mobile-number sharing statement.
+
