@@ -36,6 +36,14 @@
     },
     {
       "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/popup.js",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/popup.js"
+      }
+    },
+    {
+      "step": "writeFile",
       "path": "/wordpress/wp-content/themes/garage-king/assets/theme.css",
       "data": {
         "resource": "url",
@@ -112,6 +120,14 @@
       "data": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/king-difference.php"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/patterns/offers-band.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/patterns/offers-band.php"
       }
     },
     {

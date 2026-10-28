@@ -175,6 +175,76 @@ def card_row(cards):
     return f'<!-- wp:columns {json.dumps(a)} -->\n<div class="wp-block-columns gk-cards">{"".join(cards)}</div>\n<!-- /wp:columns -->\n'
 
 
+# ---------- Rack size diagram (built from the current site's list of nine sizes, in feet) ----------
+def size_diagram():
+    """Top-view, to-scale drawing of the nine overhead rack sizes listed on the current site (8x4, 8x3, 8x2, 6x4, 6x3, 6x2, 4x4, 4x3, 4x2).
+    Length is across, depth is down. The 8x4 is the exclusive Enduro Deck. Units are feet, as on the current site (8'x4' Enduro Deck)."""
+    k = 28                      # pixels per foot
+    lengths, depths = (8, 6, 4), (4, 3, 2)
+    gap, left, top = 24, 70, 52
+    colw = [l * k for l in lengths]
+    rowh = [d * k for d in depths]
+    xs = [left]
+    for w in colw[:-1]:
+        xs.append(xs[-1] + w + gap)
+    ys = [top]
+    for h in rowh[:-1]:
+        ys.append(ys[-1] + h + gap)
+    width = xs[-1] + colw[-1] + 20
+    height = ys[-1] + rowh[-1] + 56
+    parts = []
+    for ci, l in enumerate(lengths):
+        parts.append(f'<text x="{xs[ci] + colw[ci] / 2}" y="30" text-anchor="middle" class="gk-sd-axis">{l}&#8242; long</text>')
+    for ri, d in enumerate(depths):
+        parts.append(f'<text x="{left - 12}" y="{ys[ri] + rowh[ri] / 2 + 6}" text-anchor="end" class="gk-sd-axis">{d}&#8242; deep</text>')
+    names = []
+    for ci, l in enumerate(lengths):
+        for ri, d in enumerate(depths):
+            w, h = l * k, d * k
+            enduro = (l, d) == (8, 4)
+            cls = "gk-sd-rack gk-sd-rack--enduro" if enduro else "gk-sd-rack"
+            parts.append(f'<rect x="{xs[ci]}" y="{ys[ri]}" width="{w}" height="{h}" rx="4" class="{cls}"/>')
+            label = f"{l}&#8242; &#215; {d}&#8242;"
+            if enduro:
+                parts.append(f'<text x="{xs[ci] + w / 2}" y="{ys[ri] + h / 2 - 4}" text-anchor="middle" class="gk-sd-label gk-sd-label--dark">{label}</text>')
+                parts.append(f'<text x="{xs[ci] + w / 2}" y="{ys[ri] + h / 2 + 18}" text-anchor="middle" class="gk-sd-note">Enduro Deck</text>')
+            else:
+                parts.append(f'<text x="{xs[ci] + w / 2}" y="{ys[ri] + h / 2 + 6}" text-anchor="middle" class="gk-sd-label">{label}</text>')
+            names.append(f"{l} by {d} feet" + (" (the Enduro Deck)" if enduro else ""))
+    sy = height - 26
+    parts.append(f'<line x1="{left}" y1="{sy}" x2="{left + 4 * k}" y2="{sy}" class="gk-sd-scale"/>')
+    parts.append(f'<line x1="{left}" y1="{sy - 6}" x2="{left}" y2="{sy + 6}" class="gk-sd-scale"/>')
+    parts.append(f'<line x1="{left + 4 * k}" y1="{sy - 6}" x2="{left + 4 * k}" y2="{sy + 6}" class="gk-sd-scale"/>')
+    parts.append(f'<text x="{left + 4 * k + 12}" y="{sy + 6}" class="gk-sd-axis">scale: 4&#8242;</text>')
+    desc = "Top view, drawn to the same scale: " + ", ".join(names) + "."
+    svg = (f'<svg class="gk-size-diagram" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="gk-sd-t gk-sd-d">'
+           f'<title id="gk-sd-t">The nine overhead rack sizes, to scale</title><desc id="gk-sd-d">{desc}</desc>' + "".join(parts) + '</svg>')
+    return f'<!-- wp:html -->\n<figure class="gk-size-figure">{svg}<figcaption>Rack sizes drawn to the same scale, top view, in feet. See the layout options above for one and two car garages and for ceilings under and over 9.5 feet.</figcaption></figure>\n<!-- /wp:html -->\n'
+
+
+# ---------- Offers (sample, from the client's public Latest Deals document) ----------
+# Read 2026-10-28 from the document the current site's pricing page links to (the "Your Special Deals" block). Promotional pricing in it ended 2026-10-19,
+# so the site shows these as SAMPLE offers to preview the layout. The client edits this section in the page editor.
+OFFERS = [("Buy one motor rack, get 50% off the second", "Two motor racks", "$6,900"),
+          ("Buy two fixed racks, get one free", "Three fixed racks", "$2,960"),
+          ("Buy two cases of slatwall, get the third free", "Three cases of slatwall", "$2,960"),
+          ("The Deluxe Cabinet Package, 7-piece set", "Two tall, two upper and two lower cabinets with a bamboo counter top", "$7,200 (normally $8,380)")]
+OFFERS_NOTE = "Sample offers: the October promotion, which ended on October 19, 2026, shown here to preview how current offers will look. Offer pricing is for conventional garages."
+
+
+def offer_card(title, what, price):
+    return (f'<!-- wp:column {{"className":"gk-card gk-offer-card"}} -->\n<div class="wp-block-column gk-card gk-offer-card">'
+            + pa("Sample offer", "amber", cls="gk-offer-tag")
+            + f'<!-- wp:heading {{"level":3,"textColor":"white"}} -->\n<h3 class="wp-block-heading has-white-color has-text-color">{e(title)}</h3>\n<!-- /wp:heading -->\n'
+            + pa(what, "muted") + pa(price, "amber", cls="gk-offer-price")
+            + '</div>\n<!-- /wp:column -->\n')
+
+
+def offers_block(heading_color="white"):
+    return (card_row([offer_card(*o) for o in OFFERS[:2]]) + card_row([offer_card(*o) for o in OFFERS[2:]])
+            + pa(OFFERS_NOTE, "muted", size="small"))
+
+
 SIZES = ["8×4 Enduro Deck", "8×3", "8×2", "6×4", "6×3", "6×2", "4×4", "4×3", "4×2"]
 TAG = "Can't find a thing? Ask the Garage King!"
 POSITION = "The boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems."
@@ -203,7 +273,7 @@ body += grp(
             im(UP + "2012/03/Overhead-Racks-Two-Car-Garage-Layout-High-Ceilings.jpg", "Two car garage rack layout, high ceilings"),
             im(UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg", "Overhead racks in a two car garage"),
             im(UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg", "Overhead racks, two car, high ceilings")], cls="gk-gallery", gap="1rem")
-    + hd(3, "Sizes available") + chips(SIZES) + pa("Nine sizes, including our exclusive 8′×4′ Enduro Deck rack.", cls="")
+    + hd(3, "Sizes available") + chips(SIZES) + pa("Nine sizes, including our exclusive 8′×4′ Enduro Deck rack.", cls="") + size_diagram()
     + pa(OFFER, cls="gk-offer") + badges())
 body += pattern("cta-band")
 write("page-overhead-racks", "Overhead racks page", body)
@@ -280,8 +350,9 @@ body += grp(hd(2, "What each product includes", color="white")
                         card("Floor coatings", "Priced by the square foot. A one car garage is about 250 square feet.", "/garage-floor-coatings"),
                         card("Garage ventilation", "Cools your garage up to 20 degrees and the attic up to 40 degrees. Includes a thermostat and two premium aluminum intake vents with insect screens.", "/garage-exhaust-fans")]),
             bg="ink", color="white")
-body += grp(hd(2, "Current offers", color="white", align="center") + pa("We run limited-time offers on racks, slatwall and cabinet packages. Complete our contact form and book your free design consultation to hear what is available now.", "muted", align="center")
-            + btns(btn("Book a call to claim current offers", "/schedule-quote"), center=True), bg="black", color="white", width="900px", pad="50")
+body += grp(hd(2, "Current offers", color="white", align="center")
+            + pa("Limited-time offers on racks, slatwall and cabinet packages. Book your free design consultation to claim them.", "muted", align="center")
+            + offers_block() + btns(btn("Book a call to claim current offers", "/schedule-quote"), center=True), bg="black", color="white", width="1000px", pad="50")
 body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
             + card_row([card(n, d, ).replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
             bg="ink", color="white")
@@ -532,3 +603,8 @@ write("welcome", "Welcome", body)
 body = grp(hd(2, "Trusted across Central Texas", align="center") + pa("4.9 Google rating. A few words from our customers.", align="center")
            + review_rows(GREV[:3]) + btns(btn("Read more reviews", "/testimonials"), center=True), bg="grey", width="1180px")
 write("reviews", "Reviews", body)
+
+# ---------- Home page: offers band ----------
+write("offers-band", "Offers band", grp(hd(2, "Current offers", color="white", align="center") + offers_block()
+      + btns(btn("Book a Free Design Consultation", "/schedule-quote"), btn("See pricing", "/garage-storage-pricing", outline=True), center=True),
+      bg="black", color="white", pad="50"))

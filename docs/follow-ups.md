@@ -59,11 +59,11 @@ Compared against everything above. Items already built need no action; new reque
 
 **New requests that differ from the current site (David to decide; none built):**
 1. **Photo upload** on the quote, scheduling and contact forms: the client wants it (Outline step 2 also lists it). Earlier set out of scope on 2026-10-23. Needs a decision, private storage for the photos, and a note on `/schedule-quote`.
-2. **Incentive pop-up with a coupon code** the visitor can quote when booking (the Contact form already has an optional discount code field). Not built; the offer wording is not confirmed.
-3. **Size chart as a visual diagram** (the Outline's site map says a diagram, not a table). Today the size charts and ceiling-height visuals are untouched, as on the live site.
+2. **Incentive pop-up with a coupon code** (placeholder built 2026-10-28, see `docs/later-scope.md`) the visitor can quote when booking (the Contact form already has an optional discount code field). Not built; the offer wording is not confirmed.
+3. **Size chart as a visual diagram** (rack sizes built as a to-scale diagram 2026-10-28) (the Outline's site map says a diagram, not a table). Today the size charts and ceiling-height visuals are untouched, as on the live site.
 4. **Price estimator and financing**: client says possibly a new small scope of work. Already parked.
 5. **City pages**: starter set Cedar Park, Boerne (the notes say "Bourne"), Horseshoe Bay, Hill Country Village. Not in this scope; the service-area statement stays. The reason to build them later: the ads should never show a city the site does not mention.
-6. **Offers placed on the site** (not in a linked document): the client has the list of ongoing offers from the questionnaire; the last limited-time offers ended 2026-10-19 and are not published. Need the current list and who updates it. David offered to show the client how to update the Pricing page himself.
+6. **Offers placed on the site** (sample offers displayed 2026-10-28) (not in a linked document): the client has the list of ongoing offers from the questionnaire; the last limited-time offers ended 2026-10-19 and are not published. Need the current list and who updates it. David offered to show the client how to update the Pricing page himself.
 7. **Testimonials**: how were they collected, and should Google reviews be integrated? (already in section B).
 8. **Drip**: David wants to review it to see how it connects to new features.
 

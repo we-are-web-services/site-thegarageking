@@ -40,3 +40,6 @@ Read `docs/follow-ups.md` section F first (David's notes of the Oct 19 call, sor
 - Photos are linked from the current site; download them into the new site before launch, or they break when the old site is replaced.
 - Branches: delete merged branches (Delete branch button); tick "Automatically delete head branches" in each repo.
 - Items parked for another scope of work: `docs/later-scope.md`. Full to-do list: `docs/follow-ups.md`. Decisions: `docs/site-notes.md`. What the site should be: `docs/brief.md`.
+
+## Added 2026-10-28
+Built on branch `claude/offers-popup-size-diagram` (David's instruction, as previews): sample current offers (Pricing page and Home band), a placeholder coupon pop-up, and a to-scale rack size diagram. Details and what each still needs: `docs/later-scope.md`, "Built 2026-10-28". **Checked** in a static page in Chromium (desktop and phone widths: the diagram, the offer cards, the pop-up opens, closes with Escape and remembers). **Not checked in WordPress** (no local WordPress this session); open the Playground link from the branch and look at the Home, Pricing and Overhead pages. Add `?gk_popup=1` to any address to see the pop-up.

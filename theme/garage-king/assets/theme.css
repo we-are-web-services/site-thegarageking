@@ -127,3 +127,36 @@
 .gk-prices th { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
 .gk-prices td:last-child { font-weight: 700; white-space: nowrap; }
 @media (max-width: 600px) { .gk-prices td:last-child { white-space: normal; } }
+
+/* Offers (sample offers from the client's Latest Deals document) */
+.gk-offer-card .gk-offer-tag { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin: 0; }
+.gk-offer-card h3 { font-size: 1.25rem; }
+.gk-offer-price { font-family: var(--wp--preset--font-family--poppins); font-style: italic; font-weight: 800; font-size: 1.5rem; margin: 0.75rem 0 0; }
+
+/* Rack size diagram */
+.gk-size-figure { margin: 1.5rem 0; background: #fff; border: 1px solid #c9c9c4; padding: 1rem; }
+.gk-size-diagram { width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto; }
+.gk-size-figure figcaption { font-size: 0.875rem; text-align: center; margin-top: 0.75rem; }
+.gk-sd-rack { fill: #262626; stroke: #0b0b0b; stroke-width: 1; }
+.gk-sd-rack--enduro { fill: #ffb117; }
+.gk-sd-label { fill: #fff; font: 700 22px Inter, Arial, sans-serif; }
+.gk-sd-label--dark { fill: #0b0b0b; }
+.gk-sd-note { fill: #0b0b0b; font: 600 16px Inter, Arial, sans-serif; }
+.gk-sd-axis { fill: #3d3d3a; font: 600 18px Inter, Arial, sans-serif; }
+.gk-sd-scale { stroke: #0b0b0b; stroke-width: 2; }
+
+/* Offer pop-up (placeholder: wording and code to be confirmed with the client) */
+.gk-popup[hidden] { display: none; }
+.gk-popup { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 1rem; background: rgba(0, 0, 0, 0.7); }
+.gk-popup__box { position: relative; width: 100%; max-width: 30rem; background: var(--gk-black); color: #fff; border-top: 4px solid var(--gk-amber); padding: 2rem 1.75rem 1.75rem; }
+.gk-popup__close { position: absolute; top: 0.5rem; right: 0.5rem; width: 2.75rem; height: 2.75rem; background: transparent; border: 0; color: #fff; font-size: 1.75rem; line-height: 1; cursor: pointer; }
+.gk-popup__close:hover, .gk-popup__close:focus-visible { color: var(--gk-amber); }
+.gk-popup__tag { margin: 0; color: var(--gk-amber); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+.gk-popup__title { margin: 0.4rem 0 0.75rem; font-size: 1.6rem; line-height: 1.2; }
+.gk-popup__text { margin: 0 0 1rem; color: var(--wp--preset--color--muted, #b9b9b5); }
+.gk-popup__code { display: flex; align-items: stretch; margin: 0 0 1rem; border: 2px dashed var(--gk-amber); }
+.gk-popup__code code { flex: 1; padding: 0.7rem 1rem; font-size: 1.3rem; font-weight: 800; letter-spacing: 0.12em; text-align: center; color: var(--gk-amber); background: transparent; }
+.gk-popup__copy { padding: 0 1rem; background: var(--gk-amber); color: var(--gk-black); border: 0; font-weight: 800; cursor: pointer; }
+.gk-popup__cta { display: block; padding: 0.95rem 1rem; text-align: center; background: var(--gk-amber); color: var(--gk-black); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem; text-decoration: none; }
+.gk-popup__cta:hover { background: #fff; }
+.gk-popup__note { margin: 1rem 0 0; font-size: 0.75rem; color: #8d8d89; }
