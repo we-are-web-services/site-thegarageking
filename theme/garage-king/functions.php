@@ -15,12 +15,7 @@ function gk_placeholder( $path ) {
 }
 
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style(
-		'gk-fonts',
-		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Poppins:ital,wght@1,700;1,800&display=swap',
-		array(),
-		null
-	);
+	wp_enqueue_style( 'gk-fonts', get_theme_file_uri( 'assets/fonts/fonts.css' ), array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'garage-king', get_theme_file_uri( 'assets/theme.css' ), array(), wp_get_theme()->get( 'Version' ) );
 	if ( gk_popup_enabled() ) {
 		wp_enqueue_script( 'gk-popup', get_theme_file_uri( 'assets/popup.js' ), array(), wp_get_theme()->get( 'Version' ), true );
@@ -98,3 +93,54 @@ add_action( 'template_redirect', function () {
 		exit;
 	}
 } );
+
+/*
+ * Search basics: a short description for each main page, share tags, and LocalBusiness structured data on the home and contact pages.
+ * Only facts already on the client's current site. Left out on purpose until the client confirms them: rating and review count, founding year
+ * (the site says 2004, the ads say 2000), street address and hours. FAQ structured data waits until the FAQ answers are approved.
+ */
+function gk_seo_descriptions() {
+	return array(
+		'home'                             => 'The boutique, family owned and operated expert in luxury full garage renovations, including floors, doors and storage solution systems. Serving Greater Austin and Greater San Antonio.',
+		'overhead-racks'                   => 'Strong, lightweight steel overhead storage racks in nine sizes, installed by The Garage King for all ceiling heights.',
+		'motorized-overhead-racks'         => 'Motorized overhead storage racks that lower with the press of a button, with a wireless remote and safety net, installed by The Garage King.',
+		'slatwall'                         => 'Heavy duty slatwall garage organization in four finishes, installed by The Garage King in Greater Austin and Greater San Antonio.',
+		'steel-cabinets'                   => 'Powder coated steel garage cabinets, mounted off the floor, with soft self-closing drawers and doors.',
+		'garage-exhaust-fans'              => 'Garage ventilation that cools your garage up to 20 degrees and your attic up to 40 degrees.',
+		'garage-storage-pricing'           => 'Regular pricing for overhead racks, slatwall, steel cabinets, floor coatings and garage ventilation, and current offers.',
+		'garage-storage-photos'            => 'Photos of recent garage storage installations by The Garage King in Greater Austin and Greater San Antonio.',
+		'garage-storage-solutions'         => 'Garage storage solution systems from The Garage King: overhead racks, slatwall, steel cabinets, floor coatings and ventilation.',
+		'how-it-works'                     => 'How a garage renovation with The Garage King works, from your free design consultation to installation.',
+		'faq'                              => 'Answers to common questions about garage storage installations by The Garage King.',
+		'about'                            => 'The Garage King is a boutique, family owned and operated expert in luxury full garage renovations.',
+		'testimonials'                     => 'Reviews from The Garage King customers in Greater Austin and Greater San Antonio.',
+		'service-areas'                    => 'The Garage King serves all Greater Austin, Greater San Antonio and surrounding areas.',
+		'contact-us'                       => 'Contact The Garage King to book a free design consultation for your garage.',
+		'schedule-quote'                   => 'Book your free design consultation with The Garage King.',
+	);
+}
+
+add_action( 'wp_head', function () {
+	$map  = gk_seo_descriptions();
+	$slug = is_front_page() ? 'home' : ( is_page() ? get_post_field( 'post_name', get_queried_object_id() ) : '' );
+	if ( $slug && isset( $map[ $slug ] ) ) {
+		$desc = $map[ $slug ];
+		printf( "<meta name=\"description\" content=\"%s\" />\n", esc_attr( $desc ) );
+		printf( "<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:site_name\" content=\"The Garage King\" />\n" );
+		printf( "<meta property=\"og:title\" content=\"%s\" />\n<meta property=\"og:description\" content=\"%s\" />\n", esc_attr( wp_get_document_title() ), esc_attr( $desc ) );
+		printf( "<meta property=\"og:url\" content=\"%s\" />\n", esc_url( is_front_page() ? home_url( '/' ) : get_permalink() ) );
+	}
+	if ( is_front_page() || ( is_page() && 'contact-us' === get_post_field( 'post_name', get_queried_object_id() ) ) ) {
+		$data = array(
+			'@context'    => 'https://schema.org',
+			'@type'       => 'HomeAndConstructionBusiness',
+			'name'        => 'The Garage King',
+			'url'         => home_url( '/' ),
+			'telephone'   => '+1-844-694-5464',
+			'email'       => 'info@thegarageking.com',
+			'description' => $map['home'],
+			'areaServed'  => array( 'Greater Austin, Texas', 'Greater San Antonio, Texas' ),
+		);
+		echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "</script>\n";
+	}
+}, 1 );

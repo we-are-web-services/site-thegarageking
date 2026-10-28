@@ -24,6 +24,10 @@
     },
     {
       "step": "mkdir",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/fonts"
+    },
+    {
+      "step": "mkdir",
       "path": "/wordpress/wp-content/themes/garage-king/assets/images"
     },
     {
@@ -61,6 +65,38 @@
     {
       "step": "mkdir",
       "path": "/wordpress/wp-content/themes/garage-king/templates"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/fonts/fonts.css",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/fonts/fonts.css"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/fonts/inter-normal-400.woff2",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/fonts/inter-normal-400.woff2"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/fonts/poppins-italic-700.woff2",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/fonts/poppins-italic-700.woff2"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/themes/garage-king/assets/fonts/poppins-italic-800.woff2",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/we-are-web-services/site-thegarageking/main/theme/garage-king/assets/fonts/poppins-italic-800.woff2"
+      }
     },
     {
       "step": "writeFile",
