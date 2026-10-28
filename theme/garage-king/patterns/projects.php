@@ -15,8 +15,11 @@ $ph = array(
 <h2 class="wp-block-heading has-text-align-center">See the transformation</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Before and after sliders will go here. These are photos from the current site.</p>
+<p class="has-text-align-center">Drag the slider to compare. This is a sample pair of photos; real before and after pairs come from the client.</p>
 <!-- /wp:paragraph -->
+<!-- wp:html -->
+<?php echo gk_before_after( 'sample-before-slatwall.jpg', 'sample-after-slatwall.jpg', 'A wall before and after slatwall was installed', 'Sample: slatwall install' ); ?>
+<!-- /wp:html -->
 <!-- wp:columns {"className":"gk-gallery"} -->
 <div class="wp-block-columns gk-gallery">
 <?php foreach ( $ph as $p ) : ?>

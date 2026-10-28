@@ -223,10 +223,10 @@
 <h3 class="wp-block-heading has-white-color has-text-color">The Emerson</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted"} -->
-<p class="has-muted-color has-text-color">A starter combination of overhead storage and slatwall.</p>
+<p class="has-muted-color has-text-color">Buy two racks, get one case of slatwall free.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor": "white", "fontSize": "small"} -->
-<p class="has-white-color has-text-color has-small-font-size">Package contents and price to be confirmed</p>
+<p class="has-white-color has-text-color has-small-font-size">$2,960</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -235,10 +235,10 @@
 <h3 class="wp-block-heading has-white-color has-text-color">The Duke</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted"} -->
-<p class="has-muted-color has-text-color">A larger combination for bigger garages.</p>
+<p class="has-muted-color has-text-color">Buy four cases of slatwall or four racks, get two cases of slatwall or two racks free.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor": "white", "fontSize": "small"} -->
-<p class="has-white-color has-text-color has-small-font-size">Package contents and price to be confirmed</p>
+<p class="has-white-color has-text-color has-small-font-size">$5,920</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -247,10 +247,10 @@
 <h3 class="wp-block-heading has-white-color has-text-color">The Earl</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted"} -->
-<p class="has-muted-color has-text-color">Our top combination for the whole garage.</p>
+<p class="has-muted-color has-text-color">Contents and price to come from the client.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor": "white", "fontSize": "small"} -->
-<p class="has-white-color has-text-color has-small-font-size">Package contents and price to be confirmed</p>
+<p class="has-white-color has-text-color has-small-font-size">To be confirmed</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->

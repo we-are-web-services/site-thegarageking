@@ -34,7 +34,7 @@ Added 2026-10-23: fill the pages marked "details from the client" (Lifts, Garage
 - ~~Quote page and forms~~ **Done 2026-10-23:** quote form in two steps and the Contact form matched to the live site's fields; one thank-you URL per form. Photo upload and estimates are out of scope (David, 2026-10-23). reCAPTCHA: add later if needed (the forms use a hidden field and a minimum fill time for now).
 - Lifts and Garage Door Installation and Repairs pages exist as drafts (2026-10-23) and need the client's content; Project Stories is a Coming Soon page. Still to do: Floor Coatings, Cabinets and Terms content; the city page template.
 - Ad landing page `/ga` and keyword variants; `/nextdoor` and `/sael` if still active; Privacy, Terms and SMS; 404.
-- Scroll-triggered incentive pop-up; real logo; self-hosted fonts instead of Google Fonts; SEO (titles, descriptions, LocalBusiness, Review and FAQ schema); WebP images; accessibility check; tablet check of the header.
+- Real logo; WebP images; accessibility check; tablet check of the header. **Done 2026-10-28:** self-hosted fonts (Inter and Poppins, latin subset, `assets/fonts`), page descriptions and share tags, LocalBusiness structured data on Home and Contact. **Still open:** Review schema (needs the real review count and rating), FAQ schema (needs the FAQ answers approved by the client), street address and hours in the structured data.
 - Test the blueprint in real Playground; read pages 15 to 18 of the questionnaire PDF as images for their colours.
 
 ## D. Found on the current site (not in the Website Content Outline)

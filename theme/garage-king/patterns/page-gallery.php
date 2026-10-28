@@ -20,6 +20,18 @@
 <!-- /wp:cover -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1280px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
+<h2 class="wp-block-heading">Before and after</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Drag the slider to see a wall before and after. This is a sample pair of photos from a slatwall install, to preview how the sliders will work. Real before and after pairs come from the client.</p>
+<!-- /wp:paragraph -->
+<!-- wp:html -->
+<?php echo gk_before_after( 'sample-before-slatwall.jpg', 'sample-after-slatwall.jpg', 'A wall before and after slatwall was installed', 'Sample: slatwall install' ); ?>
+<!-- /wp:html -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1280px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
 <h2 class="wp-block-heading">Recent installs</h2>
 <!-- /wp:heading -->
 <!-- wp:gallery {"linkTo":"none","className":"gk-gallery-grid"} -->
