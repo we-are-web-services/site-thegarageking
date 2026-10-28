@@ -6,8 +6,8 @@
  * Inserter: no
  */
 ?>
-<!-- wp:cover {"url":"https://thegarageking.com/wp-content/uploads/2021/04/20190225_134757-scaled.jpg","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://thegarageking.com/wp-content/uploads/2021/04/20190225_134757-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
+<!-- wp:cover {"url":"<?php echo gk_placeholder( '2021/04/20190225_134757-scaled.jpg' ); ?>","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo gk_placeholder( '2021/04/20190225_134757-scaled.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
 <p class="gk-eyebrow has-amber-color has-text-color">Reviews</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
@@ -199,13 +199,13 @@
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
-<figure class="wp-block-image size-large gk-badge"><img src="https://thegarageking.com/wp-content/uploads/2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png" alt="Better Business Bureau Accredited A+ rating"/></figure>
+<figure class="wp-block-image size-large gk-badge"><img src="<?php echo gk_placeholder( '2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png' ); ?>" alt="Better Business Bureau Accredited A+ rating"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
-<figure class="wp-block-image size-large gk-badge"><img src="https://thegarageking.com/wp-content/uploads/2013/03/seal.png" alt="HomeAdvisor Screened and Approved"/></figure>
+<figure class="wp-block-image size-large gk-badge"><img src="<?php echo gk_placeholder( '2013/03/seal.png' ); ?>" alt="HomeAdvisor Screened and Approved"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->

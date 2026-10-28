@@ -10,7 +10,7 @@
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2017/07/Garage-Organization-Garage-King-1.png" alt="The Garage King team under an overhead storage rack"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2017/07/Garage-Organization-Garage-King-1.png' ); ?>" alt="The Garage King team under an overhead storage rack"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -36,13 +36,13 @@
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
-<figure class="wp-block-image size-large gk-badge"><img src="https://thegarageking.com/wp-content/uploads/2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png" alt="Better Business Bureau Accredited A+ rating"/></figure>
+<figure class="wp-block-image size-large gk-badge"><img src="<?php echo gk_placeholder( '2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png' ); ?>" alt="Better Business Bureau Accredited A+ rating"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
-<figure class="wp-block-image size-large gk-badge"><img src="https://thegarageking.com/wp-content/uploads/2013/03/seal.png" alt="HomeAdvisor Screened and Approved"/></figure>
+<figure class="wp-block-image size-large gk-badge"><img src="<?php echo gk_placeholder( '2013/03/seal.png' ); ?>" alt="HomeAdvisor Screened and Approved"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->

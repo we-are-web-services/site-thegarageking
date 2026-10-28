@@ -37,6 +37,13 @@ Read `docs/follow-ups.md` section F first (David's notes of the Oct 19 call, sor
 
 ## Things to remember
 - Unread: pages 15 to 18 of the questionnaire PDF as images (their colours).
-- Photos are linked from the current site; download them into the new site before launch, or they break when the old site is replaced.
+- Photos from the current site are now in the theme (`assets/images/old-site`, 2026-10-28), so they will not break at launch.
 - Branches: delete merged branches (Delete branch button); tick "Automatically delete head branches" in each repo.
 - Items parked for another scope of work: `docs/later-scope.md`. Full to-do list: `docs/follow-ups.md`. Decisions: `docs/site-notes.md`. What the site should be: `docs/brief.md`.
+
+## Added 2026-10-28
+Built on branch `claude/offers-popup-size-diagram` (David's instruction, as previews): sample current offers (Pricing page and Home band), a placeholder coupon pop-up, and a to-scale rack size diagram. Details and what each still needs: `docs/later-scope.md`, "Built 2026-10-28". **Checked** in a static page in Chromium (desktop and phone widths: the diagram, the offer cards, the pop-up opens, closes with Escape and remembers). **Not checked in WordPress** (no local WordPress this session); open the Playground link from the branch and look at the Home, Pricing and Overhead pages. Add `?gk_popup=1` to any address to see the pop-up.
+
+## Client photos added 2026-10-28
+32 resized photos (about 1,600 px wide, location data removed, 5.6 MB in total) from Justin's shared Drive folder "Pictures" are in `theme/garage-king/assets/images`, used on: Overhead Storage (tall and vaulted ceilings, recent installs), Motorized Overhead Racks, Slatwall (four finishes), Steel Cabinets, Garage Ventilation and Our Work. Chosen by Claude's judgment (David: "use your best judgement"), no people, plates or house numbers. The full-size originals are in Drive, `The Garage King / Website Build / New Website Build Materials / Photos from Justin`. Not used: customer-named folders (Service Calls, Jobs In Progress, Damages), videos, team photos (people; About page later, with permission), and the supplier-looking cabinet rendering. The 51 photos the draft used to link from the old site (heroes, Welcome, Our Work, About and others) are now downloaded, resized and stored in `theme/garage-king/assets/images/old-site` (7 MB, already-public photos), and served from the theme through `gk_placeholder()`, so nothing breaks when the old site is replaced. 14 newer Google Meet photos over 6 MB could not be downloaded through the Drive tool; David can download them by hand if wanted. Floor Coatings, Lifts and Garage Doors have no client photos yet.
+

@@ -16,7 +16,7 @@ Kept in one place; update it when an item is done. Ideas set aside for another s
 Added 2026-10-23: what Lifts means; which garage door services and brands; are cabinets for sale now (Deluxe Cabinet Package) or "coming soon"; slatwall capacity (200 lbs per panel on the current page vs 300 lbs per square foot in Latest Deals); approval of the footer tagline "Can't find a thing? Ask the Garage King!" (replaces "Call the Garage King!"); contents and prices of The Emerson, The Duke and The Earl; when the next limited-time offers start (the last ended 2026-10-19).
 - ~~Estimator~~ **Out of scope (David, 2026-10-23):** nothing on the current site to match it, and the client has not confirmed having the information to base estimates on. Revisit only if that changes; the last working version is in git history (commit e1a9cfd).
 - Package contents and prices (The Emerson, The Duke, The Earl); garages completed; Google review count; real reviews (or live feed).
-- Photos and video (shared Drive folder, not received); team photos; customer permission for photos and names.
+- Photos and video: the shared folder arrived ("Pictures"); 32 resized photos are on the site (2026-10-28). Still needed: video, team photos, floor coating, lifts and garage door photos, and customer permission for photos and names.
 - Phone, email, hours, address for the footer; warranty and installation details; product specs (motorized racks, slatwall colours and finishes, cabinets, floor coating system, fans), which the client deferred to the designer.
 - Financing provider; the primary offer wording and the incentive pop-up offer; the tagline and branding tweaks; a name for "Slatwall" (red).
 - Final city-page list; whether /nextdoor and /sael are still used; which ad landing variants at launch; who approves new thank-you URLs in Google Ads.
@@ -59,11 +59,11 @@ Compared against everything above. Items already built need no action; new reque
 
 **New requests that differ from the current site (David to decide; none built):**
 1. **Photo upload** on the quote, scheduling and contact forms: the client wants it (Outline step 2 also lists it). Earlier set out of scope on 2026-10-23. Needs a decision, private storage for the photos, and a note on `/schedule-quote`.
-2. **Incentive pop-up with a coupon code** the visitor can quote when booking (the Contact form already has an optional discount code field). Not built; the offer wording is not confirmed.
-3. **Size chart as a visual diagram** (the Outline's site map says a diagram, not a table). Today the size charts and ceiling-height visuals are untouched, as on the live site.
+2. **Incentive pop-up with a coupon code** (placeholder built 2026-10-28, see `docs/later-scope.md`) the visitor can quote when booking (the Contact form already has an optional discount code field). Not built; the offer wording is not confirmed.
+3. **Size chart as a visual diagram** (rack sizes built as a to-scale diagram 2026-10-28) (the Outline's site map says a diagram, not a table). Today the size charts and ceiling-height visuals are untouched, as on the live site.
 4. **Price estimator and financing**: client says possibly a new small scope of work. Already parked.
 5. **City pages**: starter set Cedar Park, Boerne (the notes say "Bourne"), Horseshoe Bay, Hill Country Village. Not in this scope; the service-area statement stays. The reason to build them later: the ads should never show a city the site does not mention.
-6. **Offers placed on the site** (not in a linked document): the client has the list of ongoing offers from the questionnaire; the last limited-time offers ended 2026-10-19 and are not published. Need the current list and who updates it. David offered to show the client how to update the Pricing page himself.
+6. **Offers placed on the site** (sample offers displayed 2026-10-28) (not in a linked document): the client has the list of ongoing offers from the questionnaire; the last limited-time offers ended 2026-10-19 and are not published. Need the current list and who updates it. David offered to show the client how to update the Pricing page himself.
 7. **Testimonials**: how were they collected, and should Google reviews be integrated? (already in section B).
 8. **Drip**: David wants to review it to see how it connects to new features.
 

@@ -6,8 +6,8 @@
  * Inserter: no
  */
 ?>
-<!-- wp:cover {"url":"https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
+<!-- wp:cover {"url":"<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg' ); ?>","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
 <p class="gk-eyebrow has-amber-color has-text-color">Overhead storage racks</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
@@ -43,7 +43,7 @@
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg" alt="Overhead storage racks above a garage door"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg' ); ?>" alt="Overhead storage racks above a garage door"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -58,25 +58,25 @@
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
 <div class="wp-block-columns gk-gallery"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Racks-One-Car-Garage-Layout.jpg" alt="One car garage rack layout"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Racks-One-Car-Garage-Layout.jpg' ); ?>" alt="One car garage rack layout"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Racks-One-Car-Garage-Layout-High-Ceiling.jpg" alt="One car garage rack layout, high ceiling"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Racks-One-Car-Garage-Layout-High-Ceiling.jpg' ); ?>" alt="One car garage rack layout, high ceiling"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-One-Care-Layout-351x247.jpg" alt="Overhead racks in a one car garage"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks-One-Care-Layout-351x247.jpg' ); ?>" alt="Overhead racks in a one car garage"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks.jpg" alt="Overhead garage storage racks"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks.jpg' ); ?>" alt="Overhead garage storage racks"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -88,25 +88,70 @@
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
 <div class="wp-block-columns gk-gallery"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Racks-Two-Car-Garage-Layout.jpg" alt="Two car garage rack layout"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Racks-Two-Car-Garage-Layout.jpg' ); ?>" alt="Two car garage rack layout"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Racks-Two-Car-Garage-Layout-High-Ceilings.jpg" alt="Two car garage rack layout, high ceilings"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Racks-Two-Car-Garage-Layout-High-Ceilings.jpg' ); ?>" alt="Two car garage rack layout, high ceilings"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg" alt="Overhead racks in a two car garage"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg' ); ?>" alt="Overhead racks in a two car garage"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg" alt="Overhead racks, two car, high ceilings"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg' ); ?>" alt="Overhead racks, two car, high ceilings"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Tall and vaulted ceilings</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>We accommodate all ceiling heights, including vaulted and high ceilings.</p>
+<!-- /wp:paragraph -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-vaulted-ceiling.jpg' ) ); ?>" alt="Overhead racks installed under a vaulted ceiling above a garage door"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-vaulted-ceiling-2.jpg' ) ); ?>" alt="An overhead rack under a sloped ceiling"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-high-ceiling.jpg' ) ); ?>" alt="Overhead racks in a garage with a high ceiling"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Recent installs</h3>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-slatwall-door.jpg' ) ); ?>" alt="An overhead rack and slatwall beside the garage door"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-racks-long-run.jpg' ) ); ?>" alt="A long run of overhead racks along a garage wall"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -148,19 +193,22 @@
 <!-- wp:paragraph -->
 <p>Nine sizes, including our exclusive 8′×4′ Enduro Deck rack.</p>
 <!-- /wp:paragraph -->
+<!-- wp:html -->
+<figure class="gk-size-figure"><svg class="gk-size-diagram" viewBox="0 0 642 408" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="gk-sd-t gk-sd-d"><title id="gk-sd-t">The nine overhead rack sizes, to scale</title><desc id="gk-sd-d">Top view, drawn to the same scale: 8 by 4 feet (the Enduro Deck), 8 by 3 feet, 8 by 2 feet, 6 by 4 feet, 6 by 3 feet, 6 by 2 feet, 4 by 4 feet, 4 by 3 feet, 4 by 2 feet.</desc><text x="182.0" y="30" text-anchor="middle" class="gk-sd-axis">8&#8242; long</text><text x="402.0" y="30" text-anchor="middle" class="gk-sd-axis">6&#8242; long</text><text x="566.0" y="30" text-anchor="middle" class="gk-sd-axis">4&#8242; long</text><text x="58" y="114.0" text-anchor="end" class="gk-sd-axis">4&#8242; deep</text><text x="58" y="236.0" text-anchor="end" class="gk-sd-axis">3&#8242; deep</text><text x="58" y="330.0" text-anchor="end" class="gk-sd-axis">2&#8242; deep</text><rect x="70" y="52" width="224" height="112" rx="4" class="gk-sd-rack gk-sd-rack--enduro"/><text x="182.0" y="104.0" text-anchor="middle" class="gk-sd-label gk-sd-label--dark">8&#8242; &#215; 4&#8242;</text><text x="182.0" y="126.0" text-anchor="middle" class="gk-sd-note">Enduro Deck</text><rect x="70" y="188" width="224" height="84" rx="4" class="gk-sd-rack"/><text x="182.0" y="236.0" text-anchor="middle" class="gk-sd-label">8&#8242; &#215; 3&#8242;</text><rect x="70" y="296" width="224" height="56" rx="4" class="gk-sd-rack"/><text x="182.0" y="330.0" text-anchor="middle" class="gk-sd-label">8&#8242; &#215; 2&#8242;</text><rect x="318" y="52" width="168" height="112" rx="4" class="gk-sd-rack"/><text x="402.0" y="114.0" text-anchor="middle" class="gk-sd-label">6&#8242; &#215; 4&#8242;</text><rect x="318" y="188" width="168" height="84" rx="4" class="gk-sd-rack"/><text x="402.0" y="236.0" text-anchor="middle" class="gk-sd-label">6&#8242; &#215; 3&#8242;</text><rect x="318" y="296" width="168" height="56" rx="4" class="gk-sd-rack"/><text x="402.0" y="330.0" text-anchor="middle" class="gk-sd-label">6&#8242; &#215; 2&#8242;</text><rect x="510" y="52" width="112" height="112" rx="4" class="gk-sd-rack"/><text x="566.0" y="114.0" text-anchor="middle" class="gk-sd-label">4&#8242; &#215; 4&#8242;</text><rect x="510" y="188" width="112" height="84" rx="4" class="gk-sd-rack"/><text x="566.0" y="236.0" text-anchor="middle" class="gk-sd-label">4&#8242; &#215; 3&#8242;</text><rect x="510" y="296" width="112" height="56" rx="4" class="gk-sd-rack"/><text x="566.0" y="330.0" text-anchor="middle" class="gk-sd-label">4&#8242; &#215; 2&#8242;</text><line x1="70" y1="382" x2="182" y2="382" class="gk-sd-scale"/><line x1="70" y1="376" x2="70" y2="388" class="gk-sd-scale"/><line x1="182" y1="376" x2="182" y2="388" class="gk-sd-scale"/><text x="194" y="388" class="gk-sd-axis">scale: 4&#8242;</text></svg><figcaption>Rack sizes drawn to the same scale, top view, in feet. See the layout options above for one and two car garages and for ceilings under and over 9.5 feet.</figcaption></figure>
+<!-- /wp:html -->
 <!-- wp:paragraph {"className": "gk-offer"} -->
 <p class="gk-offer">Complete our contact form to book your free design consultation and hear our current offers.</p>
 <!-- /wp:paragraph -->
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
-<figure class="wp-block-image size-large gk-badge"><img src="https://thegarageking.com/wp-content/uploads/2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png" alt="Better Business Bureau Accredited A+ rating"/></figure>
+<figure class="wp-block-image size-large gk-badge"><img src="<?php echo gk_placeholder( '2012/03/The-Garage-King-Better-Business-Bureau-Accredited-A-Plus-Rating-191x60.png' ); ?>" alt="Better Business Bureau Accredited A+ rating"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
-<figure class="wp-block-image size-large gk-badge"><img src="https://thegarageking.com/wp-content/uploads/2013/03/seal.png" alt="HomeAdvisor Screened and Approved"/></figure>
+<figure class="wp-block-image size-large gk-badge"><img src="<?php echo gk_placeholder( '2013/03/seal.png' ); ?>" alt="HomeAdvisor Screened and Approved"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->

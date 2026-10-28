@@ -6,8 +6,8 @@
  * Inserter: no
  */
 ?>
-<!-- wp:cover {"url":"https://thegarageking.com/wp-content/uploads/2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://thegarageking.com/wp-content/uploads/2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
+<!-- wp:cover {"url":"<?php echo gk_placeholder( '2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg' ); ?>","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo gk_placeholder( '2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
 <p class="gk-eyebrow has-amber-color has-text-color">Slatwall</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
@@ -40,7 +40,7 @@
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2013/01/slatwall.jpg" alt="Slatwall panels with storage accessories"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2013/01/slatwall.jpg' ); ?>" alt="Slatwall panels with storage accessories"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -67,7 +67,7 @@
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2013/01/12-slatwall.jpg" alt="Standard duty slatwall panel"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2013/01/12-slatwall.jpg' ); ?>" alt="Standard duty slatwall panel"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -88,7 +88,7 @@
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Slatwall-Garage-Panels-433x149.jpg" alt="Heavy duty slatwall panels"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Slatwall-Garage-Panels-433x149.jpg' ); ?>" alt="Heavy duty slatwall panels"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -100,19 +100,100 @@
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
 <div class="wp-block-columns gk-gallery"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg" alt="Slatwall garage with car parked"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg' ); ?>" alt="Slatwall garage with car parked"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Slatwall-Garage-King-882x563.jpg" alt="Slatwall garage"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Slatwall-Garage-King-882x563.jpg' ); ?>" alt="Slatwall garage"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
-<figure class="wp-block-image size-large gk-photo"><img src="https://thegarageking.com/wp-content/uploads/2012/03/Slatwall-Garage-King-621x1000.jpg" alt="Slatwall garage wall"/></figure>
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo gk_placeholder( '2012/03/Slatwall-Garage-King-621x1000.jpg' ); ?>" alt="Slatwall garage wall"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
+<h2 class="wp-block-heading">Finishes</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Slatwall comes in four finishes. Photos are from recent installs.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Barnwood</h3>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-barnwood-panel.jpg' ) ); ?>" alt="A barnwood finish slatwall panel on a garage wall"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-barnwood-hooks.jpg' ) ); ?>" alt="Barnwood slatwall with hooks beside an overhead rack"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Graphite</h3>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-graphite-panel.jpg' ) ); ?>" alt="A graphite slatwall panel below an overhead rack"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-graphite-shelves.jpg' ) ); ?>" alt="Graphite slatwall in a corner with shelves"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Gray</h3>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-gray-panel.jpg' ) ); ?>" alt="A gray slatwall panel on a garage wall"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-gray-bike-hooks.jpg' ) ); ?>" alt="Gray slatwall with bike hooks"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Whitewood</h3>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-whitewood-hooks.jpg' ) ); ?>" alt="Whitewood slatwall with hooks under an overhead rack"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/slatwall-whitewood-shelves.jpg' ) ); ?>" alt="Whitewood slatwall with shelves"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->

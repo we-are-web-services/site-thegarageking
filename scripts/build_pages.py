@@ -128,6 +128,15 @@ def page_hero(title, eyebrow, lead, img):
             f'<div class="wp-block-cover__inner-container">{inner}</div></div>\n<!-- /wp:cover -->\n')
 
 
+def photos(items, per=3):
+    """items: (file in assets/images, alt text). Rows of up to `per` photos."""
+    out = ""
+    for i in range(0, len(items), per):
+        row = items[i:i + per]
+        out += cols([im("gk-local:" + f, alt) for f, alt in row], cls="gk-gallery", gap="1rem")
+    return out
+
+
 def chips(items, light=True):
     c = "gk-chips gk-chips--light" if light else "gk-chips"
     inner = "".join(pa(x, cls="gk-chip") for x in items)
@@ -158,6 +167,10 @@ def cta():
 
 
 def write(slug, title, body):
+    # "gk-local:name.jpg" points at a photo in theme/garage-king/assets/images (photos from the client's shared folder, resized, location data removed)
+    body = re.sub(r"gk-local:([\w.\-]+)", lambda m: "<?php echo esc_url( get_theme_file_uri( 'assets/images/" + m.group(1) + "' ) ); ?>", body)
+    # photos that were linked from the client's current site are served from the theme (see gk_placeholder in functions.php)
+    body = re.sub(r"https://thegarageking\.com/wp-content/uploads/([A-Za-z0-9_./%()\-]+)", lambda m: "<?php echo gk_placeholder( '" + m.group(1) + "' ); ?>", body)
     head = f"<?php\n/**\n * Title: {title}\n * Slug: garage-king/{slug}\n * Categories: garage-king\n * Inserter: no\n */\n?>\n"
     (PAT / f"{slug}.php").write_text(head + body)
 
@@ -173,6 +186,76 @@ def card(title, text, href=None, num=None):
 def card_row(cards):
     a = {"className": "gk-cards", "style": {"spacing": {"blockGap": {"top": "1.25rem", "left": "1.25rem"}}}}
     return f'<!-- wp:columns {json.dumps(a)} -->\n<div class="wp-block-columns gk-cards">{"".join(cards)}</div>\n<!-- /wp:columns -->\n'
+
+
+# ---------- Rack size diagram (built from the current site's list of nine sizes, in feet) ----------
+def size_diagram():
+    """Top-view, to-scale drawing of the nine overhead rack sizes listed on the current site (8x4, 8x3, 8x2, 6x4, 6x3, 6x2, 4x4, 4x3, 4x2).
+    Length is across, depth is down. The 8x4 is the exclusive Enduro Deck. Units are feet, as on the current site (8'x4' Enduro Deck)."""
+    k = 28                      # pixels per foot
+    lengths, depths = (8, 6, 4), (4, 3, 2)
+    gap, left, top = 24, 70, 52
+    colw = [l * k for l in lengths]
+    rowh = [d * k for d in depths]
+    xs = [left]
+    for w in colw[:-1]:
+        xs.append(xs[-1] + w + gap)
+    ys = [top]
+    for h in rowh[:-1]:
+        ys.append(ys[-1] + h + gap)
+    width = xs[-1] + colw[-1] + 20
+    height = ys[-1] + rowh[-1] + 56
+    parts = []
+    for ci, l in enumerate(lengths):
+        parts.append(f'<text x="{xs[ci] + colw[ci] / 2}" y="30" text-anchor="middle" class="gk-sd-axis">{l}&#8242; long</text>')
+    for ri, d in enumerate(depths):
+        parts.append(f'<text x="{left - 12}" y="{ys[ri] + rowh[ri] / 2 + 6}" text-anchor="end" class="gk-sd-axis">{d}&#8242; deep</text>')
+    names = []
+    for ci, l in enumerate(lengths):
+        for ri, d in enumerate(depths):
+            w, h = l * k, d * k
+            enduro = (l, d) == (8, 4)
+            cls = "gk-sd-rack gk-sd-rack--enduro" if enduro else "gk-sd-rack"
+            parts.append(f'<rect x="{xs[ci]}" y="{ys[ri]}" width="{w}" height="{h}" rx="4" class="{cls}"/>')
+            label = f"{l}&#8242; &#215; {d}&#8242;"
+            if enduro:
+                parts.append(f'<text x="{xs[ci] + w / 2}" y="{ys[ri] + h / 2 - 4}" text-anchor="middle" class="gk-sd-label gk-sd-label--dark">{label}</text>')
+                parts.append(f'<text x="{xs[ci] + w / 2}" y="{ys[ri] + h / 2 + 18}" text-anchor="middle" class="gk-sd-note">Enduro Deck</text>')
+            else:
+                parts.append(f'<text x="{xs[ci] + w / 2}" y="{ys[ri] + h / 2 + 6}" text-anchor="middle" class="gk-sd-label">{label}</text>')
+            names.append(f"{l} by {d} feet" + (" (the Enduro Deck)" if enduro else ""))
+    sy = height - 26
+    parts.append(f'<line x1="{left}" y1="{sy}" x2="{left + 4 * k}" y2="{sy}" class="gk-sd-scale"/>')
+    parts.append(f'<line x1="{left}" y1="{sy - 6}" x2="{left}" y2="{sy + 6}" class="gk-sd-scale"/>')
+    parts.append(f'<line x1="{left + 4 * k}" y1="{sy - 6}" x2="{left + 4 * k}" y2="{sy + 6}" class="gk-sd-scale"/>')
+    parts.append(f'<text x="{left + 4 * k + 12}" y="{sy + 6}" class="gk-sd-axis">scale: 4&#8242;</text>')
+    desc = "Top view, drawn to the same scale: " + ", ".join(names) + "."
+    svg = (f'<svg class="gk-size-diagram" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="gk-sd-t gk-sd-d">'
+           f'<title id="gk-sd-t">The nine overhead rack sizes, to scale</title><desc id="gk-sd-d">{desc}</desc>' + "".join(parts) + '</svg>')
+    return f'<!-- wp:html -->\n<figure class="gk-size-figure">{svg}<figcaption>Rack sizes drawn to the same scale, top view, in feet. See the layout options above for one and two car garages and for ceilings under and over 9.5 feet.</figcaption></figure>\n<!-- /wp:html -->\n'
+
+
+# ---------- Offers (sample, from the client's public Latest Deals document) ----------
+# Read 2026-10-28 from the document the current site's pricing page links to (the "Your Special Deals" block). Promotional pricing in it ended 2026-10-19,
+# so the site shows these as SAMPLE offers to preview the layout. The client edits this section in the page editor.
+OFFERS = [("Buy one motor rack, get 50% off the second", "Two motor racks", "$6,900"),
+          ("Buy two fixed racks, get one free", "Three fixed racks", "$2,960"),
+          ("Buy two cases of slatwall, get the third free", "Three cases of slatwall", "$2,960"),
+          ("The Deluxe Cabinet Package, 7-piece set", "Two tall, two upper and two lower cabinets with a bamboo counter top", "$7,200 (normally $8,380)")]
+OFFERS_NOTE = "Sample offers: the October promotion, which ended on October 19, 2026, shown here to preview how current offers will look. Offer pricing is for conventional garages."
+
+
+def offer_card(title, what, price):
+    return (f'<!-- wp:column {{"className":"gk-card gk-offer-card"}} -->\n<div class="wp-block-column gk-card gk-offer-card">'
+            + pa("Sample offer", "amber", cls="gk-offer-tag")
+            + f'<!-- wp:heading {{"level":3,"textColor":"white"}} -->\n<h3 class="wp-block-heading has-white-color has-text-color">{e(title)}</h3>\n<!-- /wp:heading -->\n'
+            + pa(what, "muted") + pa(price, "amber", cls="gk-offer-price")
+            + '</div>\n<!-- /wp:column -->\n')
+
+
+def offers_block(heading_color="white"):
+    return (card_row([offer_card(*o) for o in OFFERS[:2]]) + card_row([offer_card(*o) for o in OFFERS[2:]])
+            + pa(OFFERS_NOTE, "muted", size="small"))
 
 
 SIZES = ["8×4 Enduro Deck", "8×3", "8×2", "6×4", "6×3", "6×2", "4×4", "4×3", "4×2"]
@@ -203,7 +286,14 @@ body += grp(
             im(UP + "2012/03/Overhead-Racks-Two-Car-Garage-Layout-High-Ceilings.jpg", "Two car garage rack layout, high ceilings"),
             im(UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-Image.jpg", "Overhead racks in a two car garage"),
             im(UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg", "Overhead racks, two car, high ceilings")], cls="gk-gallery", gap="1rem")
-    + hd(3, "Sizes available") + chips(SIZES) + pa("Nine sizes, including our exclusive 8′×4′ Enduro Deck rack.", cls="")
+    + hd(3, "Tall and vaulted ceilings") + pa("We accommodate all ceiling heights, including vaulted and high ceilings.")
+    + photos([("overhead-rack-vaulted-ceiling.jpg", "Overhead racks installed under a vaulted ceiling above a garage door"),
+              ("overhead-rack-vaulted-ceiling-2.jpg", "An overhead rack under a sloped ceiling"),
+              ("overhead-rack-high-ceiling.jpg", "Overhead racks in a garage with a high ceiling")])
+    + hd(3, "Recent installs")
+    + photos([("overhead-rack-slatwall-door.jpg", "An overhead rack and slatwall beside the garage door"),
+              ("overhead-racks-long-run.jpg", "A long run of overhead racks along a garage wall")], per=2)
+    + hd(3, "Sizes available") + chips(SIZES) + pa("Nine sizes, including our exclusive 8′×4′ Enduro Deck rack.", cls="") + size_diagram()
     + pa(OFFER, cls="gk-offer") + badges())
 body += pattern("cta-band")
 write("page-overhead-racks", "Overhead racks page", body)
@@ -233,6 +323,12 @@ body += grp(
     + cols([im(UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg", "Slatwall garage with car parked"),
             im(UP + "2012/03/Slatwall-Garage-King-882x563.jpg", "Slatwall garage"),
             im(UP + "2012/03/Slatwall-Garage-King-621x1000.jpg", "Slatwall garage wall")], cls="gk-gallery", gap="1rem"))
+body += grp(hd(2, "Finishes") + pa("Slatwall comes in four finishes. Photos are from recent installs.")
+            + hd(3, "Barnwood") + photos([("slatwall-barnwood-panel.jpg", "A barnwood finish slatwall panel on a garage wall"), ("slatwall-barnwood-hooks.jpg", "Barnwood slatwall with hooks beside an overhead rack")], per=2)
+            + hd(3, "Graphite") + photos([("slatwall-graphite-panel.jpg", "A graphite slatwall panel below an overhead rack"), ("slatwall-graphite-shelves.jpg", "Graphite slatwall in a corner with shelves")], per=2)
+            + hd(3, "Gray") + photos([("slatwall-gray-panel.jpg", "A gray slatwall panel on a garage wall"), ("slatwall-gray-bike-hooks.jpg", "Gray slatwall with bike hooks")], per=2)
+            + hd(3, "Whitewood") + photos([("slatwall-whitewood-hooks.jpg", "Whitewood slatwall with hooks under an overhead rack"), ("slatwall-whitewood-shelves.jpg", "Whitewood slatwall with shelves")], per=2),
+            width="1180px", pad="50")
 body += pattern("cta-band")
 write("page-slatwall", "Slatwall page", body)
 
@@ -242,6 +338,11 @@ body += grp(
     pa("Cabinets coming soon! We are in research and development of a new cabinet line that we are confident will continue to lead the industry for quality, durability, and security.")
     + pa("Complete our contact form to hear about the storage solution systems available right now, including overhead storage and slatwall, or to find out when our steel cabinets will be back.")
     + btns(btn("Book a Free Design Consultation", "/schedule-quote")), width="820px")
+body += grp(hd(2, "Recent installs") + photos([("steel-cabinets-wall.jpg", "A wall of gray steel cabinets"),
+                                                 ("steel-cabinets-open.jpg", "Gray steel cabinets with the doors open and shelves showing"),
+                                                 ("steel-cabinets-workbench.jpg", "Gray steel cabinets with a bamboo workbench and slatwall"),
+                                                 ("steel-cabinets-bamboo-counter.jpg", "Upper and lower steel cabinets with a bamboo counter top")], per=2),
+            width="1180px", pad="50")
 body += pattern("cta-band")
 write("page-steel-cabinets", "Steel cabinets page", body)
 
@@ -280,8 +381,9 @@ body += grp(hd(2, "What each product includes", color="white")
                         card("Floor coatings", "Priced by the square foot. A one car garage is about 250 square feet.", "/garage-floor-coatings"),
                         card("Garage ventilation", "Cools your garage up to 20 degrees and the attic up to 40 degrees. Includes a thermostat and two premium aluminum intake vents with insect screens.", "/garage-exhaust-fans")]),
             bg="ink", color="white")
-body += grp(hd(2, "Current offers", color="white", align="center") + pa("We run limited-time offers on racks, slatwall and cabinet packages. Complete our contact form and book your free design consultation to hear what is available now.", "muted", align="center")
-            + btns(btn("Book a call to claim current offers", "/schedule-quote"), center=True), bg="black", color="white", width="900px", pad="50")
+body += grp(hd(2, "Current offers", color="white", align="center")
+            + pa("Limited-time offers on racks, slatwall and cabinet packages. Book your free design consultation to claim them.", "muted", align="center")
+            + offers_block() + btns(btn("Book a call to claim current offers", "/schedule-quote"), center=True), bg="black", color="white", width="1000px", pad="50")
 body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
             + card_row([card(n, d, ).replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
             bg="ink", color="white")
@@ -299,6 +401,10 @@ GAL = """2021/04/20170303_180905-scaled.jpg 2021/04/20210212_101134-scaled.jpg 2
 2012/03/PA020396.jpg 2012/03/PA020397.jpg 2012/03/PA020398.jpg 2012/03/PA020399.jpg 2012/03/PA020401.jpg 2012/03/PA020402.jpg 2012/03/PA020403.jpg
 2012/03/PA020404.jpg 2012/03/PA020405.jpg 2012/03/PA020406.jpg 2012/03/PA020408.jpg 2012/03/PA020409.jpg 2012/03/PA020410.jpg""".split()
 body = page_hero("Our Work", "Photo gallery", "Photos of our team and installations in Greater Austin and San Antonio.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
+body += grp(hd(2, "Recent installs")
+            + gallery(["gk-local:" + f for f in ["garage-complete-1.jpg", "garage-complete-2.jpg", "garage-complete-3.jpg", "overhead-racks-two-car.jpg", "garage-complete-4.jpg",
+                                                  "motorized-two-racks-dark.jpg", "overhead-rack-slatwall-door.jpg", "steel-cabinets-wall.jpg", "steel-cabinets-workbench.jpg", "motorized-rack-net-closeup.jpg"]],
+                       "A finished garage installation by The Garage King"), width="1280px", pad="50")
 body += grp(pa("Below are some photos of our team and installation packages. We enjoy installing our garage organizers for you in Greater Austin and San Antonio. If you are interested in finding the right garage storage solution for you, contact us to provide some information about your garage.", align="center")
             + gallery([UP + g for g in GAL], "The Garage King installation photo")
             + btns(btn("Book a Free Design Consultation", "/schedule-quote"), btn("Project stories", "/garage-storage-photos/project-stories", outline=True), center=True), width="1280px")
@@ -441,10 +547,12 @@ body += pattern("solutions") + cta()
 write("page-solutions", "Solutions hub page", body)
 
 
-def simple_product(slug, title, eyebrow, lead, paras, bullets, img):
+def simple_product(slug, title, eyebrow, lead, paras, bullets, img, pics=None, pics_title=None, per=3):
     b = page_hero(title, eyebrow, lead, img)
     b += grp(cols([pa(paras[0]) + "".join(pa(x) for x in paras[1:]) + btns(btn("Book a Free Design Consultation", "/schedule-quote")),
                    ul(bullets, cls="gk-checks")]), width="1180px", pad="60")
+    if pics:
+        b += grp(hd(2, pics_title) + photos(pics, per=per), width="1180px", pad="50")
     b += pattern("cta-band")
     write(slug, title, b)
 
@@ -453,7 +561,13 @@ simple_product("page-motorized", "Motorized Overhead Storage Racks", "Automated 
                ["Are you in need of garage storage space but want to avoid having to climb up a ladder? Our automated, remote-controlled storage solution systems allow you to effortlessly lower the platform with the simple press of a button.",
                 "This feature makes it easy for you to load or unload the storage rack and safely return it to the ceiling where it will be out of the way."],
                ["Wireless remote with keyed lockout", "Super duty seat belt webbing with 1,500 lb. break strength per corner", "Four-point outside corner lift system for platform stability", "No ladder, no lifting heavy bins overhead", "A short captioned demo video will go here"],
-               UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg")
+               UP + "2012/03/Overhead-Garage-Storage-Racks-Two-Car-Layout-High-Ceilings-Image.jpg",
+               pics=[("motorized-rack-net-long.jpg", "A motorized overhead rack with a safety net, lowered in a garage"),
+                     ("motorized-racks-pair-white.jpg", "Two white motorized overhead racks above a garage"),
+                     ("motorized-racks-pair-dark.jpg", "Two dark motorized overhead racks on a garage ceiling"),
+                     ("motorized-rack-lowered.jpg", "A motorized overhead rack lowered for loading"),
+                     ("motorized-rack-net-closeup.jpg", "A motorized overhead rack with a safety net, seen from below")],
+               pics_title="Motorized racks in real garages")
 simple_product("page-floor-coatings", "Garage Floor Coatings", "Floor coatings", "Finish the floor.",
                ["A coated floor finishes the garage. This page is built from the client's Website Content Outline & Questionnaire; the current site has no floor coatings page.",
                 "The coating system, installation steps, colour and flake options, cure time and warranty come from the client."],
@@ -462,7 +576,12 @@ simple_product("page-floor-coatings", "Garage Floor Coatings", "Floor coatings",
 simple_product("page-ventilation", "Garage Ventilation", "Garage ventilation", "Cool the garage down so you can actually use it.",
                ["A garage that is too hot to use in the Texas summer is wasted space. Our garage ventilation system cools your garage up to 20 degrees and your attic up to 40 degrees.",
                 "Each system includes a thermostat and two premium aluminum intake vents with insect screens and an auxiliary frame for a double skin insulated door (insulation not included). Reflective garage door insulation is available as an add-on."],
-               ["Cools the garage up to 20 degrees, the attic up to 40", "Thermostat controlled", "Pairs with storage for a usable workshop or hobby space", "How the system is installed: details from the client"], UP + "2021/04/20190718_125822-scaled.jpg")
+               ["Cools the garage up to 20 degrees, the attic up to 40", "Thermostat controlled", "Pairs with storage for a usable workshop or hobby space", "How the system is installed: details from the client"], UP + "2021/04/20190718_125822-scaled.jpg",
+               pics=[("garage-door-vents-stone.jpg", "A garage door with louvered intake vents at the bottom"),
+                     ("garage-door-vent-louver.jpg", "A louvered intake vent on a garage door"),
+                     ("garage-door-vent-closeup.jpg", "A close-up of a louvered garage door vent"),
+                     ("garage-door-vent-inside.jpg", "An intake vent seen from inside the garage door")],
+               pics_title="Garage door vents we install", per=2)
 simple_product("page-lifts", "Lifts", "Lifts", "Part of a complete garage renovation.",
                ["Lifts are part of the full garage renovations The Garage King offers, alongside storage solution systems, floors and doors.",
                 "The products, specifications and photos for this page come from the client. Complete our contact form to ask about lifts for your garage."],
@@ -532,3 +651,8 @@ write("welcome", "Welcome", body)
 body = grp(hd(2, "Trusted across Central Texas", align="center") + pa("4.9 Google rating. A few words from our customers.", align="center")
            + review_rows(GREV[:3]) + btns(btn("Read more reviews", "/testimonials"), center=True), bg="grey", width="1180px")
 write("reviews", "Reviews", body)
+
+# ---------- Home page: offers band ----------
+write("offers-band", "Offers band", grp(hd(2, "Current offers", color="white", align="center") + offers_block()
+      + btns(btn("Book a Free Design Consultation", "/schedule-quote"), btn("See pricing", "/garage-storage-pricing", outline=True), center=True),
+      bg="black", color="white", pad="50"))
