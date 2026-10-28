@@ -73,9 +73,39 @@
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
-<!-- wp:paragraph {"textColor": "muted"} -->
-<p class="has-muted-color has-text-color">Workmanship guarantee and product warranty, stated plainly, and a meet-the-team section with photos go here. Details from the client.</p>
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "820px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"className":"gk-draft","layout":{"type":"constrained"}} -->
+<div class="wp-block-group gk-draft"><!-- wp:paragraph {"className": "gk-draft__tag"} -->
+<p class="gk-draft__tag">Draft: needs real content from Justin</p>
 <!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The client confirmed a workmanship guarantee, a product warranty, planning calls by phone or video, and sometimes an in-home visit before the install. The terms and the team are not supplied yet.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Workmanship guarantee: what is covered and for how long</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Product warranty: what is covered and for how long</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Typical install time by project size, arrival window, how the home is protected, cleanup</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Installation team: first names and photos (with their permission)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Care tips for after the install</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>An installation time-lapse video, if one exists</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 <!-- wp:pattern {"slug":"garage-king/cta-band"} /-->

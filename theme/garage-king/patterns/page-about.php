@@ -27,9 +27,6 @@
 <!-- wp:paragraph -->
 <p>We specialize in professional grade garage storage, including overhead storage racks and slatwall. We strive to offer the highest quality products and a luxury finish. As a specialist, we are experts at what we do and we will work with you to come up with the best solution for your garage organizational needs.</p>
 <!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>The company story, the owner's first name and the team photos go here. The client will supply them.</p>
-<!-- /wp:paragraph -->
 <!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-badges"} -->
 <div class="wp-block-columns gk-badges"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-badge"} -->
@@ -55,6 +52,33 @@
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "820px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"className":"gk-draft","layout":{"type":"constrained"}} -->
+<div class="wp-block-group gk-draft"><!-- wp:paragraph {"className": "gk-draft__tag"} -->
+<p class="gk-draft__tag">Draft: needs real content from Justin</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The company story and the team are not supplied yet. The positioning line and the founding year (2004, from the current site) are already used above.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>How and why the company started, and what matters to the family</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Justin's first name and a photo, and the crew's first names and photos (with their permission)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Confirm the founding year (the site says 2004, the ads say 2000)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Years in business and garages completed, if they want them shown</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 <!-- wp:pattern {"slug":"garage-king/cta-band"} /-->

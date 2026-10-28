@@ -399,7 +399,8 @@ body += grp(hd(2, "Current offers", color="white", align="center")
 body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
             + card_row([card(n, d, ).replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
             bg="ink", color="white")
-body += grp(hd(2, "Financing") + pa("The client plans to offer financing. Details to come.")
+body += grp(hd(2, "Financing") + draft_note("The client ticked \"planning to offer\" financing. Nothing is shown to visitors until a provider and terms are chosen.",
+                                                 ["Financing provider and the terms to state", "Whether to show a monthly figure or only \"financing available\""])
             + hd(2, "Compare to off-site storage") + pa("A garage that stores your things costs less than renting a storage unit month after month."), bg="grey", width="820px", pad="50")
 body += grp(badges(), width="900px", pad="40") + pattern("cta-band")
 write("page-pricing", "Pricing page", body)
@@ -507,7 +508,11 @@ steps = [("Complete the contact form", "Tell us about your garage and pick a tim
          ("Installation day", "Arrival window, how the crew protects your home, how long it takes, and cleanup. Most storage installations are completed within one day."),
          ("After the install", "Care tips and support.")]
 body += grp(card_row([card(t, x, num=f"0{i + 1}") for i, (t, x) in enumerate(steps[:2])]) + card_row([card(t, x, num=f"0{i + 3}") for i, (t, x) in enumerate(steps[2:])])
-            + pa("Workmanship guarantee and product warranty, stated plainly, and a meet-the-team section with photos go here. Details from the client.", color="muted"), bg="black", color="white")
+            , bg="black", color="white")
+body += grp(draft_note("The client confirmed a workmanship guarantee, a product warranty, planning calls by phone or video, and sometimes an in-home visit before the install. The terms and the team are not supplied yet.",
+                       ["Workmanship guarantee: what is covered and for how long", "Product warranty: what is covered and for how long",
+                        "Typical install time by project size, arrival window, how the home is protected, cleanup", "Installation team: first names and photos (with their permission)",
+                        "Care tips for after the install", "An installation time-lapse video, if one exists"]), width="820px", pad="50")
 body += pattern("cta-band")
 write("page-how-it-works", "How it works page", body)
 
@@ -528,9 +533,12 @@ body = page_hero("About The Garage King", "Family owned and operated since 2004"
 body += grp(cols([
     hd(2, "A specialist, not a franchise") + pa(POSITION)
     + pa("We specialize in professional grade garage storage, including overhead storage racks and slatwall. We strive to offer the highest quality products and a luxury finish. As a specialist, we are experts at what we do and we will work with you to come up with the best solution for your garage organizational needs.")
-    + pa("The company story, the owner's first name and the team photos go here. The client will supply them.") + badges(),
+    + badges(),
     im(UP + "2017/07/Garage-Organization-Garage-King-1.png", "The Garage King team under an overhead storage rack"),
 ]), width="1180px")
+body += grp(draft_note("The company story and the team are not supplied yet. The positioning line and the founding year (2004, from the current site) are already used above.",
+                       ["How and why the company started, and what matters to the family", "Justin's first name and a photo, and the crew's first names and photos (with their permission)",
+                        "Confirm the founding year (the site says 2004, the ads say 2000)", "Years in business and garages completed, if they want them shown"]), width="820px", pad="50")
 body += pattern("cta-band")
 write("page-about", "About page", body)
 
