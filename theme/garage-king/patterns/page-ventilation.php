@@ -57,4 +57,40 @@
 <!-- /wp:columns -->
 </div>
 <!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
+<h2 class="wp-block-heading">Garage door vents we install</h2>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-door-vents-stone.jpg' ) ); ?>" alt="A garage door with louvered intake vents at the bottom"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-door-vent-louver.jpg' ) ); ?>" alt="A louvered intake vent on a garage door"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-door-vent-closeup.jpg' ) ); ?>" alt="A close-up of a louvered garage door vent"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-door-vent-inside.jpg' ) ); ?>" alt="An intake vent seen from inside the garage door"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
 <!-- wp:pattern {"slug":"garage-king/cta-band"} /-->

@@ -33,4 +33,40 @@
 <!-- /wp:buttons -->
 </div>
 <!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
+<h2 class="wp-block-heading">Recent installs</h2>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/steel-cabinets-wall.jpg' ) ); ?>" alt="A wall of gray steel cabinets"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/steel-cabinets-open.jpg' ) ); ?>" alt="Gray steel cabinets with the doors open and shelves showing"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/steel-cabinets-workbench.jpg' ) ); ?>" alt="Gray steel cabinets with a bamboo workbench and slatwall"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/steel-cabinets-bamboo-counter.jpg' ) ); ?>" alt="Upper and lower steel cabinets with a bamboo counter top"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
 <!-- wp:pattern {"slug":"garage-king/cta-band"} /-->

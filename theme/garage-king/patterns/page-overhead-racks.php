@@ -113,6 +113,51 @@
 </div>
 <!-- /wp:columns -->
 <!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Tall and vaulted ceilings</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>We accommodate all ceiling heights, including vaulted and high ceilings.</p>
+<!-- /wp:paragraph -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-vaulted-ceiling.jpg' ) ); ?>" alt="Overhead racks installed under a vaulted ceiling above a garage door"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-vaulted-ceiling-2.jpg' ) ); ?>" alt="An overhead rack under a sloped ceiling"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-high-ceiling.jpg' ) ); ?>" alt="Overhead racks in a garage with a high ceiling"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Recent installs</h3>
+<!-- /wp:heading -->
+<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "1rem", "left": "1rem"}}}, "className": "gk-gallery"} -->
+<div class="wp-block-columns gk-gallery"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-slatwall-door.jpg' ) ); ?>" alt="An overhead rack and slatwall beside the garage door"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"gk-photo"} -->
+<figure class="wp-block-image size-large gk-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-racks-long-run.jpg' ) ); ?>" alt="A long run of overhead racks along a garage wall"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level": 3} -->
 <h3 class="wp-block-heading">Sizes available</h3>
 <!-- /wp:heading -->
 <!-- wp:group {"className":"gk-chips gk-chips--light","layout":{"type":"flex","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"0.6rem"}}} -->

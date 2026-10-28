@@ -18,6 +18,45 @@
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1280px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
+<h2 class="wp-block-heading">Recent installs</h2>
+<!-- /wp:heading -->
+<!-- wp:gallery {"linkTo":"none","className":"gk-gallery-grid"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped gk-gallery-grid"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-complete-1.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-complete-2.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-complete-3.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-racks-two-car.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/garage-complete-4.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/motorized-two-racks-dark.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/overhead-rack-slatwall-door.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/steel-cabinets-wall.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/steel-cabinets-workbench.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/motorized-rack-net-closeup.jpg' ) ); ?>" alt="A finished garage installation by The Garage King"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
+</div>
+<!-- /wp:group -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1280px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"align": "center"} -->
 <p class="has-text-align-center">Below are some photos of our team and installation packages. We enjoy installing our garage organizers for you in Greater Austin and San Antonio. If you are interested in finding the right garage storage solution for you, contact us to provide some information about your garage.</p>
