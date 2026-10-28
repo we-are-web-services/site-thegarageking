@@ -262,9 +262,24 @@
 <div class="wp-block-group alignfull gk-section has-grey-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading -->
 <h2 class="wp-block-heading">Financing</h2>
 <!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>The client plans to offer financing. Details to come.</p>
+<!-- wp:group {"className":"gk-draft","layout":{"type":"constrained"}} -->
+<div class="wp-block-group gk-draft"><!-- wp:paragraph {"className": "gk-draft__tag"} -->
+<p class="gk-draft__tag">Draft: needs real content from Justin</p>
 <!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The client ticked "planning to offer" financing. Nothing is shown to visitors until a provider and terms are chosen.</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li>Financing provider and the terms to state</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Whether to show a monthly figure or only "financing available"</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:group -->
 <!-- wp:heading -->
 <h2 class="wp-block-heading">Compare to off-site storage</h2>
 <!-- /wp:heading -->

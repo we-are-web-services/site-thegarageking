@@ -57,3 +57,6 @@ Inter and Poppins are now served from the theme (`assets/fonts`), so the site ma
 - **Google reviews:** a web search found no Google review listing for the business, and Google reviews cannot be pulled without access to the business profile or a Places API key. The site keeps the reviews already copied from the current public site. The client's answer 28 chose curated review screenshots. To tie in a live feed later: Google Business Profile access or a reviews service.
 - Answers in the client's Content Outline comments that the pages can now use (already public in intent): most storage installs finish in one day; workmanship guarantee and product warranty both exist (terms not given); cabinets are lockable and workbenches are offered; planning calls by phone or video; no online sales; the nine rack sizes are current.
 
+
+## Added 2026-10-28 (later still): draft boxes on How It Works, About, Pricing
+The "details to come" sentences on How It Works (guarantee, warranty, install details, team), About (story, team, founding year) and the Pricing Financing section are now the same visible dashed draft boxes as the other draft pages, listing what Justin must supply. They are removed with the other `.gk-draft` boxes before launch (`docs/launch-checklist.md`). The Earl stays "to be confirmed" (David, 2026-10-28).
