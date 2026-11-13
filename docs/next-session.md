@@ -1,5 +1,7 @@
 # Pick up here (written 2026-10-23)
 
+> 2026-11-13: Shannon Earl's 21 notes were worked into the build on branch `claude/shannon-feedback`; see `docs/shannon-feedback.md` for what was done and what needs a decision.
+
 Open a session in `waws-hub`, say "continue The Garage King", and attach `site-thegarageking`.
 
 ## Where we are

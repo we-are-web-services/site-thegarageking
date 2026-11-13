@@ -17,6 +17,8 @@ function gk_placeholder( $path ) {
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'gk-fonts', get_theme_file_uri( 'assets/fonts/fonts.css' ), array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'garage-king', get_theme_file_uri( 'assets/theme.css' ), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'gk-carousel', get_theme_file_uri( 'assets/carousel.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'gk-calc', get_theme_file_uri( 'assets/calc.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 	if ( gk_popup_enabled() ) {
 		wp_enqueue_script( 'gk-popup', get_theme_file_uri( 'assets/popup.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 		wp_add_inline_script( 'gk-popup', 'window.GK_POPUP = ' . wp_json_encode( array( 'days' => 7 ) ) . ';', 'before' );

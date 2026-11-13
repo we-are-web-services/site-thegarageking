@@ -5,14 +5,15 @@
  * Categories: garage-king
  */
 $cards = array(
-	array( '01', 'Overhead Storage Solutions', 'Heavy duty overhead storage racks in nine sizes, to get your seasonal items up and out of the way.', '/overhead-racks' ),
-	array( '02', 'Motorized Overhead Racks', 'Automated, remote controlled storage: press a button and the platform lowers to you. No ladders.', '/motorized-overhead-racks' ),
-	array( '03', 'Slatwall', 'A heavy duty storage solution system with a dust free, durable surface and a full accessory system.', '/slatwall' ),
-	array( '04', 'Garage Cabinets', 'Fully welded steel cabinets. A new line is on the way.', '/steel-cabinets' ),
-	array( '05', 'Floor Coatings', 'A finished floor that looks like a showroom.', '/garage-floor-coatings' ),
-	array( '06', 'Garage Ventilation', 'Cool the garage down so you can actually use it.', '/garage-exhaust-fans' ),
-	array( '07', 'Lifts', 'Part of a complete garage renovation.', '/lifts' ),
-	array( '08', 'Garage Door Installation and Repairs', 'The door finishes the renovation.', '/garage-door-installation-repairs' ),
+	array( '01', 'Garage Door Installation and Repairs', 'Repair, replacement and new installation, from a team that already knows your garage.', '/garage-door-installation-repairs' ),
+array( '02', 'Overhead Storage Solutions', 'Heavy duty overhead storage racks in nine sizes, to get your seasonal items up and out of the way.', '/overhead-racks' ),
+	array( '03', 'Motorized Overhead Storage Solutions', 'Automated, remote controlled storage: press a button and the platform lowers to you. No ladders.', '/motorized-overhead-racks' ),
+	array( '04', 'Slatwall', 'A heavy duty storage solution system with a dust free, durable surface and a full accessory system.', '/slatwall' ),
+	array( '05', 'Garage Cabinets', 'Fully welded steel cabinets. A new line is on the way.', '/steel-cabinets' ),
+	array( '06', 'Floor Coatings', 'A finished floor that looks like a showroom.', '/garage-floor-coatings' ),
+	array( '07', 'Garage Climate Control', 'Cool the garage down so you can actually use it.', '/garage-exhaust-fans' ),
+	array( '08', 'Lifts', 'Part of a complete garage renovation.', '/lifts' ),
+
 );
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"black","textColor":"white","className":"gk-section","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->

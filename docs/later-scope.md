@@ -51,3 +51,8 @@ Add new rows at the bottom. Keep each row to one line of "why" and "what it need
 - **Current offers display:** the Pricing page "Current offers" section and a Home page band show the four "Your Special Deals" from the client's Latest Deals document as **sample offers** (the promotion ended 2026-10-19). The client edits the section in the page editor. Needs: the current offer list, end dates, and who updates it.
 - **Offer pop-up with a coupon code (placeholder):** `theme/garage-king/assets/popup.js` and the markup in `functions.php`. Wording and code are examples (`SAMPLE-CODE`). Exit intent or 25 seconds on desktop, halfway down or 15 seconds on mobile; once per visitor per 7 days; off on the quote, thank-you, contact and ad pages; no form and no tracking. Preview any time with `?gk_popup=1`. Not connected to Drip. Needs: the real offer, code and whether it should collect an email.
 - **Rack size diagram:** a to-scale top-view SVG of the nine overhead rack sizes (the only sizes the current site lists), under "Sizes available" on the overhead racks page. A layout diagram by garage and ceiling height needs sizes and clearances the current site does not state; the existing layout pictures stay.
+
+## From Shannon's feedback (2026-11-03; see `docs/shannon-feedback.md`)
+- Landscape hero video on the home page (note 21): needs a video from the client.
+- Blog plan (note 19): garage storage tips and garage door tips posts after launch.
+- Tone of voice (note 20): ask Shannon what "evolve" means, then review copy site-wide.

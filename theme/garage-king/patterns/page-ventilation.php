@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Garage Ventilation
+ * Title: Garage Climate Control
  * Slug: garage-king/page-ventilation
  * Categories: garage-king
  * Inserter: no
@@ -8,10 +8,10 @@
 ?>
 <!-- wp:cover {"url":"<?php echo gk_placeholder( '2021/04/20190718_125822-scaled.jpg' ); ?>","dimRatio":72,"overlayColor":"black","minHeight":46,"minHeightUnit":"vh","contentPosition":"center left","align":"full","className":"gk-hero gk-hero--page","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull has-custom-content-position is-position-center-left gk-hero gk-hero--page" style="min-height:46vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-72 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo gk_placeholder( '2021/04/20190718_125822-scaled.jpg' ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"textColor": "amber", "className": "gk-eyebrow"} -->
-<p class="gk-eyebrow has-amber-color has-text-color">Garage ventilation</p>
+<p class="gk-eyebrow has-amber-color has-text-color">Garage ventilation and cooling</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
-<h1 class="wp-block-heading has-white-color has-text-color">Garage Ventilation</h1>
+<h1 class="wp-block-heading has-white-color has-text-color">Garage Climate Control</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
 <p class="has-muted-color has-text-color has-medium-font-size">Cool the garage down so you can actually use it.</p>

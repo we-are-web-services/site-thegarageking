@@ -14,27 +14,97 @@
 <h1 class="wp-block-heading has-white-color has-text-color">Garage Door Installation and Repairs</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
-<p class="has-muted-color has-text-color has-medium-font-size">Part of a complete garage renovation.</p>
+<p class="has-muted-color has-text-color has-medium-font-size">Repair, replacement and new installation, from a team that already knows your garage.</p>
 <!-- /wp:paragraph -->
 </div></div>
 <!-- /wp:cover -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained"}, "align": "full", "backgroundColor": "ink", "textColor": "white", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
+<div class="wp-block-group alignfull gk-section has-ink-background-color has-background has-white-color has-text-color" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:heading {"level": 2, "textColor": "white"} -->
+<h2 class="wp-block-heading has-white-color has-text-color">Three ways we can help</h2>
+<!-- /wp:heading -->
+<!-- wp:columns {"className": "gk-cards", "style": {"spacing": {"blockGap": {"top": "1.25rem", "left": "1.25rem"}}}} -->
+<div class="wp-block-columns gk-cards"><!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color">Repair and service</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">A door that is noisy, slow, off its track or uneven. We find the cause and fix it, including springs, cables, rollers, openers and weather seals.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color">Replacement</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">An older, damaged or worn door replaced with a new one, installed and tested by our crew.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"className":"gk-card"} -->
+<div class="wp-block-column gk-card"><!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color">New installation</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor": "muted"} -->
+<p class="has-muted-color has-text-color">A new door for a new garage or a renovation, planned together with your storage, cabinets and floor.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a Free Design Consultation</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "1180px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
-<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"className":"gk-draft","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Part of a complete garage renovation</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>A finished garage includes the door. Because we are already planning your storage, we can plan your door at the same time, with one crew and one written price.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Complete our contact form to tell us about your door, and we will reply within 24 hours.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level": 3} -->
+<h3 class="wp-block-heading">Common questions</h3>
+<!-- /wp:heading -->
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Do you repair garage doors, or only install new ones?</summary><!-- wp:paragraph -->
+<p>We offer repair and service, replacement and new installation.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details -->
+<details class="wp-block-details"><summary>How do I know if I need a repair or a new door?</summary><!-- wp:paragraph -->
+<p>Noise, a stuck or slow door or an uneven door is often a repair. An older, damaged or badly worn door is often better replaced. We will look at it with you and give a written price either way.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "820px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50"}}}} -->
+<div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"className":"gk-draft","layout":{"type":"constrained"}} -->
 <div class="wp-block-group gk-draft"><!-- wp:paragraph {"className": "gk-draft__tag"} -->
 <p class="gk-draft__tag">Draft: needs real content from Justin</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>The services below are typical for garage door work, listed so the page has its shape. Justin needs to confirm which ones The Garage King offers and supply the details below.</p>
+<p>Still to supply for this page. The three services above are written in plain terms for review.</p>
 <!-- /wp:paragraph -->
 <!-- wp:list -->
 <ul><!-- wp:list-item -->
-<li>Which services are offered: installation, repair, openers, springs and cables, replacement panels</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Door brands and styles</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Whether repairs are offered in the whole service area and how fast</li>
+<li>Door brands and styles offered</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Warranty on doors and on repairs</li>
@@ -43,54 +113,15 @@
 <li>Photos of finished doors</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
+<li>How fast repairs can be scheduled across the service area</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
 <li>Price, or a custom quote</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
 </div>
 <!-- /wp:group -->
-<!-- wp:columns {"style": {"spacing": {"blockGap": {"top": "2rem", "left": "2rem"}}}} -->
-<div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph -->
-<p>A full garage renovation includes the door. The Garage King offers garage door installation and repairs alongside storage solution systems and floors.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Complete our contact form to ask about your garage door, and we will plan it with the rest of your garage.</p>
-<!-- /wp:paragraph -->
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/schedule-quote">Book a Free Design Consultation</a></div>
-<!-- /wp:button -->
-</div>
-<!-- /wp:buttons -->
-</div>
-<!-- /wp:column -->
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level": 3} -->
-<h3 class="wp-block-heading">Typical services (to be confirmed)</h3>
-<!-- /wp:heading -->
-<!-- wp:list {"className":"gk-checks"} -->
-<ul class="gk-checks"><!-- wp:list-item -->
-<li>New garage door installation</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Garage door repair</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Springs, cables and rollers</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Opener installation and repair</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li>Replacement panels and weather seals</li>
-<!-- /wp:list-item -->
-</ul>
-<!-- /wp:list -->
-</div>
-<!-- /wp:column -->
-</div>
-<!-- /wp:columns -->
 </div>
 <!-- /wp:group -->
 <!-- wp:pattern {"slug":"garage-king/cta-band"} /-->
