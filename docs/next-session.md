@@ -1,6 +1,12 @@
 # Pick up here (written 2026-10-23)
 
-> 2026-11-13: Shannon Earl's 21 notes were worked into the build on branch `claude/shannon-feedback`; see `docs/shannon-feedback.md` for what was done and what needs a decision.
+## Latest (2026-11-12, Central; read this first)
+- **Merged 2026-11-12:** Shannon Earl's 21 notes, 20 built (PR 12; note-by-note in `docs/shannon-feedback.md`), and the tracking inventory (PR 11, `docs/tracking-inventory.md`). The blog (note 19), tone review (note 20) and landscape hero video (note 21) are parked in `docs/later-scope.md`.
+- **Not yet seen live:** nothing from PR 12 has been viewed in a live WordPress or Playground link. Checked only by syntax checks, and the carousel and estimate tool in a browser on their own. Do that first (repo must be public while viewing; see CLAUDE.md rule 5).
+- **Zoom Fri 2026-11-13, 11:00 AM Central** with Justin and Shannon (Rhonda organizes). Started as Shannon's request (Nov 4) for a Go High Level build-out, moving off Leadpages and Calendly. Prep: Drive `The Garage King / Ads / _Account Access & Tracking`, Meeting Brief and the internal Status Report of 2026-11-12.
+- **After the Zoom, record in this file and `docs/follow-ups.md`:** what they want moved into Go High Level and in what order; Divi or plain WordPress (who edits the site); "Garage Climate Control" or "Garage Ventilation"; "Our Process" accepted or not; what "evolve" means for the tone; whether Raynor goes on the Garage Door page (Justin said on Nov 4 and 10 they are a Raynor dealer; the page names no brand yet); financing provider; whether the estimate tool should apply the Emerson, Duke and Earl packages (the Earl contents and price are still missing).
+- **Built for Shannon's notes (details in `docs/shannon-feedback.md`):** menu order and names, Our Process carousel, "Starting at" Pricing page with the estimate tool (`assets/calc.js`) and financing links, reviews carousel on every standard page (`garage-king/reviews-carousel`, hidden on quote, contact, thank-you, ad landing pages and Testimonials), Garage Door page and hub page, new FAQs. Page patterns are generated: edit `scripts/build_pages.py`, then run `python3 scripts/build_pages.py`.
+- **Still needs Justin:** real photos and video, before/after pairs, warranty and install details, garage door brands and photos, legal review, tracking tags (installed at launch), access to the second Tag Manager container (GTM-NGTQ2D2P), the Zapier list and Drip sequences.
 
 Open a session in `waws-hub`, say "continue The Garage King", and attach `site-thegarageking`.
 
