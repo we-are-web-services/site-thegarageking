@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Motorized Overhead Storage Racks
+ * Title: Motorized Overhead Storage Solutions
  * Slug: garage-king/page-motorized
  * Categories: garage-king
  * Inserter: no
@@ -11,7 +11,7 @@
 <p class="gk-eyebrow has-amber-color has-text-color">Automated overhead storage solution</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level": 1, "textColor": "white"} -->
-<h1 class="wp-block-heading has-white-color has-text-color">Motorized Overhead Storage Racks</h1>
+<h1 class="wp-block-heading has-white-color has-text-color">Motorized Overhead Storage Solutions</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor": "muted", "fontSize": "medium"} -->
 <p class="has-muted-color has-text-color has-medium-font-size">Press a button, the platform lowers to you.</p>

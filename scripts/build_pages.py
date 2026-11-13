@@ -173,6 +173,11 @@ def details(q, a):
             f"<!-- wp:paragraph -->\n<p>{e(a)}</p>\n<!-- /wp:paragraph --></details>\n<!-- /wp:details -->\n")
 
 
+def details_long(q, paras):
+    inner = "".join(pa(x) for x in paras)
+    return f"<!-- wp:details -->\n<details class=\"wp-block-details\"><summary>{e(q)}</summary>{inner}</details>\n<!-- /wp:details -->\n"
+
+
 def cta():
     return pattern("cta-band")
 
@@ -184,6 +189,29 @@ def write(slug, title, body):
     body = re.sub(r"https://thegarageking\.com/wp-content/uploads/([A-Za-z0-9_./%()\-]+)", lambda m: "<?php echo gk_placeholder( '" + m.group(1) + "' ); ?>", body)
     head = f"<?php\n/**\n * Title: {title}\n * Slug: garage-king/{slug}\n * Categories: garage-king\n * Inserter: no\n */\n?>\n"
     (PAT / f"{slug}.php").write_text(head + body)
+
+
+ICONS = {
+    "form": '<path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/>',
+    "phone": '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+    "wrench": '<path d="M14.5 6.5a4 4 0 0 0 5 5L9 22l-4-4L15.500 7.500z"/><path d="M14 7l3 3"/>',
+    "home": '<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+}
+
+
+def carousel(slides, label, auto=True):
+    """Scroll-snap carousel. slides: list of inner HTML strings. Works without JavaScript (swipe or scroll); assets/carousel.js adds buttons and autoplay."""
+    items = "".join(f'<li class="gk-carousel__slide">{x}</li>' for x in slides)
+    html = (f'<div class="gk-carousel" data-gk-carousel{" data-autoplay" if auto else ""} role="region" aria-roledescription="carousel" aria-label="{ea(label)}">'
+            f'<ul class="gk-carousel__track">{items}</ul>'
+            '<div class="gk-carousel__controls"><button type="button" class="gk-carousel__btn" data-dir="-1" aria-label="Previous">&#8249;</button>'
+            '<button type="button" class="gk-carousel__btn" data-dir="1" aria-label="Next">&#8250;</button></div></div>')
+    return f"<!-- wp:html -->\n{html}\n<!-- /wp:html -->\n"
+
+
+def step_slide(icon, num, title, text):
+    svg = f'<svg class="gk-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[icon]}</svg>'
+    return f'{svg}<p class="gk-step__num">{num}</p><h3>{e(title)}</h3><p>{e(text)}</p>'
 
 
 def card(title, text, href=None, num=None):
@@ -378,27 +406,57 @@ def price_table(rows, head=("Product", "Regular price")):
 PKG = [("The Emerson", "Buy two racks, get one case of slatwall free.", "$2,960"),
        ("The Duke", "Buy four cases of slatwall or four racks, get two cases of slatwall or two racks free.", "$5,920"),
        ("The Earl", "Contents and price to come from the client.", "To be confirmed")]
-body = page_hero("Garage Storage Pricing", "Pricing and offers", "Regular pricing and what each product includes, then a free design consultation to plan your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
-body += grp(hd(2, "Regular pricing") + price_table(PRICES)
-            + pa("Pricing is for conventional garages. Professional installation is included.", size="small")
-            + hd(3, "Accessories and add-ons") + price_table(EXTRAS, ("Item", "Price"))
-            + hd(3, "What counts as a conventional garage") + ul(["A 9′ ceiling height (typically no additional charge for ceilings under 11′)", "A flat ceiling, rather than cathedral, vaulted, gable or sloped", "A garage attached to a home built after 2004"], cls="gk-checks")
-            + pa("Have a taller ceiling? We specialize in tall ceilings. Complete our contact form for a customized quote.")
-            + btns(btn("Book a Free Design Consultation", "/schedule-quote")), width="900px", pad="50")
-body += grp(hd(2, "What each product includes", color="white")
-            + card_row([card("Motorized overhead storage racks", "A wireless remote with keyed lockout, super duty seat belt webbing with 1,500 lb. break strength per corner, and a four-point outside corner lift system for platform stability.", "/motorized-overhead-racks"),
-                        card("Overhead storage racks", "Nine sizes. Mounted across multiple ceiling joists and bolted into your wall framing, or flush to the wall, for all ceiling heights.", "/overhead-racks"),
-                        card("Slatwall", "Sold by the case of four 12″ × 96″ panels. Hidden fastening system, 300 lbs. per square foot at the surface, and it accepts heavy duty shelves and accessories.", "/slatwall")])
-            + card_row([card("Steel cabinets", "Powder coated steel, soft self-closing drawers and doors, 18 and 24 gauge available, 1,000 lb. capacity, 80″ tall lockers, mounted off the floor. The Deluxe Cabinet Package has two tall, two upper and two lower cabinets with a bamboo counter top.", "/steel-cabinets"),
-                        card("Floor coatings", "Priced by the square foot. A one car garage is about 250 square feet.", "/garage-floor-coatings"),
-                        card("Garage ventilation", "Cools your garage up to 20 degrees and the attic up to 40 degrees. Includes a thermostat and two premium aluminum intake vents with insect screens.", "/garage-exhaust-fans")]),
+FIN_LINKS = btns(btn("See financing options", "#financing", outline=True), center=True)
+
+
+def calc_block():
+    rows = [("motorized", "Motorized overhead storage racks", 4600, "each", "number"), ("racks", "Overhead storage racks (fixed)", 1480, "each", "number"),
+            ("slatwall", "Slatwall (case of four 12″ × 96″ panels)", 1480, "per case", "number"), ("floor", "Floor coating", 7, "per square foot (a one car garage is about 250)", "number"),
+            ("vent", "Garage climate control, two car garage", 3380, "each", "number"), ("deluxe", "Deluxe Cabinet Package", 8380, "each", "number"),
+            ("hooks", "Deluxe hook bundle", 650, "each", "number")]
+    out = "".join(f'<div class="gk-calc__row"><label for="gk-c-{k}">{e(n)}<span class="gk-calc__unit">${p:,} {e(u)}</span></label>'
+                  f'<input id="gk-c-{k}" type="number" inputmode="numeric" min="0" step="1" value="0" data-price="{p}"></div>' for k, n, p, u, _ in rows)
+    html = (f'<div class="gk-calc" data-gk-calc><div class="gk-calc__rows">{out}</div>'
+            '<div class="gk-calc__total"><span>Estimated total at regular prices</span><strong data-gk-calc-total>$0</strong></div>'
+            '<p class="gk-calc__note">An estimate only, at regular prices, for a conventional garage, with professional installation included. Current offers and combination packages are applied when you book, and your written price is confirmed after your free design consultation.</p></div>')
+    return f"<!-- wp:html -->\n{html}\n<!-- /wp:html -->\n"
+
+
+def start_card(title, price, text, href):
+    return card(title, text, href).replace("</div>\n<!-- /wp:column -->", pa(price, "amber", cls="gk-offer-price") + "</div>\n<!-- /wp:column -->")
+
+
+body = page_hero("Garage Storage Pricing", "Pricing and offers", "Clear starting prices, a simple estimate tool, then a free design consultation to plan your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
+body += grp(hd(2, "Starting prices", color="white")
+            + pa("Regular prices for a conventional garage, professional installation included.", "muted")
+            + card_row([start_card("Motorized overhead storage solutions", "Starting at $4,600", "Press a button and the platform lowers to you.", "/motorized-overhead-racks"),
+                        start_card("Overhead storage racks", "Starting at $1,480", "Nine sizes, for all ceiling heights.", "/overhead-racks"),
+                        start_card("Slatwall", "Starting at $1,480 per case", "Four 12″ × 96″ panels per case.", "/slatwall")])
+            + card_row([start_card("Garage cabinets", "Deluxe package $8,380", "Custom quotes also available.", "/steel-cabinets"),
+                        start_card("Floor coatings", "Starting at $7 per sq ft", "A one car garage is about 250 square feet.", "/garage-floor-coatings"),
+                        start_card("Garage climate control", "Starting at $3,380", "Two car garage, thermostat controlled.", "/garage-exhaust-fans")]),
             bg="ink", color="white")
+body += grp(hd(2, "Estimate your project", align="center") + pa("Add the products you are thinking about and see an estimate at regular prices.", align="center")
+            + FIN_LINKS + calc_block() + FIN_LINKS
+            + btns(btn("Book a Free Design Consultation", "/schedule-quote"), center=True), width="900px", pad="50")
+body += grp(hd(2, "Details") + details_long("What is included with each product", [
+                "Motorized overhead storage racks: a wireless remote with keyed lockout, super duty seat belt webbing with 1,500 lb. break strength per corner, and a four-point outside corner lift system for platform stability.",
+                "Overhead storage racks: nine sizes, mounted across multiple ceiling joists and bolted into your wall framing, or flush to the wall, for all ceiling heights.",
+                "Slatwall: sold by the case of four 12″ × 96″ panels. Hidden fastening system, 300 lbs. per square foot at the surface, and it accepts heavy duty shelves and accessories.",
+                "Steel cabinets: powder coated steel, soft self-closing drawers and doors, 18 and 24 gauge available, 1,000 lb. capacity, 80″ tall lockers, mounted off the floor. The Deluxe Cabinet Package has two tall, two upper and two lower cabinets with a bamboo counter top.",
+                "Floor coatings: priced by the square foot.",
+                "Garage climate control: cools your garage up to 20 degrees and the attic up to 40 degrees, with a thermostat and two premium aluminum intake vents with insect screens."])
+            + details_long("Accessories and add-ons", [f"{a}: {b}" for a, b in EXTRAS])
+            + details_long("What counts as a conventional garage", ["A 9′ ceiling height (typically no additional charge for ceilings under 11′)", "A flat ceiling, rather than cathedral, vaulted, gable or sloped", "A garage attached to a home built after 2004",
+                                                                      "Have a taller ceiling? We specialize in tall ceilings. Complete our contact form for a customized quote."])
+            + details_long("Full regular price list", [f"{a}: {b}" for a, b in PRICES]), width="900px", pad="50")
 body += grp(hd(2, "Current offers", color="white", align="center")
             + pa("Limited-time offers on racks, slatwall and cabinet packages. Book your free design consultation to claim them.", "muted", align="center")
             + offers_block() + btns(btn("Book a call to claim current offers", "/schedule-quote"), center=True), bg="black", color="white", width="1000px", pad="50")
 body += grp(hd(2, "Popular packages", color="white") + pa("Three popular combinations. The client will supply what each includes and what it costs.", "muted")
             + card_row([card(n, d, ).replace("</div>\n<!-- /wp:column -->", pa(x, "white", size="small") + "</div>\n<!-- /wp:column -->") for n, d, x in PKG]),
             bg="ink", color="white")
+body += '<!-- wp:html -->\n<div id="financing" class="gk-anchor"></div>\n<!-- /wp:html -->\n'
 body += grp(hd(2, "Financing") + draft_note("The client ticked \"planning to offer\" financing. Nothing is shown to visitors until a provider and terms are chosen.",
                                                  ["Financing provider and the terms to state", "Whether to show a monthly figure or only \"financing available\""])
             + hd(2, "Compare to off-site storage") + pa("A garage that stores your things costs less than renting a storage unit month after month."), bg="grey", width="820px", pad="50")
@@ -502,27 +560,30 @@ body = (page_hero("Privacy Policy", "Legal", "", UP + "2012/03/Slatwall-Garage-K
 write("page-privacy", "Privacy policy page", body)
 
 # ---------- Pages built from the client's Website Content Outline & Questionnaire (not on the current site) ----------
-body = page_hero("How It Works", "From first call to finished garage", "Condensed from the Website Content Outline: request, plan, install, enjoy.", UP + "2021/04/20101129-IMG_4456-scaled.jpg")
-steps = [("Complete the contact form", "Tell us about your garage and pick a time for your free consultation."),
-         ("Planning call and written price", "By phone or video: ceiling height, garage size, what you store, photos. You get a recommendation and a written price."),
-         ("Installation day", "Arrival window, how the crew protects your home, how long it takes, and cleanup. Most storage installations are completed within one day."),
-         ("After the install", "Care tips and support.")]
-body += grp(card_row([card(t, x, num=f"0{i + 1}") for i, (t, x) in enumerate(steps[:2])]) + card_row([card(t, x, num=f"0{i + 3}") for i, (t, x) in enumerate(steps[2:])])
-            , bg="black", color="white")
+body = page_hero("Our Process", "From first call to finished garage", "Four simple steps, and most installations are finished in a day.", "gk-local:garage-complete-2.jpg")
+steps = [("form", "Tell us about your garage", "Complete the short form and choose a time that suits you. The consultation is free and there is no obligation."),
+         ("phone", "Get a plan and a written price", "On a phone or video call we look at your ceiling height, your space and what you want to store. You get a clear recommendation and a written price."),
+         ("wrench", "We install it, usually in one day", "Our own crew arrives in the window we give you, protects your home and finishes most storage installations in a single day."),
+         ("home", "Enjoy your garage", "We clean up, show you how everything works, and stay one phone call away after the install.")]
+body += grp(carousel([step_slide(ic, f"0{k + 1}", t, x) for k, (ic, t, x) in enumerate(steps)], "Our four-step process"), bg="black", color="white", cls="gk-section gk-steps-carousel")
 body += grp(draft_note("The client confirmed a workmanship guarantee, a product warranty, planning calls by phone or video, and sometimes an in-home visit before the install. The terms and the team are not supplied yet.",
                        ["Workmanship guarantee: what is covered and for how long", "Product warranty: what is covered and for how long",
                         "Typical install time by project size, arrival window, how the home is protected, cleanup", "Installation team: first names and photos (with their permission)",
                         "Care tips for after the install", "An installation time-lapse video, if one exists"]), width="820px", pad="50")
 body += pattern("cta-band")
-write("page-how-it-works", "How it works page", body)
+write("page-how-it-works", "Our process page", body)
 
-FAQ = [("Are you a franchise?", "No. The Garage King is an independent, family-owned and operated Central Texas business, and every installation is done by our own crew."),
+FAQ = [("How are you different from other companies that offer the same products?", "We are a specialist, not a franchise. The Garage King is independent and family owned, we focus on professional grade garage storage, and every installation is done by our own crew, who plan the right mix for your garage and stand behind the work."),
+       ("Are you a franchise?", "No. The Garage King is an independent, family-owned and operated Central Texas business, and every installation is done by our own crew."),
        ("How long does an installation take?", "Most storage solution installations are completed within one day."),
        ("Do you offer a warranty?", "Yes: a workmanship guarantee and a product warranty. Details to be confirmed with the client."),
        ("What areas do you serve?", "We serve all Greater Austin, Greater San Antonio and surrounding areas. Don't see your town? Complete our contact form and we will let you know if we can provide for your needs and service area."),
        ("How do overhead racks attach?", "Our steel racks are assembled and installed directly into the base of the roof trusses, anywhere in the garage, even above garage doors."),
        ("What fits on an overhead rack?", "Seasonal and bulky items: holiday decorations, camping gear, bins, luggage and sports equipment. The open channel platform lets you see your belongings from below."),
        ("What does slatwall hold?", "Standard duty panels hold up to 200 lbs per panel, and heavy duty panels are even stronger. Slatwall works with our accessory system and trim."),
+       ("Do you repair garage doors, or only install new ones?", "We offer garage door repair and service, door replacement and new door installation. Complete our contact form to tell us what your door is doing."),
+       ("How do I know if my garage door needs repair or replacement?", "A door that is noisy, off its track, slow to open or uneven is often a repair. An older, damaged or badly worn door is often better replaced. We will look at it with you and give a written price either way."),
+       ("Can you add a garage door to my storage or renovation project?", "Yes. A garage door is part of a complete garage renovation, so we can plan it together with your storage, cabinets and floor."),
        ("How do I get a price?", "Our regular pricing is on the Pricing page. For a plan and written price for your garage, complete our contact form and book a free consultation, by phone or video.")]
 body = page_hero("Frequently Asked Questions", "FAQ", "", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg").replace("min-height:46vh", "min-height:30vh").replace('"minHeight":46', '"minHeight":30')
 body += grp("".join(details(q, a) for q, a in FAQ) + pa("Answers drafted from the current site and the client's questionnaire; the client approves the final text.", cls=""), width="820px")
@@ -565,7 +626,7 @@ body = grp(hd(1, "Almost there!", align="center")
 write("page-thank-you", "Thank you page", body)
 
 # ---------- Solutions hub and product pages without a page on the current site ----------
-body = page_hero("Garage Storage Solutions", "Eight product lines", "Shop by problem or by product. Every garage gets a plan.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
+body = page_hero("Garage Storage Solutions", "Garage doors and storage", "Everything for your garage in one place: garage doors, storage solutions, cabinets, floors and climate control.", UP + "2012/03/Slatwall-Garage-GK-w-Car-Parked-1000x563.jpg")
 body += pattern("solutions") + cta()
 write("page-solutions", "Solutions hub page", body)
 
@@ -580,7 +641,7 @@ def simple_product(slug, title, eyebrow, lead, paras, bullets, img, pics=None, p
     write(slug, title, b)
 
 
-simple_product("page-motorized", "Motorized Overhead Storage Racks", "Automated overhead storage solution", "Press a button, the platform lowers to you.",
+simple_product("page-motorized", "Motorized Overhead Storage Solutions", "Automated overhead storage solution", "Press a button, the platform lowers to you.",
                ["Are you in need of garage storage space but want to avoid having to climb up a ladder? Our automated, remote-controlled storage solution systems allow you to effortlessly lower the platform with the simple press of a button.",
                 "This feature makes it easy for you to load or unload the storage rack and safely return it to the ceiling where it will be out of the way."],
                ["Wireless remote with keyed lockout", "Super duty seat belt webbing with 1,500 lb. break strength per corner", "Four-point outside corner lift system for platform stability", "No ladder, no lifting heavy bins overhead", "A short captioned demo video will go here"],
@@ -591,7 +652,7 @@ simple_product("page-motorized", "Motorized Overhead Storage Racks", "Automated 
                      ("motorized-rack-lowered.jpg", "A motorized overhead rack lowered for loading"),
                      ("motorized-rack-net-closeup.jpg", "A motorized overhead rack with a safety net, seen from below")],
                pics_title="Motorized racks in real garages")
-simple_product("page-ventilation", "Garage Ventilation", "Garage ventilation", "Cool the garage down so you can actually use it.",
+simple_product("page-ventilation", "Garage Climate Control", "Garage ventilation and cooling", "Cool the garage down so you can actually use it.",
                ["A garage that is too hot to use in the Texas summer is wasted space. Our garage ventilation system cools your garage up to 20 degrees and your attic up to 40 degrees.",
                 "Each system includes a thermostat and two premium aluminum intake vents with insect screens and an auxiliary frame for a double skin insulated door (insulation not included). Reflective garage door insulation is available as an add-on."],
                ["Cools the garage up to 20 degrees, the attic up to 40", "Thermostat controlled", "Pairs with storage for a usable workshop or hobby space", "How the system is installed: details from the client"], UP + "2021/04/20190718_125822-scaled.jpg",
@@ -660,6 +721,12 @@ body = grp(hd(2, "Trusted across Central Texas", align="center") + pa("4.9 Googl
            + review_rows(GREV[:3]) + btns(btn("Read more reviews", "/testimonials"), center=True), bg="grey", width="1180px")
 write("reviews", "Reviews", body)
 
+slides = [pa("★★★★★") + pa(t) + pa(who, size="small", cls="gk-review__who") for t, who in GREV]
+body = ("<?php if ( is_page( array( 'schedule-quote', 'ga-thank-you-page-garage-talk', 'contact-us', 'ga', 'ma', 'nextdoor', 'sael', 'testimonials' ) ) ) { return; } ?>\n"
+        + grp(hd(2, "What our customers say", align="center") + carousel(slides, "Customer reviews")
+              + btns(btn("Read more reviews", "/testimonials"), center=True), bg="grey", width="1180px", pad="50", cls="gk-section gk-review-carousel"))
+write("reviews-carousel", "Reviews carousel", body)
+
 # ---------- Draft pages: built from what the page needs; real content comes from the client ----------
 # Lifts. The client's notes only say "add Lifts as a product/service". The ads records say attic lifts are sold, so this draft assumes attic lifts.
 body = page_hero("Lifts", "Lifts", "Bring your storage down to you, and put the attic to work.", UP + "2021/04/20190227_103359-scaled.jpg")
@@ -676,16 +743,19 @@ body += pattern("cta-band")
 write("page-lifts", "Lifts", body)
 
 # Garage door installation and repairs. The client's notes only say "bookmark a page for Garage Door Installation and Repairs".
-body = page_hero("Garage Door Installation and Repairs", "Garage doors", "Part of a complete garage renovation.", UP + "2021/04/20190718_125822-scaled.jpg")
-body += grp(draft_note("The services below are typical for garage door work, listed so the page has its shape. Justin needs to confirm which ones The Garage King offers and supply the details below.",
-                       ["Which services are offered: installation, repair, openers, springs and cables, replacement panels", "Door brands and styles", "Whether repairs are offered in the whole service area and how fast",
-                        "Warranty on doors and on repairs", "Photos of finished doors", "Price, or a custom quote"])
-            + cols([pa("A full garage renovation includes the door. The Garage King offers garage door installation and repairs alongside storage solution systems and floors.")
-                    + pa("Complete our contact form to ask about your garage door, and we will plan it with the rest of your garage.")
-                    + btns(btn("Book a Free Design Consultation", "/schedule-quote")),
-                    hd(3, "Typical services (to be confirmed)")
-                    + ul(["New garage door installation", "Garage door repair", "Springs, cables and rollers", "Opener installation and repair", "Replacement panels and weather seals"], cls="gk-checks")]),
+body = page_hero("Garage Door Installation and Repairs", "Garage doors", "Repair, replacement and new installation, from a team that already knows your garage.", UP + "2021/04/20190718_125822-scaled.jpg")
+body += grp(hd(2, "Three ways we can help", color="white")
+            + card_row([card("Repair and service", "A door that is noisy, slow, off its track or uneven. We find the cause and fix it, including springs, cables, rollers, openers and weather seals."),
+                        card("Replacement", "An older, damaged or worn door replaced with a new one, installed and tested by our crew."),
+                        card("New installation", "A new door for a new garage or a renovation, planned together with your storage, cabinets and floor.")])
+            + btns(btn("Book a Free Design Consultation", "/schedule-quote"), center=True), bg="ink", color="white")
+body += grp(cols([hd(2, "Part of a complete garage renovation") + pa("A finished garage includes the door. Because we are already planning your storage, we can plan your door at the same time, with one crew and one written price.")
+                  + pa("Complete our contact form to tell us about your door, and we will reply within 24 hours."),
+                  hd(3, "Common questions") + details("Do you repair garage doors, or only install new ones?", "We offer repair and service, replacement and new installation.")
+                  + details("How do I know if I need a repair or a new door?", "Noise, a stuck or slow door or an uneven door is often a repair. An older, damaged or badly worn door is often better replaced. We will look at it with you and give a written price either way.")]),
             width="1180px", pad="60")
+body += grp(draft_note("Still to supply for this page. The three services above are written in plain terms for review.",
+                       ["Door brands and styles offered", "Warranty on doors and on repairs", "Photos of finished doors", "How fast repairs can be scheduled across the service area", "Price, or a custom quote"]), width="820px", pad="50")
 body += pattern("cta-band")
 write("page-garage-doors", "Garage doors", body)
 

@@ -17,6 +17,11 @@
 <!-- /wp:cover -->
 <!-- wp:group {"className": "gk-section", "layout": {"type": "constrained", "contentSize": "820px"}, "align": "full", "style": {"spacing": {"padding": {"top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60"}}}} -->
 <div class="wp-block-group alignfull gk-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:details -->
+<details class="wp-block-details"><summary>How are you different from other companies that offer the same products?</summary><!-- wp:paragraph -->
+<p>We are a specialist, not a franchise. The Garage King is independent and family owned, we focus on professional grade garage storage, and every installation is done by our own crew, who plan the right mix for your garage and stand behind the work.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details -->
 <details class="wp-block-details"><summary>Are you a franchise?</summary><!-- wp:paragraph -->
 <p>No. The Garage King is an independent, family-owned and operated Central Texas business, and every installation is done by our own crew.</p>
 <!-- /wp:paragraph --></details>
@@ -49,6 +54,21 @@
 <!-- wp:details -->
 <details class="wp-block-details"><summary>What does slatwall hold?</summary><!-- wp:paragraph -->
 <p>Standard duty panels hold up to 200 lbs per panel, and heavy duty panels are even stronger. Slatwall works with our accessory system and trim.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Do you repair garage doors, or only install new ones?</summary><!-- wp:paragraph -->
+<p>We offer garage door repair and service, door replacement and new door installation. Complete our contact form to tell us what your door is doing.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details -->
+<details class="wp-block-details"><summary>How do I know if my garage door needs repair or replacement?</summary><!-- wp:paragraph -->
+<p>A door that is noisy, off its track, slow to open or uneven is often a repair. An older, damaged or badly worn door is often better replaced. We will look at it with you and give a written price either way.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Can you add a garage door to my storage or renovation project?</summary><!-- wp:paragraph -->
+<p>Yes. A garage door is part of a complete garage renovation, so we can plan it together with your storage, cabinets and floor.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 <!-- wp:details -->

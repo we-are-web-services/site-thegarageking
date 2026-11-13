@@ -180,3 +180,27 @@
 .gk-ba__tag--before { left: 0.75rem; }
 .gk-ba__tag--after { right: 0.75rem; }
 .gk-ba-figure figcaption { text-align: center; font-size: 0.875rem; margin-top: 0.5rem; }
+
+/* Carousel (steps and reviews) */
+.gk-carousel { position: relative; }
+.gk-carousel__track { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.gk-carousel__slide { flex: 0 0 min(100%, 22rem); scroll-snap-align: start; padding: 1.5rem; margin: 0; }
+.gk-carousel__slide p { margin-block: 0.5rem; }
+.gk-steps-carousel .gk-carousel__slide { background: var(--gk-steel); border-top: 3px solid var(--gk-amber); }
+.gk-steps-carousel .gk-icon { color: var(--gk-amber); }
+.gk-steps-carousel .gk-carousel__btn { color: #fff; border-color: #fff; }
+.gk-review-carousel .gk-carousel__slide { background: #fff; border-top: 3px solid var(--gk-amber); flex-basis: min(100%, 26rem); }
+.gk-carousel__controls { display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
+.gk-carousel__btn { width: 2.75rem; height: 2.75rem; border: 2px solid currentColor; background: transparent; color: inherit; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.gk-carousel__btn:hover, .gk-carousel__btn:focus-visible { background: var(--gk-amber); color: var(--gk-black); border-color: var(--gk-amber); }
+@media (prefers-reduced-motion: reduce) { .gk-carousel__track { scroll-behavior: auto; } }
+
+/* Pricing estimate */
+.gk-calc { background: #fff; border-left: 4px solid var(--gk-amber); padding: 1.25rem; margin: 1.25rem 0; }
+.gk-calc__row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid #e3e3df; }
+.gk-calc__row label { display: flex; flex-direction: column; font-weight: 700; }
+.gk-calc__unit { font-weight: 400; font-size: 0.85rem; color: #55554f; }
+.gk-calc__row input { width: 5.5rem; padding: 0.5rem; font-size: 1rem; text-align: right; }
+.gk-calc__total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 1rem; font-size: 1.1rem; }
+.gk-calc__total strong { font-size: 1.8rem; }
+.gk-calc__note { font-size: 0.85rem; color: #55554f; margin-bottom: 0; }
