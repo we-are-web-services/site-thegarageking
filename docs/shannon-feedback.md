@@ -13,7 +13,7 @@ Branch `claude/shannon-feedback`. Wording marked **[Proposed]** is ours for the 
 | 7 | Hero photo | Replaced with a finished garage (slatwall, bikes, white racks). |
 | 8 | Copy | Steps rewritten around what the customer gets **[Proposed]**. |
 | 9 | Less text on Pricing | "Starting prices" blocks; product details, accessories, conventional-garage rules and the price list are collapsible. |
-| 10 | Price calculator | New: combine products, estimate at regular prices (`assets/calc.js`). Floor coating by square foot. Offers and packages are applied at booking. **New scope, so it breaks the 2026-10-23 "nothing new" rule; David decides whether it stays.** |
+| 10 | Price calculator ("a pricing calculator if the user wants to calculate pricing for mixed combinations") | Built as asked: combine products, estimate at regular prices (`assets/calc.js`). Floor coating by square foot. Offers and packages are applied at booking. Open: whether it should also apply the packages (prices not final) or pass the estimate to the form (wait for the tracking and form decisions). |
 | 11 | Financing links | Above and below the calculator, jumping to the Financing section (still a draft box: no provider chosen). |
 | 12 | (none) | |
 | 13 | Reviews out of the menu | Removed from the main menu. `/testimonials` stays and is reached from the carousel. |
