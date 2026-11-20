@@ -1,5 +1,11 @@
 # Pick up here (written 2026-10-23)
 
+## Latest (2026-11-20, Central; read this first)
+- **Decided (David, 2026-11-20):** GHL first on the current site, then launch the new design. GHL's own forms replace Gravity Forms, so the new site's quote, ads and contact forms are GHL embeds, not the `gk-leads` forms (the plugin stays in the repo, unused for these forms). The contact form sends visitors to the booking page (the GHL calendar), as the live forms do. Ad pages are built in WordPress, not LeadPages, at the same addresses; the matched landing pages for the Google Ads campaigns are part of this project (`docs/follow-ups.md`, section G). Detail and order: `docs/lead-capture-and-ghl-plan.md`, section 4.
+- **Not changed:** the live site. Everything live waits for the client to accept the GHL setup proposal (flat $1,500, drafted in Drive) and for Nov 26.
+- **Still needs the client:** the Earl package, real photos and before and after pairs, Lifts and Garage Door details, Terms review, financing provider, the launch week.
+- **Next in this repo:** when the GHL forms exist, swap the form shortcodes for the embeds on the new pages and carry the Meta Pixel and GA4 tags into Tag Manager; view the new build in a live WordPress or Playground link (repo public only while viewing).
+
 ## Latest (2026-11-12, Central; read this first)
 - **Merged 2026-11-12:** Shannon Earl's 21 notes, 20 built (PR 12; note-by-note in `docs/shannon-feedback.md`), and the tracking inventory (PR 11, `docs/tracking-inventory.md`). The blog (note 19), tone review (note 20) and landscape hero video (note 21) are parked in `docs/later-scope.md`.
 - **Not yet seen live:** nothing from PR 12 has been viewed in a live WordPress or Playground link. Checked only by syntax checks, and the carousel and estimate tool in a browser on their own. Do that first (repo must be public while viewing; see CLAUDE.md rule 5).
