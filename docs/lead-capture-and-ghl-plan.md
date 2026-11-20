@@ -42,40 +42,54 @@ The Google Ads booking conversion is the one that steers bidding. **Anything tha
 
 - **Switching the theme is all or nothing.** Divi stores layout in each page's content and settings in the database, so the day the theme changes, every Divi page changes. We replace every page with our own content in the same step. Pages are not restyled one at a time.
 - **Do it on a staging copy first.** WP Engine can copy the live site to staging from a backup point. Rhonda asked for a staging copy on 2026-10-23 and it is unanswered. Who owns the WP Engine account is not recorded here; confirm. Search results say WP Engine advises, for database-stored theme settings, to test on staging or with its preview and rely on its backups ([source](https://wpengine.com/resources/staging-sites/)). Not verified for Divi specifically.
-- **Forms stay as they are.** Contact stays the Gravity Forms form 2, so `.gform_confirmation_message` and the Tag Manager event keep working. The ad pages stay on LeadPages unchanged. So **our own quote, ads and contact forms (`gk-leads`) are not activated in this phase**, and the pages built around them (`/schedule-quote`, our `/ga` and thank-you pages) are held back, or point at the existing pages. Needs David's decision per page. Gravity Forms must stay licensed (open item).
-- **Tracking stays as it is:** same Tag Manager container, same Meta Pixel and GA4 tags (found in the Divi theme settings or LeadPages and **installed again in the new theme exactly once each**), same thank-you path, same Calendly embed.
+- **Forms are replaced before launch, not kept (David, 2026-11-20).** The three live Gravity Forms contact forms (the contact page, the home page and the overhead racks page) are swapped one at a time for GHL's own forms embedded on the same pages. Gravity Forms is switched off, not deleted, so it can be turned back on. Because it is replaced directly, nothing has to be connected to Gravity Forms and its admin crash does not need diagnosing for this route. Our own quote, ads and contact forms (`gk-leads`) are not used for these forms. The ad pages stay on LeadPages until launch, then are rebuilt in WordPress at the same addresses.
+- **Tracking is cleaned up first, then installed once on the new theme:** one GA4 tag, key events and the Meta Pixel in Tag Manager on the current site, with the old tags left in place until the new data is proven. The new theme then carries the same Tag Manager container, the same thank-you path and the GHL booking page.
 - **Access.** A dedicated WordPress Administrator user with an Application Password stored as a named Network secret (the way the other 15 sites were done, `waws-hub` to-do 18), over the REST API, plus a headless browser for wp-admin screens the API does not reach. **The REST API cannot install a custom theme or plugin from a zip**, so either David uploads the zips in wp-admin, or Claude uploads them through wp-admin in a headless browser. WP Engine's own portal (backup point, staging, copy to live) stays with David. Rules apply: say what changes, back up first, wait for the go-ahead, check afterward, record.
 - **Timing (my suggestion):** the 30-day check of the ad changes is 2026-11-26. A theme switch and tag reinstall in the middle of that measurement would muddy it, so schedule the live switch after it, and never in the middle of a week's Digest read. **Start (David, 2026-11-20):** as soon as the client accepts the proposal, and not before Nov 26.
 
 ## 4. Question 2: moving to Go High Level (GHL)
 
-**Recommendation (unchanged): website first with today's tools, then GHL as its own phase.** Each step below can be undone before the next begins.
+**Order (David, 2026-11-20): GHL first on the current site, then launch the new design.** This reverses the earlier recommendation of website first. Reason: the forms and booking are built once, and the new site goes live with them already feeding GHL. The client can choose the other order (new design first, GHL after), which builds the forms and booking twice and needs roughly 8 to 16 more hours (a rough estimate); it also needs a stopgap for the Drip and Zapier feeds and the Gravity Forms crash fixed. Each step below can be undone before the next begins.
 
-**Phase 0, read-only facts (needed before any price or date)**
-1. LeadPages: how the pages are served, where each form's leads go, any integrations.
-2. Zapier list, Drip sequences, Calendly integrations and webhooks, QuickBooks: what each receives.
-3. Second Tag Manager container `GTM-NGTQ2D2P` (needs access from Justin).
-4. Who owns the GHL account and whether we get access; which GHL plan (white-label or not).
-5. Where the Meta Pixel and the two GA4 tags sit.
+**Scope and price for the proposal (David, 2026-11-20): 40 hours at $37.50 an hour, a flat $1,500**, to Rhonda to edit and pass on; start as soon as the client accepts and not before Nov 26; no calendar timeframe. The client owns and pays for every account; David has the logins. Recommended GHL plan: Starter, confirmed during the trial against the checklist in section 6 below; the next plan up is the fallback.
 
-**Phase A, new look on the current site** (section 3). Tracking verified in Tag Assistant before and after.
+**Phase 0, read the accounts.** David has the logins. Read LeadPages (how the pages are served, where each form's leads go), the Zapier flows, the Drip sequences, the Calendly integrations, QuickBooks, the second Tag Manager container `GTM-NGTQ2D2P`, and where the Meta Pixel and the two GA4 tags sit. Start the GHL trial on Starter and check it against the checklist.
 
-**Phase B, GHL built beside the old system (no cutover).** Pipeline, calendar, forms, texting and email follow-ups, workflows that mirror what Zapier and Drip do today, the reports Shannon keeps in the spreadsheet. Test with internal leads only.
+**Phase 1, tracking clean-up on the current site** (after Nov 26). One GA4 tag in Tag Manager, key events for booking, form and call, the Meta Pixel moved into Tag Manager, testing in Tag Assistant and DebugView, and a light tag map. The old tags stay until the new data matches (a comparison of about two weeks, waiting time and not work time).
 
-**Phase C, landing pages on the website, forms and calendar feeding GHL.**
-- Landing pages are built in WordPress at the **same addresses** (`/ga`, `/ma`, thank-you path), so ad URLs and tag triggers hold.
-- Form: our own form posts each lead to GHL by webhook (the plugin has a webhook setting) rather than an embedded GHL form, to keep design control and the Tag Manager event. **Add hidden fields for the Google click ID (gclid) and UTM source data.** Search results say the click ID is often lost when a GHL form sits in an iframe on another site, so this must be designed in, not assumed ([source](https://www.customerlabs.com/blog/gohighlevel-google-ads-conversion-tracking-missing-gclid-fix); a vendor page, no official GHL document found).
-- Calendar: GHL's calendar is embedded on the thank-you page at the same address, replacing the Calendly embed. GHL offers one-on-one, round-robin, group and combined calendars, a connection to each person's Google or Outlook calendar, email and text reminders, reschedule and cancel links, and a booking that creates the contact (from vendor and community pages, not GHL's official documentation). **Still to confirm in the client's GHL account:** a redirect after booking to a "you're booked" page on our own site (set in the calendar's confirmation settings); which calendar features come with their plan; and that the Google click ID is kept at the form step, because a click ID cannot be relied on to pass through a redirect. Whether Calendly is retired is the client's choice after the parallel test.
+**Phase 2, build GHL beside the old system (no cutover).** A simple pipeline, the calendar, the three forms (the quote and ads forms built once and duplicated; hidden fields for the Google click ID and campaign data; consent; a redirect on submit to a page on our site), workflows that replace the Drip sequences and the Zapier flow (email and internal alerts only; no texting), and the sending domain. Test with internal leads only.
+
+**Phase 3, swap the live forms and the booking page.**
+- Each form redirects to a page on our site on submit. The contact forms go to the booking page, as the live forms do today.
+- Calendar: GHL's calendar is embedded on that booking page at the same address, replacing the Calendly embed. GHL offers one-on-one, round-robin, group and combined calendars, a connection to each person's Google or Outlook calendar, email and text reminders, reschedule and cancel links, and a booking that creates the contact (from vendor and community pages, not GHL's official documentation). **Still to confirm in the client's GHL account:** a redirect after booking to a "you're booked" page on our own site (set in the calendar's confirmation settings); which calendar features come with their plan; and that the Google click ID is kept at the form step, because a click ID cannot be relied on to pass through a redirect. Whether Calendly is retired is the client's choice after the parallel test.
+- **Form click ID.** Search results say the click ID is often lost when a GHL form sits in an embedded frame on another site, so the hidden fields must be designed in and tested, not assumed ([source](https://www.customerlabs.com/blog/gohighlevel-google-ads-conversion-tracking-missing-gclid-fix); a vendor page, no official GHL document found).
 - **Booking conversion, the main risk.** The current listener hears Calendly only. GHL's calendar widget also sits in an iframe, which Tag Manager cannot see into. Two routes: (1) a listener for the widget's completion message that pushes a data-layer event ([one practitioner's snippet](https://krmdigital.uk/?p=3206), unverified); (2) send the visitor to a dedicated "booked" page after booking and fire the conversion on that page view ([discussed here](https://consultevo.com/?p=6971)). I prefer (2) if GHL allows the redirect, because it is easy to test; **not yet confirmed against GHL's own documents.** Either route should **fire the same Google Ads booking conversion action** so its history and bidding data continue.
-- **Run old and new in parallel before cutover**: Calendly and its listener stay live until a test booking in GHL records exactly one conversion in Google Ads, then Calendly and its tag are retired together.
-- Later, optional: GHL can send closed-won stages back to Google Ads as offline conversions (needs the gclid saved on the contact). That would let bidding learn from jobs sold, not only calls booked. A separate decision.
+- **Run old and new in parallel:** Calendly and its listener stay live until a test booking in GHL records exactly one conversion in Google Ads (a day or two of testing), then Calendly and its tag are retired together.
+- Gravity Forms stays switched off, not deleted. The 4,400 entries are exported only if the client asks for them.
 
-**Phase D, phones.** Moving off Vonage is the riskiest part (a missed call is a lost lead; texting needs consent wording and carrier registration). Last, only after A to C are stable, and the call tracking in Google Ads is re-checked.
+**Phase 4, launch the new design.** The theme switch; the ad pages rebuilt in WordPress at the same addresses (`/ga`, `/ma`, `/fb`, `/aeb`, `/sr`, `/scd` and the thank-you paths), with the GHL forms on them; the same Tag Manager container installed once; conversion checks at 24 and 48 hours. The matched landing pages for the Google Ads campaigns are built in the website project (follow-ups, section G).
 
-**Phase E, clean-up.** One GA4 property linked to Google Ads with real key events (form submission, booking); retire the Universal Analytics tags; fix the double-counted lead and call actions (C-03, C-06); remove Calendly and LeadPages when unused.
+**Phase 5, clean up.** Remove the old tags and the extra tracking plugins (Conversios, Header Footer Code Manager, WP Headers And Footers) and, after launch, Gravity Forms. The client cancels their own tools (LeadPages, Calendly, Drip, the Zapier flow).
 
-## 5. Questions that decide the plan (one at a time with David)
-1. Is the live site's LeadPages content served by a plugin or by DNS? (Phase 0.)
-2. Does the client own the WP Engine account, and will they open a staging copy?
-3. For Phase A, do the ad pages (`/ga`, `/ma`, `/nextdoor`, `/sael`) stay on LeadPages untouched, or does our look reach them?
-4. Does the client pay for GHL and give us access, and is scope or price a separate conversation with Rhonda? (None exists yet.)
+**Not in this scope (offered later at $37.50 an hour):** the GA4 reporting settings and Search Console link; the Google Ads conversion tidy-up (the double-counted call and lead-form actions, C-03 and C-06, which belongs to the ads fee); GHL reports; importing the form entries; the Gravity Forms diagnosis; phones and texting (Vonage stays: Shannon says it is their phone and texting system, and calls are identified by the number dialled); monthly analytics reporting. Later, optional: GHL can send closed-won stages back to Google Ads as offline conversions (needs the click ID saved on the contact).
+
+
+## 5. Decided, and what is still open
+**Decided (David, 2026-11-20):** ad pages live in WordPress, not LeadPages; GHL's own forms replace Gravity Forms; GHL first, then launch; Starter recommended; the scope above at a flat $1,500; the client pays for GHL; Shannon's sheet is out of this work; Vonage and phones stay as they are.
+
+**Open client questions (three):**
+1. Are they open to retiring Calendly if the GHL calendar passes a test, and where do they use their Calendly link outside the website?
+2. Do they need the 4,400 Gravity Forms entries kept? If so we export them; if not we keep the backup.
+3. Which week do they want the launch?
+
+**Open, internal:** what Vonage is used for beyond phones and texting (Justin and Shannon were asked directly; answered in part); how LeadPages serves the ad pages (Phase 0 will read it).
+
+## 6. GHL Starter checklist (check during the trial; plan details come from third-party guides, confirm on GHL's own pricing page)
+- **Forms:** multi-step forms with hidden fields for the Google click ID and campaign data, a consent checkbox, a redirect on submit, styling to match the design, and an embed.
+- **Calendar:** a booking page or embed, a redirect after booking to a "you're booked" page, email reminders, two-way sync with Google or Outlook, reschedule and cancel links, and enough calendars and users for the people who take calls.
+- **Workflows:** enough triggers and actions to replace the Drip sequences and the Zapier flow, with internal alerts to the client's inbox.
+- **Contacts and pipeline:** custom fields, tags and a simple pipeline (an import of the old entries is not in scope).
+- **Email:** a sending domain set up properly, and the email volume they need.
+- **Users:** how many people can log in on Starter.
+- **Page speed:** the ad pages matter for ad rank, so test their speed with the embeds in place.
+- **If Starter is missing something we need:** recommend the next plan up (about $297 a month, Unlimited) and tell Rhonda before the client pays more.
