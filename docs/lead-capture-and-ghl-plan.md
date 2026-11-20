@@ -16,6 +16,8 @@ Written 2026-11-18 (Central) for David. Internal; nothing here goes to the clien
 
 Other actions Google Ads also lists (not a step in this flow): Google-hosted local actions (clicks to call, directions, website visits, engagements) marked primary but not in the account goals, one misconfigured primary "Submit Lead Page: /ga" action that records 0, and four retired Universal Analytics actions still marked primary (section 2 and the transition report, 3.4). Counts for each action are in section 2.
 
+**Do visitors from outside Google ads get counted? (read-only check, 2026-11-20, Oct 19 to Nov 17).** Mostly no. The Calendly listener runs on every page, so it fires for any visitor who books, but Google Ads credits a booking only when it can tie it to an earlier Google ad click. In Google Analytics, 14 of the 18 views of the contact-form booking page (`/wp-schedule-your-consultation/`) came from Direct, Organic Search or Referral, and only 4 from Paid Search; the ad-page thank-you page had 35 of 38 views from Paid Search. In Google Ads all 15 counted Calendly bookings were same-day after the ad click, so none was credited from an older click. A visitor who clicked an ad earlier the same day and then used the contact form is counted, correctly, and cannot be told apart from the ad-page path. One 30-day window, small numbers. Detail: `waws-ads` `clients/the-garage-king/decisions.md` (C-15).
+
 Open question that matters for the site plan: **how `/ga`, `/ma`, `/nextdoor` and `/sael` are served on thegarageking.com** (the LeadPages WordPress plugin, or a DNS or proxy setup). It decides whether switching the WordPress theme touches them at all.
 
 ## 2. How Google Ads records conversions today
