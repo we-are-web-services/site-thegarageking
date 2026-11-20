@@ -4,15 +4,17 @@ Written 2026-11-18 (Central) for David. Internal; nothing here goes to the clien
 
 ## 1. How a lead arrives today
 
-| Step | What happens | Status |
-|---|---|---|
-| 1 | Google Ad (account AW-783955965) sends a click to a landing page: `/ga` (and `/ma`). Meta Ads (managed by a woman named Laura, not us) sends traffic to LeadPages pages (`/nextdoor`, `/sael`, likely `/ma`) | Confirmed pages; which Meta page serves which ad is unknown |
-| 2 | LeadPages page shows the 2-step form: step 1 is name, email, phone, address, garage size and details, consent, reCAPTCHA, button "Go to step 2" | Confirmed (public page) |
-| 3 | On submit the visitor lands on `/ga-thank-you-page-garage-talk` ("Almost there!") with the client's Calendly page (`calendly.com/thegarageking/garage-talk`) embedded | Confirmed |
-| 4 | The visitor books a consultation call in Calendly. **This booking is the conversion Justin cares about** (C-01) | Confirmed |
-| 5 | Where the step-1 lead data goes (LeadPages leads list, email, Zapier, Drip, QuickBooks, the Google spreadsheet Shannon keeps metrics in) | **Unknown.** Justin offered Drip access; the Zap list is not seen |
-| 6 | Separate path: `/contact-us` is a Gravity Forms form (form 2, v3.1.3) on the WordPress site (Divi 4.27.9, WP Engine). It emails info@ and shows a confirmation on the page, no page change | Confirmed |
-| 7 | Third path: phone calls from ads (call assets and click-to-call) | Confirmed in Google Ads |
+| Step | What happens | Status | Counted as a conversion in Google Ads? |
+|---|---|---|---|
+| 1 | Google Ad (account AW-783955965) sends a click to a landing page: `/ga` (and `/ma`). Meta Ads (managed by a woman named Laura, not us) sends traffic to LeadPages pages (`/nextdoor`, `/sael`, likely `/ma`) | Confirmed pages; which Meta page serves which ad is unknown | **No.** The click itself is not a conversion |
+| 2 | LeadPages page shows the 2-step form: step 1 is name, email, phone, address, garage size and details, consent, reCAPTCHA, button "Go to step 2" | Confirmed (public page) | **Partly.** The secondary action "Submit lead form: .../ga-thank-you-page-garage-talk". One tag fires on a click on `/ga`, another on a click of the text "Click Here" on `/ga` pages. It counts clicks, not submissions (C-06). Not used for bidding |
+| 3 | On submit the visitor lands on `/ga-thank-you-page-garage-talk` ("Almost there!") with the client's Calendly page (`calendly.com/thegarageking/garage-talk`) embedded | Confirmed | **Partly.** The same secondary lead-form action also fires on a view of this thank-you page. Counts page views, not submissions |
+| 4 | The visitor books a consultation call in Calendly. **This booking is the conversion Justin cares about** (C-01) | Confirmed | **Yes, primary.** "Book GA appointment via Calendly". A Tag Manager listener hears the Calendly "booked" message and pushes `calendlyFormSubmitted`. This is the conversion that steers bidding |
+| 5 | Where the step-1 lead data goes (LeadPages leads list, email, Zapier, Drip, QuickBooks, the Google spreadsheet Shannon keeps metrics in) | **Unknown.** Justin offered Drip access; the Zap list is not seen | **No.** Nothing is counted here |
+| 6 | Separate path: `/contact-us` is a Gravity Forms form (form 2, v3.1.3) on the WordPress site (Divi 4.27.9, WP Engine). It emails info@ and shows a confirmation on the page, no page change | Confirmed | **No.** The tag that should count a submission (`form-event Tag`) sends to retired Universal Analytics, so contact-form submissions are counted nowhere |
+| 7 | Third path: phone calls from ads (call assets and click-to-call) | Confirmed in Google Ads | **Yes, primary, two actions.** "Calls From Ads (Google)" (30 seconds) and "Calls from ads" (60 seconds), so a call can be counted twice (C-03). Google call tracking, not Tag Manager |
+
+Other actions Google Ads also lists (not a step in this flow): Google-hosted local actions (clicks to call, directions, website visits, engagements) marked primary but not in the account goals, one misconfigured primary "Submit Lead Page: /ga" action that records 0, and four retired Universal Analytics actions still marked primary (section 2 and the transition report, 3.4). Counts for each action are in section 2.
 
 Open question that matters for the site plan: **how `/ga`, `/ma`, `/nextdoor` and `/sael` are served on thegarageking.com** (the LeadPages WordPress plugin, or a DNS or proxy setup). It decides whether switching the WordPress theme touches them at all.
 
