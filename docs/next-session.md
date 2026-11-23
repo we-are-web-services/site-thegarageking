@@ -1,5 +1,10 @@
 # Pick up here (written 2026-10-23)
 
+## Latest (2026-11-23, Central; read this first)
+- **GHL trial tested** (David's own HighLevel Starter trial, not the client's): forms, calendar and workflows cover the plan in `docs/lead-capture-and-ghl-plan.md`. A value in the page address reaches an inline embedded form, and the redirect after a booking replaces the whole window, so the booking conversion can fire on a "booked" page. The plan's section 4 and 6 are corrected (no multi-step form needed; offline conversions to Google Ads unconfirmed).
+- **Still unproven:** the Google Ads conversion on the booked page, the hidden click-ID field, page speed with the embeds, the sending-domain setup.
+- **Not changed:** the live site and the client's accounts. Everything live still waits for the client to accept the GHL proposal (sent to Rhonda 2026-11-23) and for Nov 26.
+
 ## Latest (2026-11-20, Central; read this first)
 - **Decided (David, 2026-11-20):** GHL first on the current site, then launch the new design. GHL's own forms replace Gravity Forms, so the new site's quote, ads and contact forms are GHL embeds, not the `gk-leads` forms (the plugin stays in the repo, unused for these forms). The contact form sends visitors to the booking page (the GHL calendar), as the live forms do. Ad pages are built in WordPress, not LeadPages, at the same addresses; the matched landing pages for the Google Ads campaigns are part of this project (`docs/follow-ups.md`, section G). Detail and order: `docs/lead-capture-and-ghl-plan.md`, section 4.
 - **Not changed:** the live site. Everything live waits for the client to accept the GHL setup proposal (flat $1,500, drafted in Drive) and for Nov 26.
